@@ -26,7 +26,7 @@ export default function Hero() {
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8 animate-float">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-            <span className="text-sm font-medium text-primary-foreground/80">Now serving San Francisco & Silicon Valley</span>
+            <span className="text-sm font-medium text-primary-foreground/80">Serving Chhatrapati Sambhaji Nagar & Beyond</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-foreground mb-8 leading-[1.1] tracking-tight">

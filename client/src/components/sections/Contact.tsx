@@ -77,7 +77,7 @@ export default function Contact() {
                     <MapPin className="h-6 w-6 mt-1" />
                     <div>
                       <h4 className="font-bold">Office</h4>
-                      <p className="text-primary-foreground/80">123 Tech Boulevard,<br />San Francisco, CA 94105</p>
+                      <p className="text-primary-foreground/80">T-16, Software Technology Parks of India,<br />Chikhalthana MIDC, Chhatrapati Sambhaji Nagar,<br />431008, Maharashtra.</p>
                     </div>
                   </div>
                   
@@ -85,7 +85,7 @@ export default function Contact() {
                     <Mail className="h-6 w-6 mt-1" />
                     <div>
                       <h4 className="font-bold">Email</h4>
-                      <p className="text-primary-foreground/80">hello@ksoftsolution.com</p>
+                      <p className="text-primary-foreground/80">info@ksoftsolution.com</p>
                     </div>
                   </div>
 
@@ -93,7 +93,7 @@ export default function Contact() {
                     <Phone className="h-6 w-6 mt-1" />
                     <div>
                       <h4 className="font-bold">Phone</h4>
-                      <p className="text-primary-foreground/80">+1 (555) 123-4567</p>
+                      <p className="text-primary-foreground/80">+91-976-541-2319</p>
                     </div>
                   </div>
                 </div>
