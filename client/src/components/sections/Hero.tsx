@@ -1,78 +1,74 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroBg from "@assets/generated_images/abstract_digital_network_background_for_hero_section.png";
+import { Link } from "wouter";
+import heroBg from "@assets/generated_images/futuristic_glassmorphism_interface_with_data_visualization.png";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
           src={heroBg} 
           alt="Digital Network Background" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/50 to-background/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background"></div>
+        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary font-medium text-sm mb-6 border border-primary/20">
-            Innovating Your Digital Future
-          </span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8 animate-float">
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            <span className="text-sm font-medium text-primary-foreground/80">Now serving San Francisco & Silicon Valley</span>
+          </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground mb-6 leading-tight">
-            Transforming Ideas into <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-              Digital Reality
-            </span>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-foreground mb-8 leading-[1.1] tracking-tight">
+            Digital <span className="text-gradient-primary">Evolution</span> <br />
+            for the AI Era.
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-            KSoft Solution is your strategic partner for modern software development, 
-            AI integration, and results-driven digital growth. We build scalable systems 
-            that drive business success.
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed font-light">
+            We architect premium digital experiences and intelligent systems that position your brand as an industry authority.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 h-12 text-base">
-              Get Started
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white h-14 px-10 text-lg rounded-full shadow-[0_0_20px_-5px_var(--primary)] hover:shadow-[0_0_30px_-5px_var(--primary)] transition-all duration-300">
+              Start Transformation
             </Button>
-            <Button size="lg" variant="outline" className="h-12 px-8 text-base group">
-              View Services
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <Link href="/services/web-development">
+              <Button size="lg" variant="outline" className="h-14 px-10 text-lg rounded-full border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all group">
+                Explore Services
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
           </div>
         </motion.div>
 
-        {/* Stats / Trust Indicators */}
+        {/* Glass Cards Stats */}
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto border-t border-border/50 pt-8"
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto"
         >
-          <div>
-            <div className="text-3xl font-bold text-foreground">98%</div>
-            <div className="text-sm text-muted-foreground">Client Satisfaction</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-foreground">50+</div>
-            <div className="text-sm text-muted-foreground">Projects Delivered</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-foreground">24/7</div>
-            <div className="text-sm text-muted-foreground">Support System</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-foreground">100%</div>
-            <div className="text-sm text-muted-foreground">SEO Optimized</div>
-          </div>
+          {[
+            { val: "98%", label: "Client Retention" },
+            { val: "10x", label: "ROI Average" },
+            { val: "24/7", label: "AI Support" },
+            { val: "#1", label: "Google Rankings" }
+          ].map((stat, i) => (
+            <div key={i} className="glass-card p-6 rounded-2xl text-center">
+              <div className="text-3xl font-bold text-gradient-primary mb-1">{stat.val}</div>
+              <div className="text-sm text-muted-foreground font-medium uppercase tracking-wider">{stat.label}</div>
+            </div>
+          ))}
         </motion.div>
       </div>
     </section>

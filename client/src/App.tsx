@@ -5,13 +5,27 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
+import WebDevelopment from "@/pages/services/WebDevelopment";
+import AIIntegration from "@/pages/services/AIIntegration";
+import SEO from "@/pages/services/SEO";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 function Router() {
   return (
-    <Switch>
-      <Route path="/" component={Home} />
-      <Route component={NotFound} />
-    </Switch>
+    <div className="min-h-screen flex flex-col bg-background text-foreground">
+      <Navbar />
+      <main className="flex-grow">
+        <Switch>
+          <Route path="/" component={Home} />
+          <Route path="/services/web-development" component={WebDevelopment} />
+          <Route path="/services/ai-integration" component={AIIntegration} />
+          <Route path="/services/seo" component={SEO} />
+          <Route component={NotFound} />
+        </Switch>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
