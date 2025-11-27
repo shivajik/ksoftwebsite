@@ -8,6 +8,9 @@ import Home from "@/pages/Home";
 import WebDevelopment from "@/pages/services/WebDevelopment";
 import AIIntegration from "@/pages/services/AIIntegration";
 import SEO from "@/pages/services/SEO";
+import MobileApps from "@/pages/services/MobileApps";
+import UiUxDesign from "@/pages/services/UiUxDesign";
+import DigitalMarketing from "@/pages/services/DigitalMarketing";
 import WebsiteDesignAurangabad from "@/pages/services/WebsiteDesignAurangabad";
 import WordpressMaintenanceAurangabad from "@/pages/services/WordpressMaintenanceAurangabad";
 import LocalSEOAurangabad from "@/pages/services/LocalSEOAurangabad";
@@ -26,6 +29,9 @@ function Router() {
           <Route path="/services/web-development" component={WebDevelopment} />
           <Route path="/services/ai-integration" component={AIIntegration} />
           <Route path="/services/seo" component={SEO} />
+          <Route path="/services/mobile-apps" component={MobileApps} />
+          <Route path="/services/ui-ux-design" component={UiUxDesign} />
+          <Route path="/services/digital-marketing" component={DigitalMarketing} />
           
           {/* Local SEO Pages */}
           <Route path="/services/website-design-aurangabad" component={WebsiteDesignAurangabad} />

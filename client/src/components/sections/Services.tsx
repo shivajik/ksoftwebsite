@@ -26,19 +26,19 @@ const services = [
     icon: <Smartphone className="h-8 w-8 text-blue-400" />,
     title: "Mobile Apps",
     description: "Native and cross-platform mobile applications designed for engagement and performance.",
-    link: "#"
+    link: "/services/mobile-apps"
   },
   {
     icon: <Palette className="h-8 w-8 text-pink-400" />,
     title: "UI/UX Design",
     description: "Intuitive, aesthetic designs that prioritize user experience and conversion rates.",
-    link: "#"
+    link: "/services/ui-ux-design"
   },
   {
     icon: <Globe className="h-8 w-8 text-green-400" />,
     title: "Digital Marketing",
     description: "Comprehensive digital strategies to grow your brand and reach your target audience.",
-    link: "#"
+    link: "/services/digital-marketing"
   }
 ];
 

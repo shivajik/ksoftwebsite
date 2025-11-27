@@ -76,6 +76,21 @@ export default function Navbar() {
                   SEO & Growth
                 </DropdownMenuItem>
               </Link>
+              <Link href="/services/mobile-apps">
+                <DropdownMenuItem className="cursor-pointer p-3 focus:bg-primary/10 focus:text-primary rounded-lg">
+                  Mobile Apps
+                </DropdownMenuItem>
+              </Link>
+              <Link href="/services/ui-ux-design">
+                <DropdownMenuItem className="cursor-pointer p-3 focus:bg-primary/10 focus:text-primary rounded-lg">
+                  UI/UX Design
+                </DropdownMenuItem>
+              </Link>
+              <Link href="/services/digital-marketing">
+                <DropdownMenuItem className="cursor-pointer p-3 focus:bg-primary/10 focus:text-primary rounded-lg">
+                  Digital Marketing
+                </DropdownMenuItem>
+              </Link>
             </DropdownMenuContent>
           </DropdownMenu>
 
@@ -112,6 +127,15 @@ export default function Navbar() {
                 </Link>
                 <Link href="/services/seo">
                   <a className="text-foreground/80 block">SEO & Growth</a>
+                </Link>
+                <Link href="/services/mobile-apps">
+                  <a className="text-foreground/80 block">Mobile Apps</a>
+                </Link>
+                <Link href="/services/ui-ux-design">
+                  <a className="text-foreground/80 block">UI/UX Design</a>
+                </Link>
+                <Link href="/services/digital-marketing">
+                  <a className="text-foreground/80 block">Digital Marketing</a>
                 </Link>
               </div>
             </div>
