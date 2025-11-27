@@ -76,6 +76,19 @@ export default function Navbar() {
                   SEO & Growth
                 </DropdownMenuItem>
               </Link>
+              <div className="px-3 py-2 text-xs font-bold text-muted-foreground uppercase tracking-wider border-t border-white/5 mt-2 pt-2">
+                Local Services
+              </div>
+              <Link href="/services/website-design-aurangabad">
+                <DropdownMenuItem className="cursor-pointer p-3 focus:bg-primary/10 focus:text-primary rounded-lg">
+                  Website Design (Aurangabad)
+                </DropdownMenuItem>
+              </Link>
+              <Link href="/services/local-seo-aurangabad">
+                <DropdownMenuItem className="cursor-pointer p-3 focus:bg-primary/10 focus:text-primary rounded-lg">
+                  Local SEO (Aurangabad)
+                </DropdownMenuItem>
+              </Link>
             </DropdownMenuContent>
           </DropdownMenu>
 
