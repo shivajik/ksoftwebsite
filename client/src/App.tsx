@@ -1,11 +1,11 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, useLocation } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useEffect } from "react";
 
 // Lazy Load Pages for Performance
 const Home = lazy(() => import("@/pages/Home"));
@@ -21,6 +21,15 @@ const WordpressMaintenanceAurangabad = lazy(() => import("@/pages/services/Wordp
 const LocalSEOAurangabad = lazy(() => import("@/pages/services/LocalSEOAurangabad"));
 const CitationBuildingAurangabad = lazy(() => import("@/pages/services/CitationBuildingAurangabad"));
 const SocialMediaMarketingAurangabad = lazy(() => import("@/pages/services/SocialMediaMarketingAurangabad"));
+
+// Redirect Component for Legacy URLs
+const Redirect = ({ to }: { to: string }) => {
+  const [, setLocation] = useLocation();
+  useEffect(() => {
+    setLocation(to);
+  }, [to, setLocation]);
+  return null;
+};
 
 function Router() {
   return (
@@ -44,6 +53,32 @@ function Router() {
             <Route path="/services/citation-building-aurangabad" component={CitationBuildingAurangabad} />
             <Route path="/services/social-media-marketing-aurangabad" component={SocialMediaMarketingAurangabad} />
             
+            {/* Legacy Redirects */}
+            <Route path="/shop"><Redirect to="/" /></Route>
+            <Route path="/seo-analysis"><Redirect to="/services/seo" /></Route>
+            <Route path="/our-clients"><Redirect to="/" /></Route>
+            <Route path="/case-studies"><Redirect to="/" /></Route>
+            <Route path="/checkout"><Redirect to="/" /></Route>
+            <Route path="/my-account"><Redirect to="/" /></Route>
+            <Route path="/our-testimonials"><Redirect to="/" /></Route>
+            <Route path="/cart"><Redirect to="/" /></Route>
+            <Route path="/contact-information"><Redirect to="/#contact" /></Route>
+            <Route path="/our-services"><Redirect to="/services/web-development" /></Route>
+            <Route path="/website-designing-digital-marketing-aurangabad"><Redirect to="/services/website-design-aurangabad" /></Route>
+            <Route path="/pay-per-click-ppc-management"><Redirect to="/services/digital-marketing" /></Route>
+            <Route path="/smm-social-media-marketing-services-aurangabad"><Redirect to="/services/social-media-marketing-aurangabad" /></Route>
+            <Route path="/email-marketing"><Redirect to="/services/digital-marketing" /></Route>
+            <Route path="/terms-conditions"><Redirect to="/" /></Route>
+            <Route path="/privacy-policy"><Redirect to="/" /></Route>
+            <Route path="/local-citation-building"><Redirect to="/services/citation-building-aurangabad" /></Route>
+            <Route path="/website-designer"><Redirect to="/services/web-development" /></Route>
+            <Route path="/google-drive-stacking"><Redirect to="/services/seo" /></Route>
+            <Route path="/website-design"><Redirect to="/services/web-development" /></Route>
+            <Route path="/wordpress-maintenance-services"><Redirect to="/services/wordpress-maintenance-aurangabad" /></Route>
+            <Route path="/website-designing-company-in-aurangabad"><Redirect to="/services/website-design-aurangabad" /></Route>
+            <Route path="/local-seo-search-engine-optimization-services-aurangabad"><Redirect to="/services/local-seo-aurangabad" /></Route>
+            <Route path="/refund_returns"><Redirect to="/" /></Route>
+
             <Route component={NotFound} />
           </Switch>
         </Suspense>
