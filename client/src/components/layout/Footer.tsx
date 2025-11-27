@@ -40,10 +40,21 @@ export default function Footer() {
           <div>
             <h4 className="font-heading font-semibold text-lg mb-4">Company</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li><a href="#about" className="hover:text-primary transition-colors">About Us</a></li>
+              <li><a href="/#about" className="hover:text-primary transition-colors">About Us</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Careers</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Blog</a></li>
-              <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
+              <li><a href="/#contact" className="hover:text-primary transition-colors">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-heading font-semibold text-lg mb-4">Aurangabad Services</h4>
+            <ul className="space-y-2 text-muted-foreground text-sm">
+              <li><a href="/services/website-design-aurangabad" className="hover:text-primary transition-colors">Website Design</a></li>
+              <li><a href="/services/wordpress-maintenance-aurangabad" className="hover:text-primary transition-colors">WordPress Maintenance</a></li>
+              <li><a href="/services/local-seo-aurangabad" className="hover:text-primary transition-colors">Local SEO Services</a></li>
+              <li><a href="/services/citation-building-aurangabad" className="hover:text-primary transition-colors">Citation Building</a></li>
+              <li><a href="/services/social-media-marketing-aurangabad" className="hover:text-primary transition-colors">Social Media Marketing</a></li>
             </ul>
           </div>
         </div>
