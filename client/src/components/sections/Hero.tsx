@@ -13,6 +13,8 @@ export default function Hero() {
           src={heroBg} 
           alt="Digital Network Background" 
           className="w-full h-full object-cover opacity-60"
+          loading="eager"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background"></div>
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>

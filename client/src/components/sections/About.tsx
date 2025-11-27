@@ -14,6 +14,7 @@ export default function About() {
                 src={aboutImage} 
                 alt="Team working together" 
                 className="w-full h-auto object-cover"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
             </div>
