@@ -41,9 +41,14 @@ export default function Contact() {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
+    // Construct mailto link
+    const mailtoLink = `mailto:sales@ksoftsolution.com?subject=Enquiry from ${values.name}&body=Name: ${values.name}%0D%0AEmail: ${values.email}%0D%0A%0D%0AMessage:%0D%0A${values.message}`;
+    
+    window.location.href = mailtoLink;
+
     toast({
-      title: "Message Sent!",
-      description: "We'll get back to you as soon as possible.",
+      title: "Opening Email Client...",
+      description: "Please send the pre-filled email to complete your enquiry.",
     });
     form.reset();
   }
