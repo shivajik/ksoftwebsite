@@ -4,6 +4,7 @@ import { CheckCircle2, ArrowRight, Laptop, Zap, Layers, Search, Code, Rocket, Sh
 import { Link } from "wouter";
 import webDevImg from "@assets/generated_images/web_development_abstract_concept_with_code_and_structure.png";
 import SchemaMarkup from "@/components/seo/SchemaMarkup";
+import LeadGenCTA from "@/components/sections/LeadGenCTA";
 
 export default function WebDevelopment() {
   const schemaData = {
@@ -221,42 +222,8 @@ export default function WebDevelopment() {
             </div>
           </div>
 
-          {/* 6. Pricing Table */}
-          <div className="mb-20">
-            <h2 className="text-3xl font-heading font-bold text-center mb-4">Investment Plans</h2>
-            <p className="text-center text-muted-foreground mb-12">Clear pricing for clear results.</p>
-            
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {[
-                { name: "Starter Web", price: "$1,500+", features: ["Custom Design", "5 Core Pages", "Contact Integration", "Basic SEO", "Mobile Responsive"] },
-                { name: "Growth Business", price: "$3,500+", popular: true, features: ["10+ Pages", "CMS Integration", "Advanced SEO", "Blog/News Section", "Analytics Setup", "Speed Optimization"] },
-                { name: "Enterprise / SaaS", price: "Custom", features: ["Full Web App", "User Authentication", "Database Integration", "API Development", "Custom Features", "Priority Support"] }
-              ].map((plan, i) => (
-                <div key={i} className={`relative rounded-2xl p-8 border ${plan.popular ? 'bg-secondary/30 border-primary shadow-lg shadow-primary/10' : 'bg-background border-white/10'}`}>
-                  {plan.popular && (
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
-                      Recommended
-                    </div>
-                  )}
-                  <div className="text-center mb-8">
-                    <h3 className="text-lg font-medium text-muted-foreground mb-2">{plan.name}</h3>
-                    <div className="text-4xl font-bold text-foreground">{plan.price}</div>
-                  </div>
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feat, j) => (
-                      <li key={j} className="flex items-center gap-3 text-sm">
-                        <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                        <span>{feat}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button className={`w-full ${plan.popular ? 'bg-primary hover:bg-primary/90' : 'bg-secondary hover:bg-secondary/80'}`}>
-                    Get Quote
-                  </Button>
-                </div>
-              ))}
-            </div>
-          </div>
+          {/* 6. Pricing Table Replacement */}
+          <LeadGenCTA />
 
           {/* 7. Process */}
           <div className="mb-20">

@@ -4,6 +4,7 @@ import { Smartphone, Layers, Zap, Shield, Tablet, Wifi, CheckCircle2, Star, Arro
 import { Link } from "wouter";
 import heroImg from "@assets/generated_images/mobile_app_development_concept_with_multiple_devices.png";
 import SchemaMarkup from "@/components/seo/SchemaMarkup";
+import LeadGenCTA from "@/components/sections/LeadGenCTA";
 
 export default function MobileApps() {
   const schemaData = {
@@ -221,42 +222,8 @@ export default function MobileApps() {
             </div>
           </div>
 
-          {/* 6. Pricing */}
-          <div className="mb-20">
-            <h2 className="text-3xl font-heading font-bold text-center mb-4">Development Packages</h2>
-            <p className="text-center text-muted-foreground mb-12">Bring your app idea to life.</p>
-            
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {[
-                { name: "MVP Launch", price: "$5,000+", features: ["Core Features", "iOS & Android", "Basic UI", "Firebase Backend", "Store Submission"] },
-                { name: "Pro App", price: "$12,000+", popular: true, features: ["Custom UI/UX", "Push Notifications", "Advanced Backend", "Admin Panel", "Analytics"] },
-                { name: "Enterprise", price: "Custom", features: ["Complex Logic", "Third-party APIs", "Offline Sync", "Dedicated Team", "SLA Support"] }
-              ].map((plan, i) => (
-                <div key={i} className={`relative rounded-2xl p-8 border ${plan.popular ? 'bg-blue-500/10 border-blue-500 shadow-lg shadow-blue-500/10' : 'bg-background border-white/10'}`}>
-                  {plan.popular && (
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-blue-500 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
-                      Best Value
-                    </div>
-                  )}
-                  <div className="text-center mb-8">
-                    <h3 className="text-lg font-medium text-muted-foreground mb-2">{plan.name}</h3>
-                    <div className="text-4xl font-bold text-foreground">{plan.price}</div>
-                  </div>
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feat, j) => (
-                      <li key={j} className="flex items-center gap-3 text-sm">
-                        <CheckCircle2 className="w-5 h-5 text-blue-500 flex-shrink-0" />
-                        <span>{feat}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button className={`w-full ${plan.popular ? 'bg-blue-500 hover:bg-blue-600 text-white' : 'bg-secondary hover:bg-secondary/80'}`}>
-                    Start Building
-                  </Button>
-                </div>
-              ))}
-            </div>
-          </div>
+          {/* 6. Pricing Replacement */}
+          <LeadGenCTA />
 
           {/* 11. FAQ */}
           <div className="mb-20 max-w-3xl mx-auto">

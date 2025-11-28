@@ -4,6 +4,7 @@ import { Bot, BrainCircuit, Sparkles, Cpu, Network, MessageSquare, Database, Arr
 import { Link } from "wouter";
 import aiImg from "@assets/generated_images/artificial_intelligence_neural_network_visualization.png";
 import SchemaMarkup from "@/components/seo/SchemaMarkup";
+import LeadGenCTA from "@/components/sections/LeadGenCTA";
 
 export default function AIIntegration() {
   const schemaData = {
@@ -221,42 +222,8 @@ export default function AIIntegration() {
             </div>
           </div>
 
-          {/* 6. Pricing */}
-          <div className="mb-20">
-            <h2 className="text-3xl font-heading font-bold text-center mb-4">AI Investment Plans</h2>
-            <p className="text-center text-muted-foreground mb-12">Scalable solutions for every stage of AI adoption.</p>
-            
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {[
-                { name: "Pilot", price: "$2,500", features: ["Custom Chatbot Setup", "Training on 50 Docs", "Web Integration", "Standard Support"] },
-                { name: "Integration", price: "$5,000", popular: true, features: ["Workflow Automation", "API Integration", "Advanced RAG", "Multi-Model Support", "Priority Support"] },
-                { name: "Enterprise", price: "Custom", features: ["Private LLM Hosting", "On-Premise Deployment", "Custom Fine-Tuning", "SLA Guarantees", "Dedicated AI Engineer"] }
-              ].map((plan, i) => (
-                <div key={i} className={`relative rounded-2xl p-8 border ${plan.popular ? 'bg-accent/10 border-accent shadow-lg shadow-accent/10' : 'bg-background border-white/10'}`}>
-                  {plan.popular && (
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-accent text-accent-foreground px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
-                      Most Popular
-                    </div>
-                  )}
-                  <div className="text-center mb-8">
-                    <h3 className="text-lg font-medium text-muted-foreground mb-2">{plan.name}</h3>
-                    <div className="text-4xl font-bold text-foreground">{plan.price}</div>
-                  </div>
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feat, j) => (
-                      <li key={j} className="flex items-center gap-3 text-sm">
-                        <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
-                        <span>{feat}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button className={`w-full ${plan.popular ? 'bg-accent text-accent-foreground hover:bg-accent/90' : 'bg-secondary hover:bg-secondary/80'}`}>
-                    Start Pilot
-                  </Button>
-                </div>
-              ))}
-            </div>
-          </div>
+          {/* 6. Pricing Replacement */}
+          <LeadGenCTA />
 
           {/* 7. Process */}
           <div className="mb-20">

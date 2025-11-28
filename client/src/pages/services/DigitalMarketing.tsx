@@ -4,6 +4,7 @@ import { Megaphone, TrendingUp, Users, Target, BarChart, Mail, Search, CheckCirc
 import { Link } from "wouter";
 import heroImg from "@assets/generated_images/digital_marketing_strategy_dashboard_and_growth.png";
 import SchemaMarkup from "@/components/seo/SchemaMarkup";
+import LeadGenCTA from "@/components/sections/LeadGenCTA";
 
 export default function DigitalMarketing() {
   const schemaData = {
@@ -220,42 +221,8 @@ export default function DigitalMarketing() {
             </div>
           </div>
 
-          {/* 6. Pricing */}
-          <div className="mb-20">
-            <h2 className="text-3xl font-heading font-bold text-center mb-4">Marketing Retainers</h2>
-            <p className="text-center text-muted-foreground mb-12">Plans to fuel your growth.</p>
-            
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {[
-                { name: "Starter", price: "$1,000/mo", features: ["Google Ads Management", "Monthly Reporting", "Basic Ad Creatives", "Budget < $3k"] },
-                { name: "Growth", price: "$2,500/mo", popular: true, features: ["Multi-Channel (FB + Google)", "Landing Page Optimization", "Email Marketing", "Weekly Reporting"] },
-                { name: "Scale", price: "Custom", features: ["Full Funnel Strategy", "Dedicated Team", "Video Production", "Advanced Analytics", "CRO Program"] }
-              ].map((plan, i) => (
-                <div key={i} className={`relative rounded-2xl p-8 border ${plan.popular ? 'bg-green-500/10 border-green-500 shadow-lg shadow-green-500/10' : 'bg-background border-white/10'}`}>
-                  {plan.popular && (
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-green-500 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
-                      Recommended
-                    </div>
-                  )}
-                  <div className="text-center mb-8">
-                    <h3 className="text-lg font-medium text-muted-foreground mb-2">{plan.name}</h3>
-                    <div className="text-4xl font-bold text-foreground">{plan.price}</div>
-                  </div>
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feat, j) => (
-                      <li key={j} className="flex items-center gap-3 text-sm">
-                        <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
-                        <span>{feat}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button className={`w-full ${plan.popular ? 'bg-green-500 hover:bg-green-600 text-white' : 'bg-secondary hover:bg-secondary/80'}`}>
-                    Start Growth
-                  </Button>
-                </div>
-              ))}
-            </div>
-          </div>
+          {/* 6. Pricing Replacement */}
+          <LeadGenCTA />
 
           {/* 11. FAQ */}
           <div className="mb-20 max-w-3xl mx-auto">
