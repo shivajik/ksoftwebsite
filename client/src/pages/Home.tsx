@@ -2,8 +2,8 @@ import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
 import About from "@/components/sections/About";
-import Contact from "@/components/sections/Contact";
 import Footer from "@/components/layout/Footer";
+import LeadGenCTA from "@/components/sections/LeadGenCTA";
 
 export default function Home() {
   return (
@@ -11,7 +11,9 @@ export default function Home() {
       <Hero />
       <Services />
       <About />
-      <Contact />
+      <div className="container mx-auto px-4">
+        <LeadGenCTA />
+      </div>
     </div>
   );
 }

@@ -21,6 +21,7 @@ const WordpressMaintenanceAurangabad = lazy(() => import("@/pages/services/Wordp
 const LocalSEOAurangabad = lazy(() => import("@/pages/services/LocalSEOAurangabad"));
 const CitationBuildingAurangabad = lazy(() => import("@/pages/services/CitationBuildingAurangabad"));
 const SocialMediaMarketingAurangabad = lazy(() => import("@/pages/services/SocialMediaMarketingAurangabad"));
+const Contact = lazy(() => import("@/pages/Contact"));
 
 // Redirect Component for Legacy URLs
 const Redirect = ({ to }: { to: string }) => {
@@ -52,6 +53,7 @@ function Router() {
             <Route path="/services/local-seo-aurangabad" component={LocalSEOAurangabad} />
             <Route path="/services/citation-building-aurangabad" component={CitationBuildingAurangabad} />
             <Route path="/services/social-media-marketing-aurangabad" component={SocialMediaMarketingAurangabad} />
+            <Route path="/contact" component={Contact} />
             
             {/* Legacy Redirects */}
             <Route path="/shop"><Redirect to="/" /></Route>

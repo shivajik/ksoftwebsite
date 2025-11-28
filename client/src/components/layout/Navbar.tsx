@@ -94,12 +94,18 @@ export default function Navbar() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <a href="/#about" className="font-medium text-muted-foreground hover:text-primary transition-colors">About</a>
-          <a href="/#contact" className="font-medium text-muted-foreground hover:text-primary transition-colors">Contact</a>
+          <Link href="/#about">
+            <a className="font-medium text-muted-foreground hover:text-primary transition-colors">About</a>
+          </Link>
+          <Link href="/contact">
+            <a className="font-medium text-muted-foreground hover:text-primary transition-colors">Contact</a>
+          </Link>
           
-          <Button onClick={() => scrollToSection("#contact")} className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 shadow-[0_0_15px_-5px_var(--primary)] hover:shadow-[0_0_25px_-5px_var(--primary)] transition-all">
-            Get Started
-          </Button>
+          <Link href="/contact">
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 shadow-[0_0_15px_-5px_var(--primary)] hover:shadow-[0_0_25px_-5px_var(--primary)] transition-all">
+              Get Started
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile Toggle */}
@@ -140,10 +146,14 @@ export default function Navbar() {
               </div>
             </div>
             <a href="/#about" className="text-lg font-medium text-foreground py-2 block">About</a>
-            <a href="/#contact" className="text-lg font-medium text-foreground py-2 block">Contact</a>
-            <Button onClick={() => scrollToSection("#contact")} className="w-full bg-primary text-primary-foreground py-6 text-lg rounded-xl mt-4">
-              Get Started
-            </Button>
+            <Link href="/contact">
+              <a className="text-lg font-medium text-foreground py-2 block">Contact</a>
+            </Link>
+            <Link href="/contact">
+              <Button className="w-full bg-primary text-primary-foreground py-6 text-lg rounded-xl mt-4">
+                Get Started
+              </Button>
+            </Link>
           </div>
         )}
       </div>

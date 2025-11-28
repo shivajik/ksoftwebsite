@@ -20,7 +20,7 @@ export default function LeadGenCTA() {
             </p>
           </div>
           <div className="flex-shrink-0">
-            <Link href="/#contact">
+            <Link href="/contact">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground h-14 px-8 text-lg shadow-lg shadow-primary/20">
                 Get a Custom Quote
                 <ArrowRight className="ml-2 h-5 w-5" />
