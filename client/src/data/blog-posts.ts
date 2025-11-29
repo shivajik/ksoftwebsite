@@ -1,4 +1,5 @@
 import { Calendar, Clock, User } from "lucide-react";
+import voiceSearchImg from "@assets/stock_images/voice_assistant_smar_0d61b538.jpg";
 
 export interface BlogPost {
   id: string;
@@ -323,7 +324,7 @@ export const blogPosts: BlogPost[] = [
     date: "December 9, 2025",
     readTime: "5 min read",
     category: "SEO",
-    image: "https://images.unsplash.com/photo-1589254065878-42c9da9e2fa6?q=80&w=2070&auto=format&fit=crop",
+    image: voiceSearchImg,
     tags: ["AEO", "Voice Search", "Zero-Click", "Siri/Alexa"],
     content: `
       <h2>Winner Takes All</h2>
