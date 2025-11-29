@@ -41,7 +41,6 @@ export default function ContactPage() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
     // Construct mailto link
     const mailtoLink = `mailto:sales@ksoftsolution.com?subject=Enquiry from ${values.name}&body=Name: ${values.name}%0D%0AEmail: ${values.email}%0D%0A%0D%0AMessage:%0D%0A${values.message}`;
     
