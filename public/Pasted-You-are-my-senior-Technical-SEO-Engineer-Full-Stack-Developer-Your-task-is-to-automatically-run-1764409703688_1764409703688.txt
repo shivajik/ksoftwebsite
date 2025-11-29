@@ -1,0 +1,128 @@
+You are my senior Technical SEO Engineer + Full-Stack Developer.  
+Your task is to automatically run Lighthouse and perform a complete technical SEO audit of my entire project.  
+Then fix every issue with high-priority recommendations and code-level updates.
+
+---------------------------------------------------------
+### 🔥 WHAT YOU MUST DO:
+
+#### 1. RUN AUTOMATED CHECKS
+Run the following on localhost after spinning up the development server:
+
+A) **Lighthouse Audit**
+   - Performance score
+   - Accessibility score
+   - Best Practices score
+   - SEO score
+   - PWA score (if available)
+   - Extract:
+      • LCP  
+      • FCP  
+      • CLS  
+      • TTI  
+      • TBT  
+      • Render time  
+      • JavaScript bundle size  
+      • Fonts & images issues
+
+B) **SEO Audit**
+   Scan entire codebase & output:
+   - Missing meta titles
+   - Missing meta descriptions
+   - Multiple H1s (flag them)
+   - Missing canonical tag
+   - Missing OpenGraph tags
+   - Missing Twitter tags
+   - Missing alt text on images
+   - Missing sitemap
+   - Missing robots.txt
+   - Missing schema markup (Organization, LocalBusiness, Service, Breadcrumb)
+   - Pages with thin content
+   - Pages with duplicate content
+   - Broken internal links
+   - Pages with low word count (<200 words)
+
+C) **Performance Audit**
+   - Unoptimized images  
+   - Missing Next.js `<Image/>`  
+   - Missing lazy-loading on images  
+   - Non-deferred scripts  
+   - CSS not optimized  
+   - Fonts not optimized (no `font-display: swap`)  
+   - Render-blocking resources  
+   - Large JavaScript files  
+   - Missing caching headers  
+
+D) **Accessibility Audit**
+   - Missing ALT  
+   - Missing aria-label  
+   - Non-contrast-compliant colors  
+   - Buttons without labels  
+   - Keyboard focus issues  
+
+---------------------------------------------------------
+### 📌 OUTPUT REQUIREMENTS:
+
+After running all audits, produce:
+
+1. **Lighthouse Score Table** (Performance, SEO, Accessibility, Best Practices)
+2. **List of all issues found**  
+   - Categorized by: Critical / High / Medium / Low
+3. **Exact code files where issues exist**
+4. **Step-by-step fixes**
+5. **Code changes you will apply**
+6. **Final improved Lighthouse score projection**
+
+---------------------------------------------------------
+### 🛠️ AUTO-FIX REQUIREMENTS:
+
+After detecting issues, you must FIX them across the project:
+
+#### 1. SEO Fixes:
+- Add missing titles and descriptions  
+- Add canonical tags  
+- Add OG + Twitter tags  
+- Generate sitemap.xml  
+- Generate robots.txt  
+- Add structured data (JSON-LD)  
+- Improve H1/H2 hierarchy  
+- Add internal links  
+- Add missing alt text  
+
+#### 2. Performance Fixes:
+- Convert images → WebP/AVIF  
+- Replace `<img>` with Next.js `<Image />`  
+- Use lazy-loading for below-fold images  
+- Preload primary fonts  
+- Add `font-display: swap`  
+- Minify CSS/JS  
+- Remove unused libraries  
+- Add caching headers  
+- Fix CLS by setting width/height  
+
+#### 3. Accessibility Fixes:
+- Add ALT text  
+- Add ARIA attributes  
+- Improve color contrast  
+- Fix clickable area sizes  
+- Add skip-to-content link  
+
+---------------------------------------------------------
+### 🧪 VALIDATION:
+After applying fixes:
+- Rerun Lighthouse  
+- Show before/after score comparison  
+- Show updated metrics (LCP, CLS, etc.)  
+- Provide a final optimization report  
+
+---------------------------------------------------------
+### 📝 IMPORTANT RULES:
+- Do not break functionality  
+- Do not remove essential layouts  
+- Only improve structure, SEO, speed, and accessibility  
+- Modify content only if required by SEO  
+- Keep all code clean and documented  
+
+---------------------------------------------------------
+
+Start now.  
+Spin up a localhost build, run Lighthouse automatically, gather issues, and begin fixing every finding.
