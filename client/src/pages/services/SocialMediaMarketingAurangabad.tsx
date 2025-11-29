@@ -28,8 +28,8 @@ export default function SocialMediaMarketingAurangabad() {
   return (
     <>
       <SEO 
-        title="Social Media Marketing in Aurangabad | KSoft Solution"
-        description="Expert social media marketing services in Aurangabad. Instagram, Facebook, and LinkedIn growth strategies."
+        title="Social Media Marketing in Aurangabad | Instagram & Facebook Ads"
+        description="Don't just post. Sell. We create high-ROI social media campaigns for businesses in Aurangabad to drive real leads and sales."
         canonical="/services/social-media-marketing-aurangabad"
         ogImage={heroImg}
         schema={schemaData}
@@ -55,7 +55,7 @@ export default function SocialMediaMarketingAurangabad() {
               Social Media Marketing in <span className="text-gradient-primary">Aurangabad</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Engage your audience on Instagram, Facebook, and LinkedIn. KSoft Solution creates viral content and targeted ad campaigns tailored for the Aurangabad audience.
+              Your customers in Aurangabad are on Instagram and Facebook right now. Are you? We create engaging content and targeted ads that turn scrollers into buyers.
             </p>
             <div className="flex gap-4">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">

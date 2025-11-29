@@ -27,11 +27,11 @@ export default function About() {
               </span>
               
               <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6 leading-tight">
-                We Build <span className="text-gradient-primary">Growth Engines</span>, Not Just Websites.
+                Your Business Deserves <span className="text-gradient-primary">More Than Just Code</span>.
               </h2>
               
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Most agencies treat web design and marketing as separate things. That's a mistake. A beautiful site that nobody finds is useless. A top-ranking site that looks outdated is even worse.
+                At KSoft Solution, we don't just "build websites"—we build your 24/7 top-performing salesperson. Based in Aurangabad and serving clients globally, we bridge the gap between stunning design and serious revenue. While others count hours, we count your ROI. We’re a team of obsessive tech-heads who treat your business like our own.
               </p>
 
               <div className="space-y-6 mb-10">
@@ -40,8 +40,8 @@ export default function About() {
                     <Code2 className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-foreground mb-1">Technical Excellence</h3>
-                    <p className="text-muted-foreground">Built on React & Next.js for sub-second load times. No bloated templates.</p>
+                    <h3 className="text-lg font-bold text-foreground mb-1">Built for Speed & Scale</h3>
+                    <p className="text-muted-foreground">We use modern stacks like React & Next.js to ensure your site loads instantly—keeping Google and your customers happy.</p>
                   </div>
                 </div>
                 
@@ -50,8 +50,8 @@ export default function About() {
                     <LineChart className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-foreground mb-1">SEO First, Not Last</h3>
-                    <p className="text-muted-foreground">We don't "add" SEO later. We engineer it into the architecture from Day 1.</p>
+                    <h3 className="text-lg font-bold text-foreground mb-1">Dominate Search Results</h3>
+                    <p className="text-muted-foreground">We don't just "add" SEO later. We engineer it into the DNA of your site, helping you rank for the keywords that actually bring cash.</p>
                   </div>
                 </div>
 
@@ -60,8 +60,8 @@ export default function About() {
                     <Zap className="w-6 h-6 text-purple-500" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-foreground mb-1">Conversion Focused</h3>
-                    <p className="text-muted-foreground">Every pixel is placed with one goal: turning visitors into paying customers.</p>
+                    <h3 className="text-lg font-bold text-foreground mb-1">Obsessed with Conversion</h3>
+                    <p className="text-muted-foreground">Traffic is vanity; sales are sanity. Every pixel we place is designed to turn a casual visitor into a paying loyalist.</p>
                   </div>
                 </div>
               </div>

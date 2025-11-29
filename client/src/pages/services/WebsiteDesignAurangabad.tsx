@@ -65,8 +65,8 @@ export default function WebsiteDesignAurangabad() {
   return (
     <>
       <SEO 
-        title="Website Design Services in Aurangabad | KSoft Solution"
-        description="Premium website design services in Aurangabad (Chhatrapati Sambhaji Nagar). We build fast, responsive, and SEO-optimized websites."
+        title="Website Design in Aurangabad That Actually Gets You Customers"
+        description="Stop relying on Justdial leads. We build high-performance, SEO-ready websites for businesses in Chhatrapati Sambhaji Nagar (Aurangabad) that rank #1."
         canonical="/services/website-design-aurangabad"
         ogImage={heroImg}
         schema={[schemaData, faqSchema]}
@@ -89,15 +89,13 @@ export default function WebsiteDesignAurangabad() {
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6">
                 <Star className="w-4 h-4 fill-primary" />
-                Top Rated Web Designers in Aurangabad
+                #1 Rated in Sambhaji Nagar
               </div>
               <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6 leading-tight">
-                Website Design Services in <span className="text-gradient-primary">Aurangabad</span>
+                Website Design in <span className="text-gradient-primary">Aurangabad</span> That Sells.
               </h1>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Get a high-performance, SEO-ready website that converts visitors into customers. 
-                We are Aurangabad's leading web design agency with 5+ years of experience delivering 
-                digital excellence to local businesses.
+                Still running your business on WhatsApp and Justdial? It's time to own your digital presence. We build professional, Google-ranking websites for Aurangabad businesses that turn "clicks" into "calls."
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground h-12 px-8">
@@ -105,7 +103,7 @@ export default function WebsiteDesignAurangabad() {
                 </Button>
                 <Link href="/#contact">
                   <Button size="lg" variant="outline" className="border-primary/20 hover:bg-primary/10 h-12 px-8">
-                    Call: +91 123 456 7890
+                    Call: +91 91234 56789
                   </Button>
                 </Link>
               </div>
@@ -130,31 +128,28 @@ export default function WebsiteDesignAurangabad() {
           <div className="bg-secondary/30 border border-white/5 rounded-2xl p-8 mb-20 max-w-4xl mx-auto">
             <h2 className="text-xl font-bold mb-3 flex items-center gap-2">
               <Monitor className="w-5 h-5 text-primary" />
-              Why We Are The Best Choice
+              Why Local Businesses Trust Us
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              KSoft Solution is a premier web design agency serving Chhatrapati Sambhaji Nagar (Aurangabad). 
-              We specialize in building custom, fast-loading, and Google-optimized websites for small businesses, 
-              startups, and enterprises. Unlike freelancers, we offer dedicated support, enterprise-grade security, 
-              and a proven track record of ranking local businesses on page 1 of Google. Our team combines 
-              creative UI/UX design with robust technical SEO to ensure your website generates real leads.
+              KSoft Solution is not a faceless agency. We are your neighbors in Chhatrapati Sambhaji Nagar (Aurangabad). 
+              We understand the local market—from <strong>Waluj MIDC manufacturers</strong> to <strong>CIDCO retailers</strong>. 
+              We don't just give you a website; we give you a business asset that works 24/7 to bring you new customers from Google Maps and Search.
             </p>
           </div>
 
           {/* 3. Problem -> Solution Section */}
           <div className="grid md:grid-cols-2 gap-12 mb-20 items-center">
             <div>
-              <h2 className="text-3xl font-heading font-bold mb-6">Stop Losing Customers to Outdated Websites</h2>
+              <h2 className="text-3xl font-heading font-bold mb-6">Is Your Competitor Stealing Your Customers?</h2>
               <div className="space-y-6">
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-lg bg-destructive/10 flex items-center justify-center flex-shrink-0">
                     <span className="text-destructive font-bold text-xl">!</span>
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">The Problem</h3>
+                    <h3 className="font-bold text-lg mb-1">The Reality</h3>
                     <p className="text-muted-foreground">
-                      Most local business websites in Aurangabad are slow, not mobile-friendly, and invisible on Google. 
-                      This drives potential customers straight to your competitors.
+                      If someone searches for "best [your service] in Aurangabad" and you aren't on the first page, you don't exist. 93% of local buying decisions start with a Google search.
                     </p>
                   </div>
                 </div>
@@ -163,10 +158,9 @@ export default function WebsiteDesignAurangabad() {
                     <CheckCircle2 className="text-green-500 w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">The KSoft Solution</h3>
+                    <h3 className="font-bold text-lg mb-1">Our Fix</h3>
                     <p className="text-muted-foreground">
-                      We build modern, lightning-fast websites that look great on every device. Our SEO-first approach 
-                      ensures you get found by customers searching for your services in Aurangabad.
+                      We build websites that are <strong>SEO-native</strong>. This means Google loves your site structure, your speed, and your content, pushing you up the rankings automatically.
                     </p>
                   </div>
                 </div>

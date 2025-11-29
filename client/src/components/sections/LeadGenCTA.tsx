@@ -11,18 +11,18 @@ export default function LeadGenCTA() {
           <div className="text-center md:text-left max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
               <Sparkles className="w-4 h-4" />
-              <span>Customized for You</span>
+              <span>No Fluff. Just Results.</span>
             </div>
-            <h2 className="text-3xl font-heading font-bold mb-4">Tailored Solutions, Transparent Pricing</h2>
+            <h2 className="text-3xl font-heading font-bold mb-4">Ready to Dominate Your Niche?</h2>
             <p className="text-muted-foreground text-lg">
-              We don't believe in one-size-fits-all. Your business is unique, and your solution should be too. 
-              Let's discuss your goals and create a plan that maximizes your ROI.
+              Your competitors are already moving fast. Don't get left behind with an outdated site. 
+              Let's build a custom strategy that puts you miles ahead and maximizes your ROI.
             </p>
           </div>
           <div className="flex-shrink-0">
             <Link href="/contact">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground h-14 px-8 text-lg shadow-lg shadow-primary/20">
-                Get a Custom Quote
+                Book Your Free Call
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>

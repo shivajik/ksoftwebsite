@@ -60,8 +60,8 @@ export default function WebDevelopment() {
   return (
     <>
       <SEO 
-        title="Custom Web Development Services | KSoft Solution"
-        description="Premium web development using React & Next.js. We build fast, scalable, and SEO-optimized websites and web applications."
+        title="Enterprise-Grade Web Development That Scales | KSoft Solution"
+        description="Stop losing customers to slow websites. We build high-performance, custom web apps using React & Next.js that rank high and convert fast."
         canonical="/services/web-development"
         ogImage={webDevImg}
         schema={[schemaData, faqSchema]}
@@ -84,22 +84,21 @@ export default function WebDevelopment() {
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6">
                 <Star className="w-4 h-4 fill-primary" />
-                Professional Web Development
+                Engineering Excellence
               </div>
               <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6 leading-tight">
-                Modern <span className="text-gradient-primary">Web Solutions</span>
+                Websites That Work <span className="text-gradient-primary">Harder Than Your Sales Team</span>
               </h1>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                We build fast, secure, and scalable websites using modern technologies like React and Next.js. 
-                Our focus is on creating sites that look great and perform well for your users.
+                Your website is often the first (and only) impression you make. We don't just write code; we engineer digital assets that load instantly, rank automatically, and close deals while you sleep.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground h-12 px-8">
-                  Start Project
+                  Build My Platform
                 </Button>
                 <Link href="/#contact">
                   <Button size="lg" variant="outline" className="border-primary/20 hover:bg-primary/10 h-12 px-8">
-                    View Portfolio
+                    See Our Code
                   </Button>
                 </Link>
               </div>
@@ -114,7 +113,7 @@ export default function WebDevelopment() {
               <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full -z-10"></div>
               <img 
                 src={webDevImg} 
-                alt="Web Development Architecture" 
+                alt="High Performance Web Architecture" 
                 className="rounded-2xl border border-white/10 shadow-2xl w-full"
               />
             </motion.div>
@@ -124,29 +123,27 @@ export default function WebDevelopment() {
           <div className="bg-secondary/30 border border-white/5 rounded-2xl p-8 mb-20 max-w-4xl mx-auto">
             <h2 className="text-xl font-bold mb-3 flex items-center gap-2">
               <Monitor className="w-5 h-5 text-primary" />
-              Why Choose Our Web Development Services?
+              Why "Custom" Matters
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              KSoft Solution provides industry-leading web development services focused on performance, scalability, and security. 
-              Unlike traditional agencies using outdated templates, we engineer custom digital experiences using React, Next.js, and 
-              cloud-native architectures. Our solutions are designed for businesses that demand high availability, fast load times, 
-              and seamless user experiences across all devices.
+              Templates are great for hobbyists, but businesses die on generic designs. KSoft Solution builds custom architectures because your business logic is unique. 
+              We use <strong>React, Next.js, and Node.js</strong>—the same stack used by Netflix and Uber—to ensure your site can handle 10 visitors or 10 million without breaking a sweat.
             </p>
           </div>
 
           {/* 3. Problem -> Solution Section */}
           <div className="grid md:grid-cols-2 gap-12 mb-20 items-center">
             <div>
-              <h2 className="text-3xl font-heading font-bold mb-6">Is Your Website Holding You Back?</h2>
+              <h2 className="text-3xl font-heading font-bold mb-6">Is Your Current Site Bleeding Money?</h2>
               <div className="space-y-6">
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-lg bg-destructive/10 flex items-center justify-center flex-shrink-0">
                     <span className="text-destructive font-bold text-xl">!</span>
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">The Bottleneck</h3>
+                    <h3 className="font-bold text-lg mb-1">The Hidden Cost of Slow</h3>
                     <p className="text-muted-foreground">
-                      Slow loading times, poor mobile responsiveness, and spaghetti code can kill your conversions and search rankings.
+                      Amazon found that every 100ms of latency cost them 1% in sales. If your site takes 3 seconds to load, half your customers are gone before they see your logo.
                     </p>
                   </div>
                 </div>
@@ -155,9 +152,9 @@ export default function WebDevelopment() {
                     <CheckCircle2 className="text-green-500 w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">The Architecture</h3>
+                    <h3 className="font-bold text-lg mb-1">The Speed Advantage</h3>
                     <p className="text-muted-foreground">
-                      We deliver clean, modular, and efficient codebases that scale with your business, ensuring 99.9% uptime and sub-second interactions.
+                      We build "Static-First" applications. By pre-rendering pages at build time, we deliver content instantly. Google loves speed, and so do your users.
                     </p>
                   </div>
                 </div>

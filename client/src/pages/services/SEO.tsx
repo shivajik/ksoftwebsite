@@ -59,8 +59,8 @@ export default function SEO() {
   return (
     <>
       <SEOHead 
-        title="SEO & GEO Services | KSoft Solution"
-        description="Advanced SEO and Generative Engine Optimization (GEO) services to rank on Google and AI platforms like ChatGPT and Perplexity."
+        title="SEO & AI Search Optimization (GEO) | Dominate Google & ChatGPT"
+        description="Don't let AI search kill your traffic. We help you rank #1 on Google AND appear in ChatGPT answers. Future-proof your SEO strategy today."
         canonical="/services/seo"
         ogImage={seoImg}
         schema={[schemaData, faqSchema]}
@@ -82,22 +82,22 @@ export default function SEO() {
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6">
                 <TrendingUp className="w-4 h-4" />
-                Future-Proof Search Strategy
+                Beyond Just Keywords
               </div>
               <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">
-                Dominate <span className="text-gradient-primary">Search Results</span>
+                Don't Just Rank on Google. <br />
+                <span className="text-gradient-primary">Own the AI Answers.</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                We don't just optimize for Google. We optimize for the future of search: 
-                AI Overviews (SGE), ChatGPT, and Perplexity.
+                The search game has changed. If you aren't optimized for ChatGPT, Perplexity, and Google's AI Overviews (SGE), you're invisible. We fix that.
               </p>
               <div className="flex justify-center gap-4 mb-12">
                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground h-12 px-8">
-                  Get Free Audit
+                  Audit My Presence
                 </Button>
                 <Link href="/#contact">
                   <Button size="lg" variant="outline" className="border-primary/20 hover:bg-primary/10 h-12 px-8">
-                    View Case Studies
+                    See Case Studies
                   </Button>
                 </Link>
               </div>
@@ -113,28 +113,27 @@ export default function SEO() {
           <div className="bg-secondary/30 border border-white/5 rounded-2xl p-8 mb-20 max-w-4xl mx-auto">
             <h2 className="text-xl font-bold mb-3 flex items-center gap-2">
               <Search className="w-5 h-5 text-primary" />
-              SEO for the AI Era
+              SEO is Dead. Long Live GEO.
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              KSoft Solution provides next-generation SEO services that go beyond keywords. We focus on Semantic SEO, 
-              Technical Health, and Authority Building to ensure your brand dominates both traditional search engines (Google, Bing) 
-              and emerging AI answer engines. By optimizing for user intent and structural data, we future-proof your organic traffic.
+              Old-school SEO was about tricking an algorithm. <strong>Modern SEO (GEO) is about teaching an AI.</strong> KSoft Solution specializes in "Generative Engine Optimization." 
+              We structure your data so clearly that AI models like Gemini and GPT-4 cite <em>you</em> as the expert source, driving high-intent traffic that others miss.
             </p>
           </div>
 
           {/* 3. Problem -> Solution */}
           <div className="grid md:grid-cols-2 gap-12 mb-20 items-center">
             <div>
-              <h2 className="text-3xl font-heading font-bold mb-6">Old SEO Tactics Are Dead</h2>
+              <h2 className="text-3xl font-heading font-bold mb-6">Why Your Traffic Is Dropping</h2>
               <div className="space-y-6">
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-lg bg-destructive/10 flex items-center justify-center flex-shrink-0">
                     <span className="text-destructive font-bold text-xl">!</span>
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">The Shift</h3>
+                    <h3 className="font-bold text-lg mb-1">The "Zero-Click" Danger</h3>
                     <p className="text-muted-foreground">
-                      Keyword stuffing and spammy backlinks no longer work. AI Search (SGE) is pushing organic results further down the page.
+                      Google's new AI summaries push your website halfway down the page. Users are getting answers without clicking.
                     </p>
                   </div>
                 </div>
@@ -143,9 +142,9 @@ export default function SEO() {
                     <Globe className="text-purple-500 w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">The New Strategy</h3>
+                    <h3 className="font-bold text-lg mb-1">The Authority Fix</h3>
                     <p className="text-muted-foreground">
-                      We focus on E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) and structured data to make your content the primary source for AI answers.
+                      We focus on <strong>E-E-A-T (Experience, Expertise, Authority, Trust)</strong>. By proving you are a real entity with real experts, we force search engines to value your content over AI-generated fluff.
                     </p>
                   </div>
                 </div>

@@ -28,8 +28,8 @@ export default function LocalSEOAurangabad() {
   return (
     <>
       <SEO 
-        title="Local SEO Services in Aurangabad | KSoft Solution"
-        description="Dominate local search results in Aurangabad (Chhatrapati Sambhaji Nagar). Expert Local SEO services to rank on Google Maps."
+        title="Rank #1 in Aurangabad (Chh. Sambhaji Nagar) | Local SEO Experts"
+        description="If you aren't in the Google Map Pack, you're losing money. We help Aurangabad businesses dominate local search results and get more calls."
         canonical="/services/local-seo-aurangabad"
         ogImage={heroImg}
         schema={schemaData}
@@ -52,14 +52,14 @@ export default function LocalSEOAurangabad() {
               #1 Local SEO Agency
             </div>
             <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6 leading-tight">
-              Local SEO Services in <span className="text-gradient-primary">Aurangabad</span>
+              Rank #1 in <span className="text-gradient-primary">Aurangabad</span> (Chh. Sambhaji Nagar)
             </h1>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Dominate local search results in Chhatrapati Sambhaji Nagar. We help your business appear on Google Maps and top search results when customers look for services near them.
+              When a customer in Aurangabad searches for your service, do they find you or your competitor? We specialize in getting local businesses into the <strong>"Google Map Pack"</strong>—where 80% of clicks happen.
             </p>
             <div className="flex gap-4">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                Audit My Site
+                Audit My Rankings
               </Button>
               <Link href="/#contact">
                 <Button size="lg" variant="outline" className="border-primary/20 hover:bg-primary/10">
@@ -88,18 +88,18 @@ export default function LocalSEOAurangabad() {
           {[
             {
               icon: <MapPin className="w-8 h-8 text-red-500" />,
-              title: "Google Business Profile",
-              desc: "Complete optimization of your GMB profile to rank in the 'Map Pack'."
+              title: "Google Map Pack",
+              desc: "We optimize your Google Business Profile to ensure you show up in the top 3 map results for local searches."
             },
             {
               icon: <Search className="w-8 h-8 text-blue-500" />,
               title: "Local Keywords",
-              desc: "Targeting terms like 'Best [Service] in Aurangabad' to capture high-intent traffic."
+              desc: "We target high-intent terms like 'near me' and 'in Aurangabad' that drive immediate phone calls."
             },
             {
               icon: <TrendingUp className="w-8 h-8 text-green-500" />,
-              title: "Review Management",
-              desc: "Strategies to generate more 5-star reviews and build local trust."
+              title: "Reputation Management",
+              desc: "We help you get more 5-star reviews from real customers, building trust before they even call you."
             }
           ].map((feature, i) => (
             <motion.div

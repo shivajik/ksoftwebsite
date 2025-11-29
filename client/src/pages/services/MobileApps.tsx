@@ -59,8 +59,8 @@ export default function MobileApps() {
   return (
     <>
       <SEO 
-        title="Mobile App Development Services | KSoft Solution"
-        description="Custom iOS and Android mobile app development using React Native and Flutter. High-performance, secure, and scalable apps."
+        title="Native-Quality Mobile Apps (iOS & Android) | React Native Experts"
+        description="Get a high-performance mobile app without paying for two separate teams. We build beautiful cross-platform apps using React Native and Flutter."
         canonical="/services/mobile-apps"
         ogImage={heroImg}
         schema={[schemaData, faqSchema]}
@@ -86,19 +86,18 @@ export default function MobileApps() {
                 iOS & Android Solutions
               </div>
               <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6 leading-tight">
-                Mobile App <span className="text-gradient-primary">Development</span>
+                Your Business, In Their Pocket. <span className="text-gradient-primary">24/7.</span>
               </h1>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                We build high-performance, native and cross-platform mobile applications. 
-                From concept to launch, we ensure your app provides a seamless user experience on every device.
+                Websites are great, but an app gives you a permanent home on your customer's most personal device. Push notifications, offline access, and instant engagement—just a tap away.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground h-12 px-8">
-                  Start Your App
+                  Build My App
                 </Button>
                 <Link href="/#contact">
                   <Button size="lg" variant="outline" className="border-primary/20 hover:bg-primary/10 h-12 px-8">
-                    View Portfolio
+                    See App Portfolio
                   </Button>
                 </Link>
               </div>
@@ -123,29 +122,27 @@ export default function MobileApps() {
           <div className="bg-blue-500/5 border border-blue-500/10 rounded-2xl p-8 mb-20 max-w-4xl mx-auto">
             <h2 className="text-xl font-bold mb-3 flex items-center gap-2 text-blue-400">
               <Tablet className="w-5 h-5" />
-              Expert Mobile Engineering
+              One Codebase, Two Platforms
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              KSoft Solution is a leading mobile app development agency delivering robust iOS and Android applications. 
-              We use modern cross-platform technologies like React Native and Flutter to reduce development time and cost 
-              while maintaining native-like performance. Our apps are secure, scalable, and designed to provide engaging 
-              user experiences that drive retention and growth.
+              In the past, you needed two separate teams to build for iPhone and Android. Not anymore. KSoft Solution uses <strong>React Native and Flutter</strong> to write code once and deploy everywhere. 
+              You get native performance (60fps smooth animations) and full device access (Camera, GPS) at half the development cost.
             </p>
           </div>
 
           {/* 3. Problem -> Solution */}
            <div className="grid md:grid-cols-2 gap-12 mb-20 items-center">
              <div>
-              <h2 className="text-3xl font-heading font-bold mb-6">Most Apps Fail. Yours Won't.</h2>
+              <h2 className="text-3xl font-heading font-bold mb-6">Why Mobile Web Isn't Enough</h2>
               <div className="space-y-6">
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-lg bg-destructive/10 flex items-center justify-center flex-shrink-0">
                     <span className="text-destructive font-bold text-xl">!</span>
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">The Issue</h3>
+                    <h3 className="font-bold text-lg mb-1">The Engagement Gap</h3>
                     <p className="text-muted-foreground">
-                      Users abandon apps that are slow, buggy, or hard to use. A poor mobile experience damages your brand reputation.
+                      Mobile web users are fickle. They close tabs. They forget URLs. They can't be reached once they leave your site.
                     </p>
                   </div>
                 </div>
@@ -154,9 +151,9 @@ export default function MobileApps() {
                     <CheckCircle2 className="text-blue-500 w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">Our Approach</h3>
+                    <h3 className="font-bold text-lg mb-1">The App Advantage</h3>
                     <p className="text-muted-foreground">
-                      We prioritize performance and UX testing at every stage. Our apps are built to be intuitive, fast, and crash-free.
+                      With an app, you are on their home screen. You can send a Push Notification about a sale and get instant traffic. Retention rates on apps are 3x higher than mobile web.
                     </p>
                   </div>
                 </div>

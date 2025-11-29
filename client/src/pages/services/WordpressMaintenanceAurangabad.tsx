@@ -28,8 +28,8 @@ export default function WordpressMaintenanceAurangabad() {
   return (
     <>
       <SEO 
-        title="WordPress Maintenance Services in Aurangabad | KSoft Solution"
-        description="Keep your WordPress site secure and fast. Professional maintenance and support services in Chhatrapati Sambhaji Nagar."
+        title="WordPress Maintenance & Security in Aurangabad | We Fix Hacked Sites"
+        description="Don't let your site crash or get hacked. We provide local, reliable WordPress maintenance and security support in Chhatrapati Sambhaji Nagar."
         canonical="/services/wordpress-maintenance-aurangabad"
         ogImage={heroImg}
         schema={schemaData}
@@ -52,14 +52,14 @@ export default function WordpressMaintenanceAurangabad() {
               Secure & Fast
             </div>
             <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6 leading-tight">
-              WordPress Maintenance Services in <span className="text-gradient-primary">Aurangabad</span>
+              WordPress Maintenance in <span className="text-gradient-primary">Aurangabad</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Keep your WordPress site secure, fast, and updated. KSoft Solution offers reliable maintenance packages for businesses in Chhatrapati Sambhaji Nagar.
+              Is your WordPress site slow, broken, or infected with malware? Stop worrying about technical headaches. We are Aurangabad's local experts in fixing and maintaining WordPress sites so you can focus on your business.
             </p>
             <div className="flex gap-4">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                Check Plans
+                Fix My Site
               </Button>
               <Link href="/#contact">
                 <Button size="lg" variant="outline" className="border-primary/20 hover:bg-primary/10">

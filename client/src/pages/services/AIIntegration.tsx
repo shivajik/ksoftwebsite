@@ -59,8 +59,8 @@ export default function AIIntegration() {
   return (
     <>
       <SEO 
-        title="AI Integration & Automation Services | KSoft Solution"
-        description="Custom AI solutions, LLM integration, chatbots, and workflow automation services for businesses. Automate your future."
+        title="Custom AI Agents & Business Automation | KSoft Solution"
+        description="Automate your busywork. We build custom AI agents, RAG chatbots, and workflow automations that save you 20+ hours a week."
         canonical="/services/ai-integration"
         ogImage={aiImg}
         schema={[schemaData, faqSchema]}
@@ -83,22 +83,21 @@ export default function AIIntegration() {
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-accent/30 bg-accent/10 text-accent font-medium text-sm mb-6">
                 <Sparkles className="w-4 h-4" />
-                AI-Powered Future
+                Work Smarter, Not Harder
               </div>
               <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6 leading-tight">
-                Intelligent <span className="text-gradient-primary">Automation Systems</span>
+                Clone Your Best Employees with <span className="text-gradient-primary">AI Agents</span>
               </h1>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Integrate cutting-edge LLMs (GPT-4, Claude, Gemini) into your business workflows. 
-                We build custom AI agents, chatbots, and predictive analytics engines that reduce costs and boost efficiency.
+                Imagine a support rep that never sleeps, a sales agent that instantly recalls every product detail, and a data analyst that works for pennies. That's what we build.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground h-12 px-8">
-                  Consult AI Expert
+                  Automate My Business
                 </Button>
                 <Link href="/#contact">
                   <Button size="lg" variant="outline" className="border-primary/20 hover:bg-primary/10 h-12 px-8">
-                    View Use Cases
+                    See Demos
                   </Button>
                 </Link>
               </div>
@@ -123,29 +122,27 @@ export default function AIIntegration() {
           <div className="bg-accent/5 border border-accent/10 rounded-2xl p-8 mb-20 max-w-4xl mx-auto">
             <h2 className="text-xl font-bold mb-3 flex items-center gap-2 text-accent">
               <BrainCircuit className="w-5 h-5" />
-              Enterprise AI Solutions
+              It's Not Magic. It's Engineering.
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              KSoft Solution specializes in bridging the gap between advanced AI research and practical business applications. 
-              We offer end-to-end AI integration services, from custom chatbot development using RAG (Retrieval-Augmented Generation) 
-              to autonomous agents that handle complex workflows. We help businesses automate customer support, generate content at scale, 
-              and extract insights from unstructured data securely.
+              There's a lot of hype around AI. We cut through it. We don't just "use ChatGPT"—we integrate <strong>enterprise-grade LLMs</strong> directly into your database. 
+              This means your AI knows your inventory, your customer history, and your brand voice perfectly. No hallucinations, just pure productivity.
             </p>
           </div>
 
           {/* 3. Problem -> Solution */}
           <div className="grid md:grid-cols-2 gap-12 mb-20 items-center">
              <div>
-              <h2 className="text-3xl font-heading font-bold mb-6">Manual Workflows Are Scaling Bottlenecks</h2>
+              <h2 className="text-3xl font-heading font-bold mb-6">The "Human Bottleneck"</h2>
               <div className="space-y-6">
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-lg bg-destructive/10 flex items-center justify-center flex-shrink-0">
                     <span className="text-destructive font-bold text-xl">!</span>
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">The Challenge</h3>
+                    <h3 className="font-bold text-lg mb-1">The Problem</h3>
                     <p className="text-muted-foreground">
-                      Your team spends hours on repetitive data entry, customer queries, and manual analysis, preventing focus on strategic growth.
+                      Your team is burning out answering the same 5 questions, copying data between spreadsheets, and chasing leads that aren't qualified.
                     </p>
                   </div>
                 </div>
@@ -154,9 +151,9 @@ export default function AIIntegration() {
                     <Bot className="text-accent w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">The AI Advantage</h3>
+                    <h3 className="font-bold text-lg mb-1">The Fix</h3>
                     <p className="text-muted-foreground">
-                      We deploy intelligent agents that work 24/7, handling routine tasks with human-like understanding but machine-like speed and accuracy.
+                      We deploy "AI Agents"—specialized software bots that handle specific tasks (like qualifying leads or drafting emails) autonomously. They work 24/7 and cost a fraction of a salary.
                     </p>
                   </div>
                 </div>

@@ -59,8 +59,8 @@ export default function DigitalMarketing() {
   return (
     <>
       <SEO 
-        title="Digital Marketing Services | KSoft Solution"
-        description="Data-driven digital marketing strategies including PPC, Social Media, and Email Marketing to grow your business."
+        title="Performance Digital Marketing & PPC Agency | ROI Focused"
+        description="Stop burning cash on ads that don't convert. We specialize in high-ROI PPC, Social Media, and Email campaigns that actually bring in leads."
         canonical="/services/digital-marketing"
         ogImage={heroImg}
         schema={[schemaData, faqSchema]}
@@ -83,22 +83,21 @@ export default function DigitalMarketing() {
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-green-500/30 bg-green-500/10 text-green-400 font-medium text-sm mb-6">
                 <TrendingUp className="w-4 h-4" />
-                Growth Driven Marketing
+                Profit Over "Likes"
               </div>
               <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6 leading-tight">
-                Digital Marketing <span className="text-gradient-primary">Strategies</span>
+                Stop Burning Cash. <span className="text-gradient-primary">Start Printing Profit.</span>
               </h1>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                We create data-driven marketing campaigns that deliver real ROI. 
-                From social media to PPC, we help you reach your target audience and grow your business.
+                Most agencies celebrate "impressions" and "reach." We don't care about vanity metrics. We care about one thing: <strong>Customer Acquisition Cost (CAC) vs. Lifetime Value (LTV).</strong>
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground h-12 px-8">
-                  Grow Your Business
+                  Get a Profitable Campaign
                 </Button>
                 <Link href="/#contact">
                   <Button size="lg" variant="outline" className="border-primary/20 hover:bg-primary/10 h-12 px-8">
-                    Free Audit
+                    Free Ad Audit
                   </Button>
                 </Link>
               </div>
@@ -123,19 +122,18 @@ export default function DigitalMarketing() {
           <div className="bg-green-500/5 border border-green-500/10 rounded-2xl p-8 mb-20 max-w-4xl mx-auto">
             <h2 className="text-xl font-bold mb-3 flex items-center gap-2 text-green-400">
               <Target className="w-5 h-5" />
-              Performance Marketing Agency
+              We Hate Wasted Ad Spend
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              KSoft Solution is a results-oriented digital marketing agency. We specialize in paid advertising (PPC), social media management, 
-              and conversion rate optimization. Unlike generalist agencies, we focus purely on metrics that matter: leads, sales, and revenue. 
-              Our strategies are custom-tailored to your industry to ensure maximum market penetration and brand growth.
+              If you're running ads and crossing your fingers, you're gambling, not marketing. KSoft Solution is a <strong>Performance Marketing Agency</strong>. 
+              We use scientific A/B testing, precise audience segmentation, and retargeting funnels to squeeze every drop of revenue out of your budget.
             </p>
           </div>
 
           {/* 3. Problem -> Solution */}
            <div className="grid md:grid-cols-2 gap-12 mb-20 items-center">
              <div>
-              <h2 className="text-3xl font-heading font-bold mb-6">Stop Burning Ad Budget</h2>
+              <h2 className="text-3xl font-heading font-bold mb-6">The "Set It and Forget It" Trap</h2>
               <div className="space-y-6">
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-lg bg-destructive/10 flex items-center justify-center flex-shrink-0">
@@ -144,7 +142,7 @@ export default function DigitalMarketing() {
                   <div>
                     <h3 className="font-bold text-lg mb-1">The Leak</h3>
                     <p className="text-muted-foreground">
-                      Poorly targeted ads and unoptimized landing pages waste your marketing dollars without bringing in customers.
+                      Ad platforms change algorithms weekly. If you aren't tweaking your campaigns daily, you are paying a "laziness tax" to Google and Facebook.
                     </p>
                   </div>
                 </div>
@@ -155,7 +153,7 @@ export default function DigitalMarketing() {
                   <div>
                     <h3 className="font-bold text-lg mb-1">The Optimization</h3>
                     <p className="text-muted-foreground">
-                      We use precise audience targeting and A/B testing to constantly lower your cost-per-acquisition and increase profit.
+                      We are obsessive about data. We kill losing ads ruthlessly and scale winning ads aggressively. You get a weekly report that makes sense: "Spent $X, Made $Y."
                     </p>
                   </div>
                 </div>

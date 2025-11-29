@@ -7,37 +7,37 @@ const services = [
   {
     icon: <Code className="h-8 w-8 text-primary" />,
     title: "Web Development",
-    description: "Custom, high-performance websites built with modern frameworks like React and Next.js.",
+    description: "Custom, high-performance websites that act as your 24/7 sales team. Built on React & Next.js for blazing speed.",
     link: "/services/web-development"
   },
   {
     icon: <Search className="h-8 w-8 text-purple-400" />,
-    title: "SEO Optimization",
-    description: "Data-driven strategies to boost your visibility on Google and AI search engines.",
+    title: "SEO Dominance",
+    description: "Stop hiding on page 2. We use data-driven strategies to put your brand in front of customers searching right now.",
     link: "/services/seo"
   },
   {
     icon: <Cpu className="h-8 w-8 text-accent" />,
-    title: "AI Integration",
-    description: "Leverage the power of LLMs and AI to automate workflows and enhance user experience.",
+    title: "AI Automation",
+    description: "Work smarter, not harder. We integrate LLMs and AI agents to automate your busywork and supercharge customer support.",
     link: "/services/ai-integration"
   },
   {
     icon: <Smartphone className="h-8 w-8 text-blue-400" />,
     title: "Mobile Apps",
-    description: "Native and cross-platform mobile applications designed for engagement and performance.",
+    description: "Put your business in your customer's pocket. Native and cross-platform apps that users actually love to use.",
     link: "/services/mobile-apps"
   },
   {
     icon: <Palette className="h-8 w-8 text-pink-400" />,
     title: "UI/UX Design",
-    description: "Intuitive, aesthetic designs that prioritize user experience and conversion rates.",
+    description: "Design that sells. We create intuitive, stunning interfaces that guide your visitors seamlessly to the 'Buy' button.",
     link: "/services/ui-ux-design"
   },
   {
     icon: <Globe className="h-8 w-8 text-green-400" />,
     title: "Digital Marketing",
-    description: "Comprehensive digital strategies to grow your brand and reach your target audience.",
+    description: "Go beyond the like button. Comprehensive strategies to build your brand authority and fill your pipeline with leads.",
     link: "/services/digital-marketing"
   }
 ];
@@ -51,12 +51,12 @@ export default function Services() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <span className="text-accent font-medium tracking-wider uppercase text-sm mb-4 block">Our Capabilities</span>
+          <span className="text-accent font-medium tracking-wider uppercase text-sm mb-4 block">What We Do Best</span>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-            End-to-End <span className="text-gradient-primary">Digital Solutions</span>
+            End-to-End <span className="text-gradient-primary">Digital Dominance</span>
           </h2>
           <p className="text-muted-foreground text-xl">
-            We combine creativity with technical excellence to deliver products that stand out.
+            We don't dabble. We deliver. From code to content, we handle the hard stuff so you can focus on running your business.
           </p>
         </div>
 

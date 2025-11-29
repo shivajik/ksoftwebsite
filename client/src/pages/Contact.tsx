@@ -73,10 +73,10 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-              Get In Touch
+              Let's <span className="text-gradient-primary">Grow Your Business</span>
             </h1>
             <p className="text-muted-foreground text-xl">
-              Ready to start your next project? Contact us today for a free consultation.
+              Ready to rank #1 on Google? Visit our office in Chikalthana MIDC or drop us a message for a free consultation.
             </p>
           </div>
 

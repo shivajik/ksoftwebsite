@@ -59,8 +59,8 @@ export default function UiUxDesign() {
   return (
     <>
       <SEO 
-        title="UI/UX Design Services | KSoft Solution"
-        description="User-centric UI/UX design services. Wireframing, prototyping, and visual design for websites and mobile apps."
+        title="UI/UX Design That Converts Visitors into Buyers | KSoft Solution"
+        description="Stop losing customers to ugly design. We create beautiful, intuitive interfaces that guide users effortlessly to the 'Buy' button."
         canonical="/services/ui-ux-design"
         ogImage={heroImg}
         schema={[schemaData, faqSchema]}
@@ -83,21 +83,21 @@ export default function UiUxDesign() {
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-pink-500/30 bg-pink-500/10 text-pink-400 font-medium text-sm mb-6">
                 <Palette className="w-4 h-4" />
-                Design That Converts
+                Design That Sells
               </div>
               <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6 leading-tight">
-                UI/UX Design <span className="text-gradient-primary">Solutions</span>
+                Stop Losing Customers to <span className="text-gradient-primary">Confusing Design</span>
               </h1>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                We design intuitive, beautiful interfaces that users love. Our user-centric approach ensures your digital product is not just pretty, but functional and profitable.
+                You have about 0.05 seconds to make a first impression. If your site looks outdated or is hard to navigate, your competitor just got a new customer. We make sure that doesn't happen.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground h-12 px-8">
-                  Start Designing
+                  Redesign My Site
                 </Button>
                 <Link href="/#contact">
                   <Button size="lg" variant="outline" className="border-primary/20 hover:bg-primary/10 h-12 px-8">
-                    See Our Work
+                    View Design Portfolio
                   </Button>
                 </Link>
               </div>
@@ -122,19 +122,18 @@ export default function UiUxDesign() {
           <div className="bg-pink-500/5 border border-pink-500/10 rounded-2xl p-8 mb-20 max-w-4xl mx-auto">
             <h2 className="text-xl font-bold mb-3 flex items-center gap-2 text-pink-400">
               <Eye className="w-5 h-5" />
-              Human-Centered Design
+              Pretty Is Not Enough
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              KSoft Solution is a creative UI/UX design agency that blends aesthetics with usability. We don't just make things look good; 
-              we make them work. Our process involves deep user research, wireframing, and interactive prototyping to validate ideas before 
-              writing a single line of code. We help startups and enterprises create digital products that engage users and drive conversions.
+              Too many designers focus on making things "look cool" at the expense of usability. We practice <strong>Conversion-Led Design</strong>. 
+              Every button color, every layout choice, and every animation is deliberately placed to guide the user toward one specific action: becoming a customer.
             </p>
           </div>
 
           {/* 3. Problem -> Solution */}
            <div className="grid md:grid-cols-2 gap-12 mb-20 items-center">
              <div>
-              <h2 className="text-3xl font-heading font-bold mb-6">Bad Design Costs You Money</h2>
+              <h2 className="text-3xl font-heading font-bold mb-6">The "Bounce Rate" Problem</h2>
               <div className="space-y-6">
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-lg bg-destructive/10 flex items-center justify-center flex-shrink-0">
@@ -143,7 +142,7 @@ export default function UiUxDesign() {
                   <div>
                     <h3 className="font-bold text-lg mb-1">The Friction</h3>
                     <p className="text-muted-foreground">
-                      Confusing navigation and cluttered layouts frustrate users, causing high bounce rates and lost sales.
+                      If a user can't find what they need in 3 clicks, they leave. Cluttered menus and "mystery navigation" kill conversions instantly.
                     </p>
                   </div>
                 </div>
@@ -152,9 +151,9 @@ export default function UiUxDesign() {
                     <CheckCircle2 className="text-pink-500 w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">The Fix</h3>
+                    <h3 className="font-bold text-lg mb-1">The Frictionless Flow</h3>
                     <p className="text-muted-foreground">
-                      We create frictionless user journeys that guide visitors seamlessly toward your goals, increasing satisfaction and revenue.
+                      We build "Golden Paths"—intuitive journeys that feel effortless. We remove distractions and highlight the value, making the decision to buy feel natural.
                     </p>
                   </div>
                 </div>

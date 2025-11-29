@@ -32,21 +32,21 @@ export default function Hero() {
           </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-foreground mb-8 leading-[1.1] tracking-tight">
-            Expert Web Dev & <br />
-            <span className="text-gradient-primary">SEO Strategies</span>
+            We Build Digital <br />
+            <span className="text-gradient-primary">Growth Engines</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed font-light">
-            We build lightning-fast, custom websites and ensure they rank at the top of Google. Transform your digital presence with KSoft Solution.
+            Stop settling for "just a website." We engineer high-performance platforms that rank #1 on Google, capture leads, and automate your sales—powered by AI and human expertise.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white h-14 px-10 text-lg rounded-full shadow-[0_0_20px_-5px_var(--primary)] hover:shadow-[0_0_30px_-5px_var(--primary)] transition-all duration-300">
-              Start Transformation
+              Get Your Free Strategy
             </Button>
             <Link href="/services/web-development">
               <Button size="lg" variant="outline" className="h-14 px-10 text-lg rounded-full border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all group">
-                Explore Services
+                See Our Work
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>

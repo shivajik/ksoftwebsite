@@ -28,8 +28,8 @@ export default function CitationBuildingAurangabad() {
   return (
     <>
       <SEO 
-        title="Citation Building Services in Aurangabad | KSoft Solution"
-        description="Boost your local SEO with manual citation building. We list your business on top directories in Aurangabad."
+        title="Local Business Listings (Citations) | Get Found Everywhere in Aurangabad"
+        description="Boost your local SEO with manual citation building. We list your business on top directories in Aurangabad to verify your NAP."
         canonical="/services/citation-building-aurangabad"
         ogImage={heroImg}
         schema={schemaData}
@@ -52,10 +52,10 @@ export default function CitationBuildingAurangabad() {
               Build Local Authority
             </div>
             <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6 leading-tight">
-              Citation Building Services in <span className="text-gradient-primary">Aurangabad</span>
+              Get Listed on Every <span className="text-gradient-primary">Major Directory</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Establish your business presence across the web. We manually list your business on high-authority directories relevant to Aurangabad and Maharashtra to boost your SEO authority.
+              Google trusts businesses that are verifiable. We manually list your business details (Name, Address, Phone) on 50+ high-authority directories like Justdial, Sulekha, and IndiaMART to prove you are real and boost your SEO.
             </p>
             <div className="flex gap-4">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
