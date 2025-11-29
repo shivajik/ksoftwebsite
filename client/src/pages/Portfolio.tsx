@@ -12,6 +12,7 @@ import sujalImg from "@assets/Sujal-Industry_1764390251212.png";
 import sonamImg from "@assets/Sonam-Seeds_1764390378603.png";
 import varunImg from "@assets/Varun-seeds-Agrotech-India-Pvt-Ltd_1764390340802.png";
 import adinathImg from "@assets/Adinath-Crop-Science-–-Malegaon-Nashik-Maharashtra_1764390426033.png";
+import ditabadImg from "@assets/Dnyangana-Institute-of-Technology-–-Chatrapati-Sambhaji-Nagar_1764390805837.png";
 
 const projects = [
   {
@@ -69,6 +70,14 @@ const projects = [
     url: "https://adinathgrow.com/",
     image: adinathImg,
     tags: ["Sustainability", "Agriculture", "Growth"]
+  },
+  {
+    title: "DIT Aurangabad",
+    category: "Educational Institute",
+    description: "A Govt.-approved institute (DTE & MSBTE) established in 2008, delivering quality technical education in Fire Engineering and Industrial Safety.",
+    url: "https://ditabad.in/",
+    image: ditabadImg,
+    tags: ["Education", "Institutional", "Fire & Safety"]
   }
 ];
 
