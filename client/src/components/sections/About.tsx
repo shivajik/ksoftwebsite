@@ -22,16 +22,24 @@ export default function About() {
 
           <div className="w-full lg:w-1/2 order-1 lg:order-2">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
-              About Our Agency
+              Integrated Website Design & Digital Marketing Agency
             </h2>
-            <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-              Welcome to our dynamic agency, where innovative website design and strategic digital marketing converge. As a website design agency, we craft visually stunning and user-centric websites that engage and convert. Our digital marketing expertise complements this, driving targeted traffic and enhancing online visibility.
-            </p>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              KSoft Solution also has a unique structure of functioning which strives more for Quality and also timely communication with the client for hassle-free performance. Step into a world of creativity and strategy with our combined website design and digital marketing agency.
-            </p>
             
-            <ul className="space-y-4 mb-8">
+            <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+              <p className="font-medium text-foreground border-l-4 border-primary pl-4">
+                We develop simple, yet compact solutions. We aim to provide stable and high-quality products at optimal rates, empowering our technical expertise to provide outstanding services and deliver on-time high quality solutions.
+              </p>
+              
+              <p>
+                Welcome to our dynamic agency, where innovative <strong>website design</strong> and strategic <strong>digital marketing</strong> converge. As a website design agency, we craft visually stunning and user-centric websites that engage and convert. Our digital marketing expertise complements this, driving targeted traffic and enhancing online visibility. From SEO to social media, we curate campaigns that resonate with your audience. With a focus on ROI, we blend creativity with data-driven strategies. Our holistic approach ensures cohesive branding across web and marketing efforts. Whether it’s a captivating website or impactful digital campaigns, we’re dedicated to amplifying your online presence and achieving exceptional results in the digital realm.
+              </p>
+
+              <p>
+                <strong>KSoft Solution</strong> also has a unique structure of functioning which strives more for Quality and also timely communication with the client for hassle-free performance. Step into a world of creativity and strategy with our combined website design and digital marketing agency. Our website design expertise brings visions to life, delivering intuitive user experiences and visually appealing interfaces. As a digital marketing agency, we craft tailored strategies, leveraging SEO, PPC, and social media to drive brand growth. Seamlessly integrating design and marketing, we ensure cohesive online narratives that captivate and convert. From pixel-perfect websites to data-driven campaigns, we’re committed to elevating your online presence, expanding reach, and driving business success in the ever-evolving digital landscape.
+              </p>
+            </div>
+            
+            <ul className="space-y-4 mt-8 mb-8">
               {[
                 "Excellent Support",
                 "Awesome Team",

@@ -12,10 +12,10 @@ export default function About() {
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-            About Us
+            About KSoft Solution
           </h1>
           <p className="text-xl text-muted-foreground">
-            Your partner in digital transformation and growth.
+            We develop simple, yet compact solutions.
           </p>
         </div>
       </div>
