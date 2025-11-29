@@ -9,7 +9,7 @@ import cleanSignupsImg from "@assets/generated_images/saas_landing_page_mockup.p
 import nathGroupImg from "@assets/generated_images/corporate_industrial_website_mockup.png";
 import kagliwalImg from "@assets/generated_images/personal_portfolio_website_mockup.png";
 import sujalImg from "@assets/Sujal-Industry_1764390251212.png";
-import sonamImg from "@assets/generated_images/agricultural_seeds_website_mockup.png";
+import sonamImg from "@assets/Sonam-Seeds_1764390378603.png";
 import varunImg from "@assets/Varun-seeds-Agrotech-India-Pvt-Ltd_1764390340802.png";
 import adinathImg from "@assets/generated_images/agri-growth_website_mockup.png";
 
