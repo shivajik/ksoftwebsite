@@ -14,6 +14,7 @@ import varunImg from "@assets/Varun-seeds-Agrotech-India-Pvt-Ltd_1764390340802.p
 import adinathImg from "@assets/Adinath-Crop-Science-–-Malegaon-Nashik-Maharashtra_1764390426033.png";
 import ditabadImg from "@assets/Dnyangana-Institute-of-Technology-–-Chatrapati-Sambhaji-Nagar_1764390805837.png";
 import cwaImg from "@assets/CWA-Algotech-Pvt-Ltd_1764390994853.png";
+import agencySimplifierImg from "@assets/All-in-One-Agency-Management-Software-Agency-Simplifier_1764391110934.png";
 
 const projects = [
   {
@@ -23,6 +24,14 @@ const projects = [
     url: "https://www.cleansignups.com/",
     image: cleanSignupsImg,
     tags: ["SaaS", "React", "UI/UX"]
+  },
+  {
+    title: "AgencySimplifier",
+    category: "Agency Management",
+    description: "Simplify and scale your agency with an all-in-one platform for project management, client onboarding, invoicing, and streamlined daily operations.",
+    url: "https://agencysimplifier.com/",
+    image: agencySimplifierImg,
+    tags: ["SaaS", "Agency", "Management"]
   },
   {
     title: "Nath Group",
