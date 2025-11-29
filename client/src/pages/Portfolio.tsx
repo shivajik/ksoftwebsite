@@ -17,7 +17,7 @@ const projects = [
   {
     title: "CleanSignups",
     category: "SaaS Platform",
-    description: "A modern digital signup service platform with a clean, high-conversion user interface.",
+    description: "Real-time API to block fake and disposable email signups, keeping your user database clean.",
     url: "https://www.cleansignups.com/",
     image: cleanSignupsImg,
     tags: ["SaaS", "React", "UI/UX"]
@@ -25,7 +25,7 @@ const projects = [
   {
     title: "Nath Group",
     category: "Corporate Industrial",
-    description: "Enterprise website for a major industrial conglomerate specializing in paper and pulp manufacturing.",
+    description: "A corporate portal showcasing the businesses and ventures of the Nath Group.",
     url: "https://nathgroup.com/",
     image: nathGroupImg,
     tags: ["Corporate", "Enterprise", "Manufacturing"]
@@ -33,7 +33,7 @@ const projects = [
   {
     title: "Nandkishor Kagliwal",
     category: "Personal Portfolio",
-    description: "Elegant personal branding and biography website for a distinguished business leader.",
+    description: "Personal/business website for Nandkishor Kagliwal, representing his professional identity and services.",
     url: "https://nandkishorkagliwal.com/",
     image: kagliwalImg,
     tags: ["Portfolio", "Personal Brand", "Biography"]
@@ -41,7 +41,7 @@ const projects = [
   {
     title: "Sujal Appliances",
     category: "E-Commerce",
-    description: "Modern e-commerce platform for home and kitchen appliances with product showcase capabilities.",
+    description: "Your go-to site for buying reliable household appliances from Sujala Appliances.",
     url: "https://sujalappliances.co.in/",
     image: sujalImg,
     tags: ["E-Commerce", "Retail", "Product Catalog"]
@@ -49,7 +49,7 @@ const projects = [
   {
     title: "Sonam Seeds",
     category: "AgriTech",
-    description: "Professional business website for an agricultural seeds company focusing on growth and quality.",
+    description: "जन्मत: सोनम सीड्‌स — premium seed supplier offering high-quality seeds for better crop yields.",
     url: "https://sonamseeds.in/",
     image: sonamImg,
     tags: ["Agriculture", "Business", "Green Tech"]
@@ -57,7 +57,7 @@ const projects = [
   {
     title: "Varun Seeds",
     category: "AgriTech",
-    description: "Corporate agricultural website showcasing premium seed products and farming solutions.",
+    description: "Trusted source for quality seeds and agricultural inputs from Varun Seeds.",
     url: "https://varunseeds.com/",
     image: varunImg,
     tags: ["Agriculture", "Corporate", "Products"]
@@ -65,7 +65,7 @@ const projects = [
   {
     title: "Adinath Grow",
     category: "Sustainable Agriculture",
-    description: "Modern web presence for an agricultural growth solutions company with a focus on sustainability.",
+    description: "A farming and agriculture-oriented site offering growth solutions and seed/agriproduct services.",
     url: "https://adinathgrow.com/",
     image: adinathImg,
     tags: ["Sustainability", "Agriculture", "Growth"]
