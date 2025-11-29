@@ -1,7 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function Footer() {
+  const [currentYear, setCurrentYear] = useState<number | null>(null);
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
   return (
     <footer className="bg-secondary/30 border-t border-border pt-16 pb-8">
       <div className="container mx-auto px-4">
@@ -74,7 +82,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} KSoft Solution. All rights reserved.</p>
+          <p>© {currentYear ?? ''} KSoft Solution. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>

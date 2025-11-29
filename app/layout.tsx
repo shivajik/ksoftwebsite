@@ -76,22 +76,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "ProfessionalService",
-              name: "KSoft Solution",
-              description: "Digital agency providing web development, SEO, and AI solutions.",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "T-16, Software Technology Parks of India, Chikhalthana MIDC",
-                addressLocality: "Chhatrapati Sambhaji Nagar",
-                postalCode: "431008",
-                addressRegion: "Maharashtra",
-                addressCountry: "IN",
-              },
-              telephone: "+91-976-541-2319",
-              priceRange: "$$",
-            }),
+            __html: `{"@context":"https://schema.org","@type":"ProfessionalService","name":"KSoft Solution","description":"Digital agency providing web development, SEO, and AI solutions.","address":{"@type":"PostalAddress","streetAddress":"T-16, Software Technology Parks of India, Chikhalthana MIDC","addressLocality":"Chhatrapati Sambhaji Nagar","postalCode":"431008","addressRegion":"Maharashtra","addressCountry":"IN"},"telephone":"+91-976-541-2319","priceRange":"$$"}`
           }}
         />
       </head>

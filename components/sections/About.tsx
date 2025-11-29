@@ -91,6 +91,7 @@ export default function About() {
                   src="/stock_images/modern_diverse_tech__526cb6a0.jpg" 
                   alt="Modern Digital Agency Team" 
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover transform group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
