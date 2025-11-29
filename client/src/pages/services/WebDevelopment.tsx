@@ -241,18 +241,6 @@ export default function WebDevelopment() {
             </div>
           </div>
 
-          {/* 8. Portfolio (Mock) */}
-          <div className="mb-20">
-            <h2 className="text-3xl font-heading font-bold mb-8">Featured Projects</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="aspect-video bg-secondary/50 rounded-xl flex items-center justify-center border border-white/5">
-                <span className="text-muted-foreground">SaaS Dashboard UI</span>
-              </div>
-              <div className="aspect-video bg-secondary/50 rounded-xl flex items-center justify-center border border-white/5">
-                <span className="text-muted-foreground">E-Commerce Platform</span>
-              </div>
-            </div>
-          </div>
 
           {/* 11. FAQ Section */}
           <div className="mb-20 max-w-3xl mx-auto">
