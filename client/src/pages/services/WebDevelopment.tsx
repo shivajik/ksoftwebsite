@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle2, ArrowRight, Laptop, Zap, Layers, Search, Code, Rocket, ShieldCheck, Monitor, Star, MapPin } from "lucide-react";
 import { Link } from "wouter";
 import webDevImg from "@assets/generated_images/web_development_abstract_concept_with_code_and_structure.png";
-import SchemaMarkup from "@/components/seo/SchemaMarkup";
+import SEO from "@/components/seo/SEO";
 import LeadGenCTA from "@/components/sections/LeadGenCTA";
 import PortfolioCarousel from "@/components/sections/PortfolioCarousel";
 
@@ -59,8 +59,18 @@ export default function WebDevelopment() {
 
   return (
     <>
-      <SchemaMarkup data={schemaData} />
-      <SchemaMarkup data={faqSchema} />
+      <SEO 
+        title="Custom Web Development Services | KSoft Solution"
+        description="Premium web development using React & Next.js. We build fast, scalable, and SEO-optimized websites and web applications."
+        canonical="/services/web-development"
+        ogImage={webDevImg}
+        schema={[schemaData, faqSchema]}
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "Services", item: "/#services" },
+          { name: "Web Development", item: "/services/web-development" }
+        ]}
+      />
 
       <div className="pt-24 pb-16">
         <div className="container mx-auto px-4">

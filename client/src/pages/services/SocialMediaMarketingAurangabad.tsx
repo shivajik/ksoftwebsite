@@ -3,10 +3,43 @@ import { Button } from "@/components/ui/button";
 import { Instagram, Facebook, Linkedin, Twitter, Megaphone } from "lucide-react";
 import { Link } from "wouter";
 import heroImg from "@assets/generated_images/social_media_marketing_viral_growth.png";
+import SEO from "@/components/seo/SEO";
 
 export default function SocialMediaMarketingAurangabad() {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Social Media Marketing Services Aurangabad",
+    "description": "Strategic social media marketing, content creation, and ad management for businesses in Aurangabad.",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "KSoft Solution",
+      "image": heroImg,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Aurangabad",
+        "addressRegion": "MH",
+        "addressCountry": "IN"
+      }
+    },
+    "areaServed": "Aurangabad"
+  };
+
   return (
-    <div className="pt-24 pb-16">
+    <>
+      <SEO 
+        title="Social Media Marketing in Aurangabad | KSoft Solution"
+        description="Expert social media marketing services in Aurangabad. Instagram, Facebook, and LinkedIn growth strategies."
+        canonical="/services/social-media-marketing-aurangabad"
+        ogImage={heroImg}
+        schema={schemaData}
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "Services", item: "/#services" },
+          { name: "Social Media Marketing", item: "/services/social-media-marketing-aurangabad" }
+        ]}
+      />
+      <div className="pt-24 pb-16">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12 mb-20">
           <motion.div 
@@ -86,5 +119,6 @@ export default function SocialMediaMarketingAurangabad() {
         </div>
       </div>
     </div>
+    </>
   );
 }

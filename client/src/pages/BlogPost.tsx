@@ -4,12 +4,11 @@ import { Calendar, Clock, User, ArrowLeft, Share2, Tag, Search, ChevronRight } f
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
-import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import NotFound from "./not-found";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import SchemaMarkup from "@/components/seo/SchemaMarkup";
+import SEO from "@/components/seo/SEO";
 
 export default function BlogPost() {
   const { toast } = useToast();
@@ -74,16 +73,19 @@ export default function BlogPost() {
 
   return (
     <div className="min-h-screen pt-24 pb-20 bg-background">
-      <Helmet>
-        <title>{post.title} | KSoft Solution Blog</title>
-        <meta name="description" content={post.excerpt} />
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.excerpt} />
-        <meta property="og:image" content={post.image} />
-        <meta property="og:type" content="article" />
-        <link rel="canonical" href={`https://ksoftsolution.com/blog/${post.slug}`} />
-      </Helmet>
-      <SchemaMarkup data={schemaData} />
+      <SEO 
+        title={`${post.title} | KSoft Solution Blog`}
+        description={post.excerpt}
+        canonical={`/blog/${post.slug}`}
+        ogImage={post.image}
+        ogType="article"
+        schema={schemaData}
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "Blog", item: "/blog" },
+          { name: post.title, item: `/blog/${post.slug}` }
+        ]}
+      />
 
       <div className="container mx-auto px-4">
         <Link href="/blog">
@@ -225,6 +227,7 @@ export default function BlogPost() {
                             <img 
                               src={recent.image} 
                               alt={recent.title} 
+                              loading="lazy"
                               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             />
                           </div>

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Megaphone, TrendingUp, Users, Target, BarChart, Mail, Search, CheckCircle2, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import heroImg from "@assets/generated_images/digital_marketing_strategy_dashboard_and_growth.png";
-import SchemaMarkup from "@/components/seo/SchemaMarkup";
+import SEO from "@/components/seo/SEO";
 import LeadGenCTA from "@/components/sections/LeadGenCTA";
 
 export default function DigitalMarketing() {
@@ -58,8 +58,18 @@ export default function DigitalMarketing() {
 
   return (
     <>
-      <SchemaMarkup data={schemaData} />
-      <SchemaMarkup data={faqSchema} />
+      <SEO 
+        title="Digital Marketing Services | KSoft Solution"
+        description="Data-driven digital marketing strategies including PPC, Social Media, and Email Marketing to grow your business."
+        canonical="/services/digital-marketing"
+        ogImage={heroImg}
+        schema={[schemaData, faqSchema]}
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "Services", item: "/#services" },
+          { name: "Digital Marketing", item: "/services/digital-marketing" }
+        ]}
+      />
 
       <div className="pt-24 pb-16">
         <div className="container mx-auto px-4">

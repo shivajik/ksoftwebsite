@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle2, Monitor, Layout, Smartphone, Star, MapPin, ArrowRight, Code, Rocket, ShieldCheck, Search } from "lucide-react";
 import { Link } from "wouter";
 import heroImg from "@assets/generated_images/modern_website_design_studio_in_aurangabad.png";
-import SchemaMarkup from "@/components/seo/SchemaMarkup";
+import SEO from "@/components/seo/SEO";
 import LeadGenCTA from "@/components/sections/LeadGenCTA";
 
 export default function WebsiteDesignAurangabad() {
@@ -64,8 +64,18 @@ export default function WebsiteDesignAurangabad() {
 
   return (
     <>
-      <SchemaMarkup data={schemaData} />
-      <SchemaMarkup data={faqSchema} />
+      <SEO 
+        title="Website Design Services in Aurangabad | KSoft Solution"
+        description="Premium website design services in Aurangabad (Chhatrapati Sambhaji Nagar). We build fast, responsive, and SEO-optimized websites."
+        canonical="/services/website-design-aurangabad"
+        ogImage={heroImg}
+        schema={[schemaData, faqSchema]}
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "Services", item: "/#services" },
+          { name: "Website Design Aurangabad", item: "/services/website-design-aurangabad" }
+        ]}
+      />
       
       <div className="pt-24 pb-16">
         <div className="container mx-auto px-4">

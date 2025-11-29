@@ -4,8 +4,7 @@ import Services from "@/components/sections/Services";
 import About from "@/components/sections/About";
 import Footer from "@/components/layout/Footer";
 import LeadGenCTA from "@/components/sections/LeadGenCTA";
-import { Helmet } from "react-helmet";
-import SchemaMarkup from "@/components/seo/SchemaMarkup";
+import SEO from "@/components/seo/SEO";
 
 export default function Home() {
   const schemaData = {
@@ -38,12 +37,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background font-sans text-foreground">
-      <Helmet>
-        <title>KSoft Solution | Digital Agency & Software Development</title>
-        <meta name="description" content="KSoft Solution is a premier digital agency specializing in modern web development, AI integration, and SEO strategies. Transform your business today." />
-        <link rel="canonical" href="https://ksoftsolution.com/" />
-      </Helmet>
-      <SchemaMarkup data={schemaData} />
+      <SEO 
+        title="KSoft Solution | Digital Agency & Software Development"
+        description="KSoft Solution is a premier digital agency specializing in modern web development, AI integration, and SEO strategies. Transform your business today."
+        canonical="/"
+        schema={schemaData}
+      />
       
       <Hero />
       <Services />

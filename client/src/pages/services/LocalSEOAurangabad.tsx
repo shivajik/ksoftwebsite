@@ -3,10 +3,43 @@ import { Button } from "@/components/ui/button";
 import { MapPin, TrendingUp, Search, Users } from "lucide-react";
 import { Link } from "wouter";
 import heroImg from "@assets/generated_images/local_seo_map_markers_in_aurangabad.png";
+import SEO from "@/components/seo/SEO";
 
 export default function LocalSEOAurangabad() {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Local SEO Services Aurangabad",
+    "description": "Dominate local search results in Chhatrapati Sambhaji Nagar. We help your business appear on Google Maps and top search results.",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "KSoft Solution",
+      "image": heroImg,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Aurangabad",
+        "addressRegion": "MH",
+        "addressCountry": "IN"
+      }
+    },
+    "areaServed": "Aurangabad"
+  };
+
   return (
-    <div className="pt-24 pb-16">
+    <>
+      <SEO 
+        title="Local SEO Services in Aurangabad | KSoft Solution"
+        description="Dominate local search results in Aurangabad (Chhatrapati Sambhaji Nagar). Expert Local SEO services to rank on Google Maps."
+        canonical="/services/local-seo-aurangabad"
+        ogImage={heroImg}
+        schema={schemaData}
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "Services", item: "/#services" },
+          { name: "Local SEO Aurangabad", item: "/services/local-seo-aurangabad" }
+        ]}
+      />
+      <div className="pt-24 pb-16">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12 mb-20">
           <motion.div 
@@ -86,5 +119,6 @@ export default function LocalSEOAurangabad() {
         </div>
       </div>
     </div>
+    </>
   );
 }

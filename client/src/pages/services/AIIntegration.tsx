@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Bot, BrainCircuit, Sparkles, Cpu, Network, MessageSquare, Database, ArrowRight, CheckCircle2, Star, ShieldCheck } from "lucide-react";
 import { Link } from "wouter";
 import aiImg from "@assets/generated_images/artificial_intelligence_neural_network_visualization.png";
-import SchemaMarkup from "@/components/seo/SchemaMarkup";
+import SEO from "@/components/seo/SEO";
 import LeadGenCTA from "@/components/sections/LeadGenCTA";
 
 export default function AIIntegration() {
@@ -58,8 +58,18 @@ export default function AIIntegration() {
 
   return (
     <>
-      <SchemaMarkup data={schemaData} />
-      <SchemaMarkup data={faqSchema} />
+      <SEO 
+        title="AI Integration & Automation Services | KSoft Solution"
+        description="Custom AI solutions, LLM integration, chatbots, and workflow automation services for businesses. Automate your future."
+        canonical="/services/ai-integration"
+        ogImage={aiImg}
+        schema={[schemaData, faqSchema]}
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "Services", item: "/#services" },
+          { name: "AI Integration", item: "/services/ai-integration" }
+        ]}
+      />
 
       <div className="pt-24 pb-16">
         <div className="container mx-auto px-4">

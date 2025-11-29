@@ -3,16 +3,16 @@ import { Link } from "wouter";
 import { blogPosts } from "@/data/blog-posts";
 import { Calendar, Clock, User, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Helmet } from "react-helmet";
+import SEO from "@/components/seo/SEO";
 
 export default function Blog() {
   return (
     <div className="min-h-screen pt-24 pb-20">
-      <Helmet>
-        <title>Expert Tech Insights & Local SEO Tips | KSoft Solution Blog</title>
-        <meta name="description" content="Read the latest insights on Web Development, AI Integration, and Local SEO in Aurangabad. Expert tips to help your business rank and grow." />
-        <meta name="keywords" content="Web Development Aurangabad, SEO Tips, AI for Business, Digital Marketing Blog" />
-      </Helmet>
+      <SEO 
+        title="Expert Tech Insights & Local SEO Tips | KSoft Solution Blog"
+        description="Read the latest insights on Web Development, AI Integration, and Local SEO in Aurangabad. Expert tips to help your business rank and grow."
+        canonical="/blog"
+      />
 
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -48,6 +48,7 @@ export default function Blog() {
                     <img 
                       src={post.image} 
                       alt={post.title}
+                      loading="lazy"
                       className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute top-4 left-4 bg-primary/90 backdrop-blur-sm text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">

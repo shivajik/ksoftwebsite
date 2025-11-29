@@ -3,10 +3,43 @@ import { Button } from "@/components/ui/button";
 import { Database, Globe, Share2, FileText } from "lucide-react";
 import { Link } from "wouter";
 import heroImg from "@assets/generated_images/business_directory_citation_network.png";
+import SEO from "@/components/seo/SEO";
 
 export default function CitationBuildingAurangabad() {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Citation Building Services Aurangabad",
+    "description": "Manual citation building and business directory submission services to boost local SEO in Aurangabad.",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "KSoft Solution",
+      "image": heroImg,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Aurangabad",
+        "addressRegion": "MH",
+        "addressCountry": "IN"
+      }
+    },
+    "areaServed": "Aurangabad"
+  };
+
   return (
-    <div className="pt-24 pb-16">
+    <>
+      <SEO 
+        title="Citation Building Services in Aurangabad | KSoft Solution"
+        description="Boost your local SEO with manual citation building. We list your business on top directories in Aurangabad."
+        canonical="/services/citation-building-aurangabad"
+        ogImage={heroImg}
+        schema={schemaData}
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "Services", item: "/#services" },
+          { name: "Citation Building", item: "/services/citation-building-aurangabad" }
+        ]}
+      />
+      <div className="pt-24 pb-16">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12 mb-20">
           <motion.div 
@@ -73,5 +106,6 @@ export default function CitationBuildingAurangabad() {
         </div>
       </div>
     </div>
+    </>
   );
 }

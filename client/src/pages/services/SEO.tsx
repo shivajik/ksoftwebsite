@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Search, BarChart, Globe, LineChart, TrendingUp, Target, MapPin, CheckCircle2, Star, ArrowRight, FileText } from "lucide-react";
 import seoImg from "@assets/generated_images/seo_and_analytics_growth_graph_visualization.png";
 import { Link } from "wouter";
-import SchemaMarkup from "@/components/seo/SchemaMarkup";
+import SEOHead from "@/components/seo/SEO";
 import LeadGenCTA from "@/components/sections/LeadGenCTA";
 
 export default function SEO() {
@@ -58,8 +58,18 @@ export default function SEO() {
 
   return (
     <>
-      <SchemaMarkup data={schemaData} />
-      <SchemaMarkup data={faqSchema} />
+      <SEOHead 
+        title="SEO & GEO Services | KSoft Solution"
+        description="Advanced SEO and Generative Engine Optimization (GEO) services to rank on Google and AI platforms like ChatGPT and Perplexity."
+        canonical="/services/seo"
+        ogImage={seoImg}
+        schema={[schemaData, faqSchema]}
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "Services", item: "/#services" },
+          { name: "SEO & GEO", item: "/services/seo" }
+        ]}
+      />
 
       <div className="pt-24 pb-16">
         <div className="container mx-auto px-4">

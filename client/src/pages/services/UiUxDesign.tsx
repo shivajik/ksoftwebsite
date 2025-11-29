@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Palette, Layout, Eye, MousePointerClick, PenTool, Layers, Smile, CheckCircle2, ArrowRight, Monitor } from "lucide-react";
 import { Link } from "wouter";
 import heroImg from "@assets/generated_images/ui_ux_design_studio_with_creative_elements.png";
-import SchemaMarkup from "@/components/seo/SchemaMarkup";
+import SEO from "@/components/seo/SEO";
 import LeadGenCTA from "@/components/sections/LeadGenCTA";
 
 export default function UiUxDesign() {
@@ -58,8 +58,18 @@ export default function UiUxDesign() {
 
   return (
     <>
-      <SchemaMarkup data={schemaData} />
-      <SchemaMarkup data={faqSchema} />
+      <SEO 
+        title="UI/UX Design Services | KSoft Solution"
+        description="User-centric UI/UX design services. Wireframing, prototyping, and visual design for websites and mobile apps."
+        canonical="/services/ui-ux-design"
+        ogImage={heroImg}
+        schema={[schemaData, faqSchema]}
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "Services", item: "/#services" },
+          { name: "UI/UX Design", item: "/services/ui-ux-design" }
+        ]}
+      />
 
       <div className="pt-24 pb-16">
         <div className="container mx-auto px-4">

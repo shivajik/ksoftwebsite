@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Smartphone, Layers, Zap, Shield, Tablet, Wifi, CheckCircle2, Star, ArrowRight, Download } from "lucide-react";
 import { Link } from "wouter";
 import heroImg from "@assets/generated_images/mobile_app_development_concept_with_multiple_devices.png";
-import SchemaMarkup from "@/components/seo/SchemaMarkup";
+import SEO from "@/components/seo/SEO";
 import LeadGenCTA from "@/components/sections/LeadGenCTA";
 
 export default function MobileApps() {
@@ -58,8 +58,18 @@ export default function MobileApps() {
 
   return (
     <>
-      <SchemaMarkup data={schemaData} />
-      <SchemaMarkup data={faqSchema} />
+      <SEO 
+        title="Mobile App Development Services | KSoft Solution"
+        description="Custom iOS and Android mobile app development using React Native and Flutter. High-performance, secure, and scalable apps."
+        canonical="/services/mobile-apps"
+        ogImage={heroImg}
+        schema={[schemaData, faqSchema]}
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "Services", item: "/#services" },
+          { name: "Mobile App Development", item: "/services/mobile-apps" }
+        ]}
+      />
 
       <div className="pt-24 pb-16">
         <div className="container mx-auto px-4">

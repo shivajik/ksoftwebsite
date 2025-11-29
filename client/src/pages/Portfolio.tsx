@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Globe, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
-import SchemaMarkup from "@/components/seo/SchemaMarkup";
+import SEO from "@/components/seo/SEO";
 
 // Import generated mockups
 import cleanSignupsImg from "@assets/CleanSignUps-Stop-Fake-Signups-with-Real-time-Disposable-Email-Detection-API_1764390578616.png";
@@ -119,7 +119,12 @@ export default function Portfolio() {
 
   return (
     <>
-      <SchemaMarkup data={schemaData} />
+      <SEO 
+        title="Our Portfolio | KSoft Solution"
+        description="Showcase of our recent web development projects including SaaS platforms, corporate websites, and e-commerce solutions."
+        canonical="/portfolio"
+        schema={schemaData}
+      />
       <div className="pt-24 pb-16 min-h-screen bg-background">
         <div className="container mx-auto px-4">
           {/* Hero Section */}

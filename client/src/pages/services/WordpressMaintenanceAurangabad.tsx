@@ -3,10 +3,43 @@ import { Button } from "@/components/ui/button";
 import { ShieldCheck, Wrench, RefreshCw, Server } from "lucide-react";
 import { Link } from "wouter";
 import heroImg from "@assets/generated_images/wordpress_maintenance_dashboard_and_security.png";
+import SEO from "@/components/seo/SEO";
 
 export default function WordpressMaintenanceAurangabad() {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "WordPress Maintenance Services Aurangabad",
+    "description": "Reliable WordPress maintenance, security, and support services for businesses in Aurangabad.",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "KSoft Solution",
+      "image": heroImg,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Aurangabad",
+        "addressRegion": "MH",
+        "addressCountry": "IN"
+      }
+    },
+    "areaServed": "Aurangabad"
+  };
+
   return (
-    <div className="pt-24 pb-16">
+    <>
+      <SEO 
+        title="WordPress Maintenance Services in Aurangabad | KSoft Solution"
+        description="Keep your WordPress site secure and fast. Professional maintenance and support services in Chhatrapati Sambhaji Nagar."
+        canonical="/services/wordpress-maintenance-aurangabad"
+        ogImage={heroImg}
+        schema={schemaData}
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "Services", item: "/#services" },
+          { name: "WordPress Maintenance", item: "/services/wordpress-maintenance-aurangabad" }
+        ]}
+      />
+      <div className="pt-24 pb-16">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12 mb-20">
           <motion.div 
@@ -91,5 +124,6 @@ export default function WordpressMaintenanceAurangabad() {
         </div>
       </div>
     </div>
+    </>
   );
 }

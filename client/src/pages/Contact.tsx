@@ -15,7 +15,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import SchemaMarkup from "@/components/seo/SchemaMarkup";
+import SEO from "@/components/seo/SEO";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -63,7 +63,12 @@ export default function ContactPage() {
 
   return (
     <>
-      <SchemaMarkup data={schemaData} />
+      <SEO 
+        title="Contact Us | KSoft Solution"
+        description="Get in touch with KSoft Solution for web development, SEO, and AI integration services. Start your project today."
+        canonical="/contact"
+        schema={schemaData}
+      />
       <div className="pt-24 pb-16">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
