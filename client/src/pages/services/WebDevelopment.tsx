@@ -5,6 +5,7 @@ import { Link } from "wouter";
 import webDevImg from "@assets/generated_images/web_development_abstract_concept_with_code_and_structure.png";
 import SchemaMarkup from "@/components/seo/SchemaMarkup";
 import LeadGenCTA from "@/components/sections/LeadGenCTA";
+import PortfolioCarousel from "@/components/sections/PortfolioCarousel";
 
 export default function WebDevelopment() {
   const schemaData = {
@@ -224,6 +225,9 @@ export default function WebDevelopment() {
 
           {/* 6. Pricing Table Replacement */}
           <LeadGenCTA />
+
+          {/* Portfolio Section */}
+          <PortfolioCarousel />
 
           {/* 7. Process */}
           <div className="mb-20">
