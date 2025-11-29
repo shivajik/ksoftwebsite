@@ -8,7 +8,7 @@ import SchemaMarkup from "@/components/seo/SchemaMarkup";
 import cleanSignupsImg from "@assets/generated_images/saas_landing_page_mockup.png";
 import nathGroupImg from "@assets/generated_images/corporate_industrial_website_mockup.png";
 import kagliwalImg from "@assets/generated_images/personal_portfolio_website_mockup.png";
-import sujalImg from "@assets/generated_images/appliance_e-commerce_website_mockup.png";
+import sujalImg from "@assets/Sujal-Industry_1764390157418.png";
 import sonamImg from "@assets/generated_images/agricultural_seeds_website_mockup.png";
 import varunImg from "@assets/generated_images/seed_company_website_mockup.png";
 import adinathImg from "@assets/generated_images/agri-growth_website_mockup.png";
