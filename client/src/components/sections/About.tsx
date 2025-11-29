@@ -22,12 +22,10 @@ export default function About() {
 
           <div className="w-full lg:w-1/2 order-1 lg:order-2">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
-              Innovating with Purpose
+              Building Real Solutions
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              At KSoft Solution, we believe in the power of technology to transform businesses. 
-              Founded with a vision to bridge the gap between complex code and user-centric design, 
-              we have grown into a full-service digital agency trusted by industry leaders.
+              KSoft Solution is a digital agency focused on practical results. We combine technical expertise with clear design to build software that works for your business. From local startups to global enterprises, we help our clients succeed online.
             </p>
             
             <ul className="space-y-4 mb-8">

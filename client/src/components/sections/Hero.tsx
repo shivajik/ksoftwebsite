@@ -32,12 +32,12 @@ export default function Hero() {
           </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-foreground mb-8 leading-[1.1] tracking-tight">
-            Digital <span className="text-gradient-primary">Evolution</span> <br />
-            for the AI Era.
+            Software & <span className="text-gradient-primary">Digital Growth</span> <br />
+            Solutions.
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed font-light">
-            We architect premium digital experiences and intelligent systems that position your brand as an industry authority.
+            We build custom websites, mobile apps, and digital strategies that help businesses grow in the modern economy.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">

@@ -73,14 +73,14 @@ export default function WebDevelopment() {
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6">
                 <Star className="w-4 h-4 fill-primary" />
-                Enterprise-Grade Web Solutions
+                Professional Web Development
               </div>
               <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6 leading-tight">
-                Next-Gen <span className="text-gradient-primary">Web Architecture</span>
+                Modern <span className="text-gradient-primary">Web Solutions</span>
               </h1>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                We build lightning-fast, scalable, and visually stunning websites that drive conversions. 
-                Using the latest stack (React, Next.js, TypeScript), we ensure your digital presence is future-proof.
+                We build fast, secure, and scalable websites using modern technologies like React and Next.js. 
+                Our focus is on creating sites that look great and perform well for your users.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground h-12 px-8">

@@ -134,10 +134,10 @@ export default function Portfolio() {
                 Our Work
               </div>
               <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">
-                Digital <span className="text-gradient-primary">Masterpieces</span>
+                Selected <span className="text-gradient-primary">Projects</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Explore our portfolio of high-performance websites and digital experiences crafted for industry leaders.
+                A collection of our recent work, from corporate portals to e-commerce platforms and SaaS applications.
               </p>
             </motion.div>
           </div>
