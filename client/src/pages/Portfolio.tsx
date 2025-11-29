@@ -6,8 +6,8 @@ import SchemaMarkup from "@/components/seo/SchemaMarkup";
 
 // Import generated mockups
 import cleanSignupsImg from "@assets/generated_images/saas_landing_page_mockup.png";
-import nathGroupImg from "@assets/generated_images/corporate_industrial_website_mockup.png";
-import kagliwalImg from "@assets/generated_images/personal_portfolio_website_mockup.png";
+import nathGroupImg from "@assets/Nath-Group-_1764390512851.png";
+import kagliwalImg from "@assets/Dr-Nandkishor-Kagliwal-–-Nath-Group_1764390512851.png";
 import sujalImg from "@assets/Sujal-Industry_1764390251212.png";
 import sonamImg from "@assets/Sonam-Seeds_1764390378603.png";
 import varunImg from "@assets/Varun-seeds-Agrotech-India-Pvt-Ltd_1764390340802.png";
