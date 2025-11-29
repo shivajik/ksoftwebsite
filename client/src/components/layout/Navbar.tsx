@@ -104,6 +104,11 @@ export default function Navbar() {
               Portfolio
             </a>
           </Link>
+          <Link href="/blog">
+            <a className={cn("font-medium transition-colors hover:text-primary", location.startsWith("/blog") ? "text-primary" : "text-muted-foreground")}>
+              Blog
+            </a>
+          </Link>
           <Link href="/contact">
             <a className="font-medium text-muted-foreground hover:text-primary transition-colors">Contact</a>
           </Link>
@@ -157,6 +162,9 @@ export default function Navbar() {
             </Link>
             <Link href="/portfolio">
               <a className="text-lg font-medium text-foreground py-2 block">Portfolio</a>
+            </Link>
+            <Link href="/blog">
+              <a className="text-lg font-medium text-foreground py-2 block">Blog</a>
             </Link>
             <Link href="/contact">
               <a className="text-lg font-medium text-foreground py-2 block">Contact</a>

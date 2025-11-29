@@ -24,6 +24,8 @@ const SocialMediaMarketingAurangabad = lazy(() => import("@/pages/services/Socia
 const Contact = lazy(() => import("@/pages/Contact"));
 const About = lazy(() => import("@/pages/About"));
 const Portfolio = lazy(() => import("@/pages/Portfolio"));
+const Blog = lazy(() => import("@/pages/Blog"));
+const BlogPost = lazy(() => import("@/pages/BlogPost"));
 
 // Redirect Component for Legacy URLs
 const Redirect = ({ to }: { to: string }) => {
@@ -56,6 +58,8 @@ function Router() {
             <Route path="/services/citation-building-aurangabad" component={CitationBuildingAurangabad} />
             <Route path="/services/social-media-marketing-aurangabad" component={SocialMediaMarketingAurangabad} />
             <Route path="/portfolio" component={Portfolio} />
+            <Route path="/blog" component={Blog} />
+            <Route path="/blog/:slug" component={BlogPost} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
             
