@@ -1,0 +1,97 @@
+You are my expert full-stack developer and SEO specialist.  
+You must review the **entire codebase** and fix all SEO, content, schema, accessibility, and performance issues to make the website fully production-ready and Google-optimized.
+
+### 🔥 YOUR GOALS:
+1. Improve SEO structure  
+2. Add meta tags + schema  
+3. Fix content structure (H1/H2/H3)  
+4. Improve human-readability of text  
+5. Optimize images and performance  
+6. Fix accessibility  
+7. Reduce bundle size  
+8. Add internal linking  
+9. Update Next.js metadata system  
+10. Ensure Google can crawl, index, and rank pages
+
+---
+
+### ✅ REQUIRED ACTIONS:
+
+### 1. SEO FIXES
+- Add unique `<title>` and `<meta description>` for all pages  
+- Add `<link rel="canonical">`  
+- Add OG tags + Twitter cards  
+- Create `/robots.txt`  
+- Create `/sitemap.xml` using Next.js route handlers  
+- Add internal links between service pages  
+- Add breadcrumb navigation
+
+### 2. SCHEMA IMPLEMENTATION
+Implement JSON-LD for:
+- Organization
+- LocalBusiness
+- Services (each service page)
+- BreadcrumbList
+- Website schema
+
+Add these inside `<Head>` or using `next/head` or metadata API.
+
+### 3. CONTENT STRUCTURE FIXES
+- Exactly one `<h1>` per page  
+- Improve headings → H1 > H2 > H3  
+- Add Benefits, Process, Pricing, FAQ blocks  
+- Make content more human (avoid AI-like generic text)  
+- Add sample case study placeholder  
+- Add team/author section  
+- Add testimonials placeholder  
+- Add image ALT text everywhere
+
+### 4. PERFORMANCE OPTIMIZATION
+- Convert images to WebP or AVIF  
+- Replace <img> with Next.js `<Image />`  
+- Use lazy loading for all below-fold images  
+- Add responsive `sizes` & `srcset`  
+- Defer third-party scripts  
+- Remove unused libraries  
+- Add `font-display: swap` to all font imports  
+- Preload the main font only  
+- Implement bundle analyzer and shrink bundle size  
+- Add layout shifts fixes by defining height/width
+
+### 5. ACCESSIBILITY FIXES
+- Add ALT text to all images  
+- Add aria-labels  
+- Ensure all interactive elements are keyboard accessible  
+- Add skip-to-content link  
+- Increase tap-target sizes  
+- Improve color contrast if needed
+
+### 6. TECHNICAL STRUCTURE FIXES
+- Ensure Next.js metadata object is used  
+- Move repeated SEO tags into root layout  
+- Create a `seo.config.ts` for reusable metadata  
+- Clean layout structure and remove duplicates  
+- Add error boundary + loading fallback  
+- Add long-term caching headers in `next.config.js`
+
+---
+
+### 🔍 BEFORE EACH CHANGE:
+Explain what you're modifying and why.
+
+### 🧪 AFTER EACH CHANGE:
+Show the updated code block and confirm the fix.
+
+---
+
+### 🎯 FINAL OUTPUT REQUIRED:
+- Fully optimized SEO structure
+- Fast-loading pages
+- AI-safe and human content
+- Proper schema markup
+- Accessible, clean, production-ready UI
+- Perfect technical structure
+- Google-friendly architecture
+
+Start now.  
+Review the entire project and apply all above improvements.
