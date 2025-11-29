@@ -5,7 +5,7 @@ import { Link } from "wouter";
 import SchemaMarkup from "@/components/seo/SchemaMarkup";
 
 // Import generated mockups
-import cleanSignupsImg from "@assets/generated_images/saas_landing_page_mockup.png";
+import cleanSignupsImg from "@assets/CleanSignUps-Stop-Fake-Signups-with-Real-time-Disposable-Email-Detection-API_1764390578616.png";
 import nathGroupImg from "@assets/Nath-Group-_1764390512851.png";
 import kagliwalImg from "@assets/Dr-Nandkishor-Kagliwal-–-Nath-Group_1764390512851.png";
 import sujalImg from "@assets/Sujal-Industry_1764390251212.png";
