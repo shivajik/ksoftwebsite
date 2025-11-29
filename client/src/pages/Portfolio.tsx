@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, Globe, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import SEO from "@/components/seo/SEO";
+import OptimizedImage from "@/components/ui/optimized-image";
 
 // Import generated mockups
 import cleanSignupsImg from "@assets/CleanSignUps-Stop-Fake-Signups-with-Real-time-Disposable-Email-Detection-API_1764390578616.png";
@@ -160,11 +161,12 @@ export default function Portfolio() {
                 {/* Image Container */}
                 <div className="aspect-video overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
-                  <img 
+                  <OptimizedImage 
                     src={project.image} 
                     alt={`${project.title} website mockup`}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
+                    width={800}
+                    height={450}
                   />
                   
                   {/* Overlay Action */}

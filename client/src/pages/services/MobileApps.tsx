@@ -5,6 +5,7 @@ import { Link } from "wouter";
 import heroImg from "@assets/generated_images/mobile_app_development_concept_with_multiple_devices.png";
 import SEO from "@/components/seo/SEO";
 import LeadGenCTA from "@/components/sections/LeadGenCTA";
+import OptimizedImage from "@/components/ui/optimized-image";
 
 export default function MobileApps() {
   const schemaData = {
@@ -110,10 +111,13 @@ export default function MobileApps() {
               className="lg:w-1/2 relative"
             >
               <div className="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full -z-10"></div>
-              <img 
+              <OptimizedImage 
                 src={heroImg} 
                 alt="Mobile App Development" 
                 className="rounded-2xl border border-white/10 shadow-2xl w-full"
+                width={600}
+                height={400}
+                priority
               />
             </motion.div>
           </div>

@@ -5,6 +5,7 @@ import { Link } from "wouter";
 import heroImg from "@assets/generated_images/digital_marketing_strategy_dashboard_and_growth.png";
 import SEO from "@/components/seo/SEO";
 import LeadGenCTA from "@/components/sections/LeadGenCTA";
+import OptimizedImage from "@/components/ui/optimized-image";
 
 export default function DigitalMarketing() {
   const schemaData = {
@@ -110,10 +111,13 @@ export default function DigitalMarketing() {
               className="lg:w-1/2 relative"
             >
               <div className="absolute inset-0 bg-green-500/20 blur-3xl rounded-full -z-10"></div>
-              <img 
+              <OptimizedImage 
                 src={heroImg} 
                 alt="Digital Marketing Strategy" 
                 className="rounded-2xl border border-white/10 shadow-2xl w-full"
+                width={600}
+                height={400}
+                priority
               />
             </motion.div>
           </div>

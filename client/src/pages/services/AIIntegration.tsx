@@ -5,6 +5,7 @@ import { Link } from "wouter";
 import aiImg from "@assets/generated_images/artificial_intelligence_neural_network_visualization.png";
 import SEO from "@/components/seo/SEO";
 import LeadGenCTA from "@/components/sections/LeadGenCTA";
+import OptimizedImage from "@/components/ui/optimized-image";
 
 export default function AIIntegration() {
   const schemaData = {
@@ -110,10 +111,13 @@ export default function AIIntegration() {
               className="lg:w-1/2 relative"
             >
               <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full -z-10"></div>
-              <img 
+              <OptimizedImage 
                 src={aiImg} 
                 alt="AI Neural Network" 
                 className="rounded-2xl border border-white/10 shadow-2xl w-full"
+                width={600}
+                height={400}
+                priority
               />
             </motion.div>
           </div>

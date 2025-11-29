@@ -9,6 +9,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+import OptimizedImage from "@/components/ui/optimized-image";
 
 import cleanSignupsImg from "@assets/CleanSignUps-Stop-Fake-Signups-with-Real-time-Disposable-Email-Detection-API_1764390578616.png";
 import nathGroupImg from "@assets/Nath-Group-_1764390512851.png";
@@ -128,11 +129,12 @@ export default function PortfolioCarousel() {
                 <div className="p-1 h-full">
                   <Card className="h-full overflow-hidden border-white/10 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 group">
                     <div className="relative aspect-[16/10] overflow-hidden">
-                      <img 
+                      <OptimizedImage 
                         src={project.image} 
                         alt={project.title}
-                        loading="lazy"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        width={800}
+                        height={500}
                       />
                       <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <Button variant="secondary" size="sm" className="gap-2" asChild>

@@ -3,18 +3,18 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import heroBg from "@assets/generated_images/futuristic_glassmorphism_interface_with_data_visualization.png";
+import OptimizedImage from "@/components/ui/optimized-image";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
+        <OptimizedImage 
           src={heroBg} 
           alt="Digital Network Background" 
           className="w-full h-full object-cover opacity-60"
-          loading="eager"
-          fetchPriority="high"
+          priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background"></div>
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>

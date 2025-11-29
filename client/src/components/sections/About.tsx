@@ -3,6 +3,7 @@ import { CheckCircle2, ArrowRight, Code2, LineChart, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import aboutImage from "@assets/stock_images/modern_diverse_tech__526cb6a0.jpg";
+import OptimizedImage from "@/components/ui/optimized-image";
 
 export default function About() {
   return (
@@ -85,10 +86,12 @@ export default function About() {
             >
               {/* Main Image */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 group">
-                <img 
+                <OptimizedImage 
                   src={aboutImage} 
                   alt="Modern Digital Agency Team" 
                   className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  width={600}
+                  height={800}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
                 
