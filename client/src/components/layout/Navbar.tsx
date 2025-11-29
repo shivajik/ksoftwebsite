@@ -97,6 +97,11 @@ export default function Navbar() {
           <Link href="/#about">
             <a className="font-medium text-muted-foreground hover:text-primary transition-colors">About</a>
           </Link>
+          <Link href="/portfolio">
+            <a className={cn("font-medium transition-colors hover:text-primary", location === "/portfolio" ? "text-primary" : "text-muted-foreground")}>
+              Portfolio
+            </a>
+          </Link>
           <Link href="/contact">
             <a className="font-medium text-muted-foreground hover:text-primary transition-colors">Contact</a>
           </Link>
@@ -146,6 +151,9 @@ export default function Navbar() {
               </div>
             </div>
             <a href="/#about" className="text-lg font-medium text-foreground py-2 block">About</a>
+            <Link href="/portfolio">
+              <a className="text-lg font-medium text-foreground py-2 block">Portfolio</a>
+            </Link>
             <Link href="/contact">
               <a className="text-lg font-medium text-foreground py-2 block">Contact</a>
             </Link>
