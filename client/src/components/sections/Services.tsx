@@ -11,16 +11,16 @@ const services = [
     link: "/services/web-development"
   },
   {
-    icon: <Cpu className="h-8 w-8 text-accent" />,
-    title: "AI Integration",
-    description: "Leverage the power of LLMs and AI to automate workflows and enhance user experience.",
-    link: "/services/ai-integration"
-  },
-  {
     icon: <Search className="h-8 w-8 text-purple-400" />,
     title: "SEO Optimization",
     description: "Data-driven strategies to boost your visibility on Google and AI search engines.",
     link: "/services/seo"
+  },
+  {
+    icon: <Cpu className="h-8 w-8 text-accent" />,
+    title: "AI Integration",
+    description: "Leverage the power of LLMs and AI to automate workflows and enhance user experience.",
+    link: "/services/ai-integration"
   },
   {
     icon: <Smartphone className="h-8 w-8 text-blue-400" />,
