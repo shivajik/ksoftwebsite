@@ -6,6 +6,7 @@ import webDevImg from "@assets/generated_images/web_development_abstract_concept
 import SEO from "@/components/seo/SEO";
 import LeadGenCTA from "@/components/sections/LeadGenCTA";
 import PortfolioCarousel from "@/components/sections/PortfolioCarousel";
+import OptimizedImage from "@/components/ui/optimized-image";
 
 export default function WebDevelopment() {
   const schemaData = {
@@ -111,10 +112,12 @@ export default function WebDevelopment() {
               className="lg:w-1/2 relative"
             >
               <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full -z-10"></div>
-              <img 
+              <OptimizedImage 
                 src={webDevImg} 
                 alt="High Performance Web Architecture" 
                 className="rounded-2xl border border-white/10 shadow-2xl w-full"
+                width={600}
+                height={400}
               />
             </motion.div>
           </div>

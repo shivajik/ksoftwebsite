@@ -14,13 +14,13 @@ export default function Footer() {
               Transforming businesses through innovative digital solutions. We specialize in web development, AI integration, and strategic SEO to drive growth.
             </p>
             <div className="flex gap-4">
-              <a href="https://www.facebook.com/ksoftsolutionaurangabad/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary cursor-pointer transition-colors">
+              <a href="https://www.facebook.com/ksoftsolutionaurangabad/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook" className="w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary cursor-pointer transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="https://twitter.com/ksoftsolution" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary cursor-pointer transition-colors">
+              <a href="https://twitter.com/ksoftsolution" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter" className="w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary cursor-pointer transition-colors">
                 <Twitter size={20} />
               </a>
-              <a href="https://www.instagram.com/ksoftsolution/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary cursor-pointer transition-colors">
+              <a href="https://www.instagram.com/ksoftsolution/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram" className="w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary cursor-pointer transition-colors">
                 <Instagram size={20} />
               </a>
             </div>
