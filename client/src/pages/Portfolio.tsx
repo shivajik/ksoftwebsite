@@ -13,6 +13,7 @@ import sonamImg from "@assets/Sonam-Seeds_1764390378603.png";
 import varunImg from "@assets/Varun-seeds-Agrotech-India-Pvt-Ltd_1764390340802.png";
 import adinathImg from "@assets/Adinath-Crop-Science-–-Malegaon-Nashik-Maharashtra_1764390426033.png";
 import ditabadImg from "@assets/Dnyangana-Institute-of-Technology-–-Chatrapati-Sambhaji-Nagar_1764390805837.png";
+import cwaImg from "@assets/CWA-Algotech-Pvt-Ltd_1764390994853.png";
 
 const projects = [
   {
@@ -78,6 +79,14 @@ const projects = [
     url: "https://ditabad.in/",
     image: ditabadImg,
     tags: ["Education", "Institutional", "Fire & Safety"]
+  },
+  {
+    title: "CWA AlgoTech",
+    category: "FinTech & Automation",
+    description: "Empowering traders with automation solutions across Chartink, Amibroker, MT4/MT5, TradingView, Excel, Python, REST APIs, and more for fully automated trading.",
+    url: "https://cwaalgotech.com/",
+    image: cwaImg,
+    tags: ["FinTech", "Automation", "Trading"]
   }
 ];
 
