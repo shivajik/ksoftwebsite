@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import NotFound from "./not-found";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import SchemaMarkup from "@/components/seo/SchemaMarkup";
 
 export default function BlogPost() {
   const { toast } = useToast();
@@ -16,6 +17,32 @@ export default function BlogPost() {
   const post = blogPosts.find(p => p.slug === params?.slug);
 
   if (!post) return <NotFound />;
+
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://ksoftsolution.com/blog/${post.slug}`
+    },
+    "headline": post.title,
+    "description": post.excerpt,
+    "image": post.image,
+    "author": {
+      "@type": "Person",
+      "name": post.author
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "KSoft Solution",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ksoftsolution.com/assets/logo.png"
+      }
+    },
+    "datePublished": new Date(post.date).toISOString(), // Approximate ISO conversion
+    "dateModified": new Date(post.date).toISOString()
+  };
 
   const handleShare = async () => {
     try {
@@ -53,7 +80,10 @@ export default function BlogPost() {
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:image" content={post.image} />
+        <meta property="og:type" content="article" />
+        <link rel="canonical" href={`https://ksoftsolution.com/blog/${post.slug}`} />
       </Helmet>
+      <SchemaMarkup data={schemaData} />
 
       <div className="container mx-auto px-4">
         <Link href="/blog">
