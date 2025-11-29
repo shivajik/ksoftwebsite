@@ -31,7 +31,8 @@ export default function Home() {
     "sameAs": [
       "https://www.facebook.com/ksoftsolutionaurangabad/",
       "https://twitter.com/ksoftsolution",
-      "https://www.instagram.com/ksoftsolution/"
+      "https://www.instagram.com/ksoftsolution/",
+      "https://share.google/fa5Xjx7bbkthbzjuf"
     ]
   };
 

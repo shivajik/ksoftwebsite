@@ -51,7 +51,14 @@ export default function Footer() {
              <ul className="space-y-4 text-muted-foreground text-sm">
                <li className="flex items-start gap-3">
                  <MapPin className="h-5 w-5 flex-shrink-0 mt-0.5" />
-                 <span>T-16, Software Technology Parks of India, Chikhalthana MIDC, Chhatrapati Sambhaji Nagar, 431008, Maharashtra.</span>
+                 <a 
+                   href="https://share.google/fa5Xjx7bbkthbzjuf" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   className="hover:text-primary transition-colors"
+                 >
+                   T-16, Software Technology Parks of India, Chikhalthana MIDC, Chhatrapati Sambhaji Nagar, 431008, Maharashtra.
+                 </a>
                </li>
                <li className="flex items-center gap-3">
                  <Phone className="h-4 w-4 flex-shrink-0" />

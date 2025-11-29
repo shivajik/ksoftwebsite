@@ -92,7 +92,14 @@ export default function ContactPage() {
                       <MapPin className="h-6 w-6 mt-1" />
                       <div>
                         <h4 className="font-bold">Office</h4>
-                        <p className="text-primary-foreground/80">T-16, Software Technology Parks of India,<br />Chikhalthana MIDC, Chhatrapati Sambhaji Nagar,<br />431008, Maharashtra.</p>
+                        <a 
+                          href="https://share.google/fa5Xjx7bbkthbzjuf" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-primary-foreground/80 hover:text-white transition-colors"
+                        >
+                          T-16, Software Technology Parks of India,<br />Chikhalthana MIDC, Chhatrapati Sambhaji Nagar,<br />431008, Maharashtra.
+                        </a>
                       </div>
                     </div>
                     
