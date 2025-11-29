@@ -3,6 +3,7 @@ import { blogPosts } from "@/data/blog-posts";
 import { Calendar, Clock, User, ArrowLeft, Share2, Tag, Search, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useToast } from "@/hooks/use-toast";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import NotFound from "./not-found";
@@ -10,10 +11,31 @@ import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function BlogPost() {
+  const { toast } = useToast();
   const [, params] = useRoute("/blog/:slug");
   const post = blogPosts.find(p => p.slug === params?.slug);
 
   if (!post) return <NotFound />;
+
+  const handleShare = async () => {
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: post.title,
+          text: post.excerpt,
+          url: window.location.href,
+        });
+      } else {
+        await navigator.clipboard.writeText(window.location.href);
+        toast({
+          title: "Link copied",
+          description: "The article link has been copied to your clipboard.",
+        });
+      }
+    } catch (error) {
+      console.error("Error sharing:", error);
+    }
+  };
 
   // Get recent posts (excluding current)
   const recentPosts = blogPosts
@@ -111,7 +133,7 @@ export default function BlogPost() {
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-sm font-medium text-muted-foreground">Share:</span>
-                  <Button variant="outline" size="icon" className="rounded-full hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2] transition-colors">
+                  <Button onClick={handleShare} variant="outline" size="icon" className="rounded-full hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2] transition-colors">
                     <Share2 className="w-4 h-4" />
                   </Button>
                 </div>
