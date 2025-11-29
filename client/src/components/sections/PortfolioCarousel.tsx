@@ -10,39 +10,97 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 
-import ecommerceImg from "@assets/stock_images/modern_ecommerce_web_4f0a3bf9.jpg";
-import corporateImg from "@assets/stock_images/corporate_business_w_9fe1e3e8.jpg";
-import saasImg from "@assets/stock_images/saas_dashboard_appli_a6761e9a.jpg";
-import agencyImg from "@assets/stock_images/creative_digital_age_37c5a202.jpg";
+import cleanSignupsImg from "@assets/CleanSignUps-Stop-Fake-Signups-with-Real-time-Disposable-Email-Detection-API_1764390578616.png";
+import nathGroupImg from "@assets/Nath-Group-_1764390512851.png";
+import kagliwalImg from "@assets/Dr-Nandkishor-Kagliwal-–-Nath-Group_1764390512851.png";
+import sujalImg from "@assets/Sujal-Industry_1764390251212.png";
+import sonamImg from "@assets/Sonam-Seeds_1764390378603.png";
+import varunImg from "@assets/Varun-seeds-Agrotech-India-Pvt-Ltd_1764390340802.png";
+import adinathImg from "@assets/Adinath-Crop-Science-–-Malegaon-Nashik-Maharashtra_1764390426033.png";
+import ditabadImg from "@assets/Dnyangana-Institute-of-Technology-–-Chatrapati-Sambhaji-Nagar_1764390805837.png";
+import cwaImg from "@assets/CWA-Algotech-Pvt-Ltd_1764390994853.png";
+import agencySimplifierImg from "@assets/All-in-One-Agency-Management-Software-Agency-Simplifier_1764391110934.png";
 
 const projects = [
   {
-    title: "LuxeCart E-commerce",
-    category: "E-commerce",
-    image: ecommerceImg,
-    description: "A high-performance online store with seamless checkout and inventory management.",
-    tags: ["Next.js", "Shopify", "Tailwind"]
+    title: "CleanSignups",
+    category: "SaaS Platform",
+    description: "Real-time API to block fake and disposable email signups, keeping your user database clean.",
+    url: "https://www.cleansignups.com/",
+    image: cleanSignupsImg,
+    tags: ["SaaS", "React", "UI/UX"]
   },
   {
-    title: "FinTech Dashboard",
-    category: "SaaS Application",
-    image: saasImg,
-    description: "Real-time financial data visualization platform for enterprise clients.",
-    tags: ["React", "D3.js", "Node.js"]
+    title: "AgencySimplifier",
+    category: "Agency Management",
+    description: "Simplify and scale your agency with an all-in-one platform for project management, client onboarding, invoicing, and streamlined daily operations.",
+    url: "https://agencysimplifier.com/",
+    image: agencySimplifierImg,
+    tags: ["SaaS", "Agency", "Management"]
   },
   {
-    title: "CorpGlobal Identity",
-    category: "Corporate Website",
-    image: corporateImg,
-    description: "Modern corporate presence for a multinational logistics firm.",
-    tags: ["WordPress", "Custom Theme", "SEO"]
+    title: "Nath Group",
+    category: "Corporate Industrial",
+    description: "A corporate portal showcasing the businesses and ventures of the Nath Group.",
+    url: "https://nathgroup.com/",
+    image: nathGroupImg,
+    tags: ["Corporate", "Enterprise", "Manufacturing"]
   },
   {
-    title: "Creative Studio",
-    category: "Portfolio",
-    image: agencyImg,
-    description: "Award-winning portfolio site for a digital design agency.",
-    tags: ["React", "Framer Motion", "WebGL"]
+    title: "Nandkishor Kagliwal",
+    category: "Personal Portfolio",
+    description: "Personal/business website for Nandkishor Kagliwal, representing his professional identity and services.",
+    url: "https://nandkishorkagliwal.com/",
+    image: kagliwalImg,
+    tags: ["Portfolio", "Personal Brand", "Biography"]
+  },
+  {
+    title: "Sujal Appliances",
+    category: "E-Commerce",
+    description: "Your go-to site for buying reliable household appliances from Sujala Appliances.",
+    url: "https://sujalappliances.co.in/",
+    image: sujalImg,
+    tags: ["E-Commerce", "Retail", "Product Catalog"]
+  },
+  {
+    title: "Sonam Seeds",
+    category: "AgriTech",
+    description: "जन्मत: सोनम सीड्‌स — premium seed supplier offering high-quality seeds for better crop yields.",
+    url: "https://sonamseeds.in/",
+    image: sonamImg,
+    tags: ["Agriculture", "Business", "Green Tech"]
+  },
+  {
+    title: "Varun Seeds",
+    category: "AgriTech",
+    description: "Trusted source for quality seeds and agricultural inputs from Varun Seeds.",
+    url: "https://varunseeds.com/",
+    image: varunImg,
+    tags: ["Agriculture", "Corporate", "Products"]
+  },
+  {
+    title: "Adinath Grow",
+    category: "Sustainable Agriculture",
+    description: "A farming and agriculture-oriented site offering growth solutions and seed/agriproduct services.",
+    url: "https://adinathgrow.com/",
+    image: adinathImg,
+    tags: ["Sustainability", "Agriculture", "Growth"]
+  },
+  {
+    title: "DIT Aurangabad",
+    category: "Educational Institute",
+    description: "A Govt.-approved institute (DTE & MSBTE) established in 2008, delivering quality technical education in Fire Engineering and Industrial Safety.",
+    url: "https://ditabad.in/",
+    image: ditabadImg,
+    tags: ["Education", "Institutional", "Fire & Safety"]
+  },
+  {
+    title: "CWA AlgoTech",
+    category: "FinTech & Automation",
+    description: "Empowering traders with automation solutions across Chartink, Amibroker, MT4/MT5, TradingView, Excel, Python, REST APIs, and more for fully automated trading.",
+    url: "https://cwaalgotech.com/",
+    image: cwaImg,
+    tags: ["FinTech", "Automation", "Trading"]
   }
 ];
 
@@ -76,8 +134,10 @@ export default function PortfolioCarousel() {
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <Button variant="secondary" size="sm" className="gap-2">
-                          View Case Study <ExternalLink className="w-4 h-4" />
+                        <Button variant="secondary" size="sm" className="gap-2" asChild>
+                          <a href={project.url} target="_blank" rel="noopener noreferrer">
+                            View Live Site <ExternalLink className="w-4 h-4" />
+                          </a>
                         </Button>
                       </div>
                     </div>
