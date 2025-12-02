@@ -1,0 +1,201 @@
+You are my Senior Full-Stack Engineer + Technical SEO Expert + Performance Auditor.
+
+A new Next.js website for “KSoft Solution” is deployed at:  
+https://ksoftwebsite.vercel.app/
+
+Your job is to run a **complete professional-grade audit** and then **fix everything automatically** (ONLY safe fixes).  
+This includes: SEO, Core Web Vitals, Accessibility, Indexability, LLM SEO, Content Structure, Images, Metadata, Schema, Internal Linking, Build Optimization.
+
+===============================================================
+   PART 1 — FULL AUTOMATED AUDIT (CRAWL + ANALYZE EVERYTHING)
+===============================================================
+
+1. Build and run the site locally:
+   npm install
+   npm run build
+   npm run start
+
+2. AUTO-DISCOVER ALL PUBLIC ROUTES:
+   - Home
+   - About
+   - Contact
+   - All Service pages
+   - Blog index + blog slug pages
+   - Legal pages (privacy-policy, terms)
+   - Any other routes inside app/
+
+3. For each route:
+   a) Generate raw HTML snapshot (server-rendered HTML, NOT hydrated output):
+      curl -sL http://localhost:3000/ROUTE > build-report/html/ROUTE.html
+
+   b) Extract:
+      - <title>
+      - <meta name="description">
+      - <link rel="canonical">
+      - OG/Twitter tags
+      - <h1> text
+      - Word count in main HTML
+      - JSON-LD presence
+      - Whether HTML contains real content or empty root
+
+4. Run FULL LIGHTHOUSE AUDIT (mobile + desktop):
+      Save results to build-report/lighthouse/*.json
+
+5. Run AXE accessibility audit:
+      Save violations summary to build-report/accessibility.json
+
+6. Create SEO AUDIT CSV:
+   Columns:
+   URL, Title, Description, Canonical, H1, WordCount, HasOG, HasSchema, Indexable, Notes
+   Save as: build-report/seo_audit.csv
+
+===============================================================
+      PART 2 — FIX EVERYTHING (ONLY SAFE AUTO-FIXES)
+===============================================================
+
+Apply these fixes to the actual Next.js code:
+
+A) METADATA FIXES
+------------------
+- Add missing <title>, <meta name="description">, <link rel="canonical"> using Next.js metadata API.
+- Ensure each service page has unique metadata with real keywords.
+- Add OG + Twitter tags, including 1200x630 og:image.
+- Add social images to public/og/ and link them.
+
+B) STRUCTURED DATA FIXES
+-------------------------
+- Add Organization + LocalBusiness JSON-LD globally in root layout.
+- Add Service schema for every service page.
+- Add FAQ schema (FAQPage) for all pages that have FAQs.
+- Add Breadcrumb schema where appropriate.
+- Ensure all JSON-LD is server-rendered.
+
+C) INDEXABILITY FIXES
+----------------------
+- Ensure ALL pages are SSR or SSG (generateStaticParams where needed).
+- Fix any pages that return empty HTML snapshots.
+- Fix dynamic routes so they are statically generated if possible.
+- Add canonical URLs.
+
+D) CREATE ESSENTIAL FILES
+--------------------------
+Implement these Next.js routes:
+
+1. app/sitemap.xml.ts  
+2. app/robots.txt.ts  
+3. app/llms.txt.ts
+
+llms.txt must contain:
+- One entry per page
+- 50–80 word natural language summary
+- 5–10 keywords describing the page
+- Main CTA  
+(LLMs rely on this for retrieval.)
+
+E) PERFORMANCE OPTIMIZATION
+----------------------------
+- Replace ALL <img> tags with next/image or an OptimizedImage wrapper.
+- Convert all images in public/images to WebP or AVIF, or configure next/image to auto-optimize.
+- Compress hero images. Preload critical images.
+- Add font-display: swap and preload important fonts.
+- Remove unused JS/CSS imports.
+- Add dynamic imports for non-critical components.
+- Reduce JS bundle size (split components/pages).
+
+F) CORE WEB VITALS FIXES
+--------------------------
+- Reduce LCP by optimizing hero section & primary image.
+- Reduce TBT/INP by minimizing JS.
+- Fix CLS by adding width/height to all images.
+
+G) ACCESSIBILITY FIXES
+------------------------
+- Add alt="" to ALL images.
+- Add aria-label for navigations, buttons, and icons.
+- Add <SkipToContent /> link.
+- Improve color contrast (WCAG AA).
+- Fix heading hierarchy.
+
+H) CONTENT & PAGE STRUCTURE FIXES
+----------------------------------
+For EACH service page:
+- Ensure 600–900 words of high-quality human content.
+- Include sections:
+   H1 (primary keyword)
+   Intro paragraph (50–70 words)
+   Benefits (4–6 bullets)
+   Process (3 steps)
+   Pricing hint
+   5 FAQs
+   One mini case-study line
+   2 internal links to other pages
+
+For Blog:
+- Ensure MDX pipeline works.
+- Each blog post must have proper SEO metadata + canonical + OG.
+- Add internal links to service pages.
+- Add tags and categories if missing.
+
+I) INTERNAL LINKING FIXES
+---------------------------
+- Ensure navigation + footer link to all key pages.
+- Add contextual links between related services.
+- Add links from blog posts to services.
+
+===============================================================
+           PART 3 — RE-RUN AUDITS AFTER FIXES
+===============================================================
+
+After applying fixes:
+
+1. Rebuild:  
+   npm run build  
+   npm run start
+
+2. Re-run:
+   - Raw HTML snapshots
+   - Lighthouse audits (mobile + desktop)
+   - Accessibility audit
+   - SEO audit CSV
+
+3. Validate:
+   - All pages have visible metadata in view-source.
+   - JSON-LD appears in view-source.
+   - All pages return 600+ words (service pages).
+   - All <img> replaced with next/image.
+   - Sitemap, robots, llms.txt accessible.
+   - Lighthouse Mobile Score >= 90 (or provide remediation notes).
+   - Lighthouse Desktop Score >= 95.
+
+===============================================================
+       PART 4 — FINAL OUTPUT IN REPLIT CHAT (MANDATORY)
+===============================================================
+
+In Replit chat, output:
+
+1. BEFORE vs AFTER Lighthouse scores (table).
+2. BEFORE vs AFTER HTML snapshot comparison for:
+   - Home
+   - One service page
+3. Final sitemap.xml, robots.txt, llms.txt content.
+4. A ZIP file: build-report/
+   containing:
+   - html snapshots
+   - lighthouse reports
+   - accessibility report
+   - seo_audit.csv
+   - changes.md (detailed list of all fixes applied)
+5. A prioritized FINAL TODO list (Top 10 tasks).
+
+===============================================================
+RULES:
+===============================================================
+- DO NOT break hydration or client interactivity.
+- DO NOT delete existing UI unless required for performance.
+- Placeholders for secrets ONLY.
+- If a fix is risky, create a TODO entry instead of applying it.
+
+===============================================================
+START NOW:
+===============================================================
+Run the complete audit, apply fixes, generate build-report, and deliver final results.
