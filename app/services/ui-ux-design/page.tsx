@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Palette, Layout, Eye, MousePointerClick, PenTool, Layers, Smile, CheckCircle2, ArrowRight, Monitor } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import LeadGenCTA from "@/components/sections/LeadGenCTA";
 import {
   Accordion,
@@ -131,8 +132,13 @@ export default function UiUxDesignPage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-primary/20 to-secondary/40 rounded-2xl aspect-video flex items-center justify-center">
-              <Palette className="w-24 h-24 text-primary/50" />
+            <div className="rounded-2xl aspect-video overflow-hidden relative">
+              <Image 
+                src="/generated_images/ui_ux_design_studio_with_creative_elements.png"
+                alt="UI/UX Design Services"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Smartphone, Layers, Zap, Shield, Tablet, Wifi, CheckCircle2, ArrowRight, Download } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import LeadGenCTA from "@/components/sections/LeadGenCTA";
 import {
   Accordion,
@@ -131,8 +132,13 @@ export default function MobileAppsPage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-primary/20 to-secondary/40 rounded-2xl aspect-video flex items-center justify-center">
-              <Smartphone className="w-24 h-24 text-primary/50" />
+            <div className="rounded-2xl aspect-video overflow-hidden relative">
+              <Image 
+                src="/generated_images/mobile_app_development_concept_with_multiple_devices.png"
+                alt="Mobile App Development Services"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, ArrowRight, Laptop, Zap, Layers, Search, Code, Rocket, ShieldCheck, Monitor, ChevronDown } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import LeadGenCTA from "@/components/sections/LeadGenCTA";
 import {
   Accordion,
@@ -131,8 +132,13 @@ export default function WebDevelopmentPage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-primary/20 to-secondary/40 rounded-2xl aspect-video flex items-center justify-center">
-              <Rocket className="w-24 h-24 text-primary/50" />
+            <div className="rounded-2xl aspect-video overflow-hidden relative">
+              <Image 
+                src="/generated_images/web_development_abstract_concept_with_code_and_structure.png"
+                alt="Web Development Services"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>

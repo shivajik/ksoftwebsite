@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Megaphone, TrendingUp, Users, Target, BarChart, Mail, Search, CheckCircle2, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import LeadGenCTA from "@/components/sections/LeadGenCTA";
 import {
   Accordion,
@@ -131,8 +132,13 @@ export default function DigitalMarketingPage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-primary/20 to-secondary/40 rounded-2xl aspect-video flex items-center justify-center">
-              <TrendingUp className="w-24 h-24 text-primary/50" />
+            <div className="rounded-2xl aspect-video overflow-hidden relative">
+              <Image 
+                src="/generated_images/digital_marketing_strategy_dashboard_and_growth.png"
+                alt="Digital Marketing Services"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>

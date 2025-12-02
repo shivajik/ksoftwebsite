@@ -12,7 +12,7 @@ const projects = [
     category: "SaaS Platform",
     description: "Real-time API to block fake and disposable email signups, keeping your user database clean.",
     url: "https://www.cleansignups.com/",
-    image: "/stock_images/saas_dashboard_analytics.jpg",
+    image: "/CleanSignUps-Stop-Fake-Signups-with-Real-time-Disposable-Email-Detection-API_1764390578616.png",
     tags: ["SaaS", "React", "UI/UX"]
   },
   {
@@ -20,7 +20,7 @@ const projects = [
     category: "Agency Management",
     description: "Simplify and scale your agency with an all-in-one platform for project management, client onboarding, invoicing, and streamlined daily operations.",
     url: "https://agencysimplifier.com/",
-    image: "/stock_images/agency_management_platform.jpg",
+    image: "/All-in-One-Agency-Management-Software-Agency-Simplifier_1764391110934.png",
     tags: ["SaaS", "Agency", "Management"]
   },
   {
@@ -28,15 +28,23 @@ const projects = [
     category: "Corporate Industrial",
     description: "A corporate portal showcasing the businesses and ventures of the Nath Group.",
     url: "https://nathgroup.com/",
-    image: "/stock_images/corporate_website.jpg",
+    image: "/Nath-Group-_1764390512851.png",
     tags: ["Corporate", "Enterprise", "Manufacturing"]
+  },
+  {
+    title: "Nandkishor Kagliwal",
+    category: "Personal Portfolio",
+    description: "Personal/business website for Nandkishor Kagliwal, representing his professional identity and services.",
+    url: "https://nandkishorkagliwal.com/",
+    image: "/Dr-Nandkishor-Kagliwal-–-Nath-Group_1764390512851.png",
+    tags: ["Portfolio", "Personal Brand", "Biography"]
   },
   {
     title: "Sujal Appliances",
     category: "E-Commerce",
     description: "Your go-to site for buying reliable household appliances from Sujala Appliances.",
     url: "https://sujalappliances.co.in/",
-    image: "/stock_images/ecommerce_store.jpg",
+    image: "/Sujal-Industry_1764390251212.png",
     tags: ["E-Commerce", "Retail", "Product Catalog"]
   },
   {
@@ -44,16 +52,40 @@ const projects = [
     category: "AgriTech",
     description: "Premium seed supplier offering high-quality seeds for better crop yields.",
     url: "https://sonamseeds.in/",
-    image: "/stock_images/agriculture_tech.jpg",
+    image: "/Sonam-Seeds_1764390378603.png",
     tags: ["Agriculture", "Business", "Green Tech"]
+  },
+  {
+    title: "Varun Seeds",
+    category: "AgriTech",
+    description: "Trusted source for quality seeds and agricultural inputs from Varun Seeds.",
+    url: "https://varunseeds.com/",
+    image: "/Varun-seeds-Agrotech-India-Pvt-Ltd_1764390340802.png",
+    tags: ["Agriculture", "Corporate", "Products"]
+  },
+  {
+    title: "Adinath Grow",
+    category: "Sustainable Agriculture",
+    description: "A farming and agriculture-oriented site offering growth solutions and seed/agriproduct services.",
+    url: "https://adinathgrow.com/",
+    image: "/Adinath-Crop-Science-–-Malegaon-Nashik-Maharashtra_1764390426033.png",
+    tags: ["Sustainability", "Agriculture", "Growth"]
   },
   {
     title: "DIT Aurangabad",
     category: "Educational Institute",
-    description: "A Govt.-approved institute delivering quality technical education in Fire Engineering and Industrial Safety.",
+    description: "A Govt.-approved institute (DTE & MSBTE) established in 2008, delivering quality technical education in Fire Engineering and Industrial Safety.",
     url: "https://ditabad.in/",
-    image: "/stock_images/education_institute.jpg",
+    image: "/Dnyangana-Institute-of-Technology-–-Chatrapati-Sambhaji-Nagar_1764390805837.png",
     tags: ["Education", "Institutional", "Fire & Safety"]
+  },
+  {
+    title: "CWA AlgoTech",
+    category: "FinTech & Automation",
+    description: "Empowering traders with automation solutions across Chartink, Amibroker, MT4/MT5, TradingView, Excel, Python, REST APIs, and more for fully automated trading.",
+    url: "https://cwaalgotech.com/",
+    image: "/CWA-Algotech-Pvt-Ltd_1764390994853.png",
+    tags: ["FinTech", "Automation", "Trading"]
   }
 ];
 
@@ -91,9 +123,13 @@ export default function PortfolioPage() {
             >
               <div className="aspect-video overflow-hidden relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
-                <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                  <Globe className="w-16 h-16 text-primary/40" />
-                </div>
+                <Image 
+                  src={project.image} 
+                  alt={`${project.title} website mockup`}
+                  width={800}
+                  height={450}
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                />
                 
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
                   <a 
