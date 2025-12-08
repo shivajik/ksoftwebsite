@@ -44,6 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'mobile-apps',
     'ui-ux-design',
     'digital-marketing',
+    'wordpress-maintenance',
   ].map((slug) => ({
     url: `${baseUrl}/services/${slug}`,
     lastModified: currentDate,

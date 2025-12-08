@@ -89,6 +89,11 @@ export default function Navbar() {
                   Digital Marketing
                 </DropdownMenuItem>
               </Link>
+              <Link href="/services/wordpress-maintenance">
+                <DropdownMenuItem className="cursor-pointer p-3 focus:bg-primary/10 focus:text-primary rounded-lg">
+                  WordPress Maintenance
+                </DropdownMenuItem>
+              </Link>
             </DropdownMenuContent>
           </DropdownMenu>
 
@@ -147,6 +152,9 @@ export default function Navbar() {
                 </Link>
                 <Link href="/services/digital-marketing" className="text-foreground/80 block" onClick={() => setIsMobileMenuOpen(false)}>
                   Digital Marketing
+                </Link>
+                <Link href="/services/wordpress-maintenance" className="text-foreground/80 block" onClick={() => setIsMobileMenuOpen(false)}>
+                  WordPress Maintenance
                 </Link>
               </div>
             </div>
