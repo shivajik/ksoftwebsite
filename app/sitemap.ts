@@ -53,13 +53,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogPosts = [
     'web-development-trends-2025',
-    'local-seo-aurangabad-guide',
+    'local-seo-chhatrapati-sambhaji-nagar-guide',
     'ai-integration-business',
-    'best-web-development-company-aurangabad-2025',
-    'top-seo-strategies-aurangabad-businesses',
+    'best-web-development-company-chhatrapati-sambhaji-nagar-2025',
+    'top-seo-strategies-chhatrapati-sambhaji-nagar-businesses',
     'ai-integration-small-business-guide',
     'mobile-app-development-trends-2025',
-    'digital-marketing-roi-aurangabad',
+    'digital-marketing-roi-chhatrapati-sambhaji-nagar',
     'importance-of-ui-ux-design',
     'web-development-trends-2026',
     'seo-predictions-2026',
