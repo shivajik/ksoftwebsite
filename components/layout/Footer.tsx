@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -15,9 +16,21 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="col-span-1 md:col-span-1">
-            <Link href="/" className="text-2xl font-heading font-bold text-primary flex items-center gap-2 mb-4">
-              <span className="bg-primary text-primary-foreground px-2 py-1 rounded-md">K</span>
-              KSoft Solution
+            <Link href="/" className="inline-block mb-4">
+              <Image
+                src="/logo-light.png"
+                alt="KSoft Solution"
+                width={160}
+                height={36}
+                className="hidden dark:block h-9 w-auto"
+              />
+              <Image
+                src="/logo-dark.png"
+                alt="KSoft Solution"
+                width={160}
+                height={36}
+                className="block dark:hidden h-9 w-auto"
+              />
             </Link>
             <p className="text-muted-foreground text-sm mb-6">
               Transforming businesses through innovative digital solutions. We specialize in web development, AI integration, and strategic SEO to drive growth.
