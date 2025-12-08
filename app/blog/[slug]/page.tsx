@@ -7,6 +7,22 @@ import { Calendar, Clock, User, ArrowLeft, Share2, Tag, ChevronRight, Facebook, 
 import { motion } from "framer-motion";
 import { blogPosts } from "@/lib/blog-posts";
 
+function formatDateToISO(dateString: string): string {
+  const months: { [key: string]: string } = {
+    'January': '01', 'February': '02', 'March': '03', 'April': '04',
+    'May': '05', 'June': '06', 'July': '07', 'August': '08',
+    'September': '09', 'October': '10', 'November': '11', 'December': '12'
+  };
+  const parts = dateString.replace(',', '').split(' ');
+  if (parts.length === 3) {
+    const month = months[parts[0]] || '01';
+    const day = parts[1].padStart(2, '0');
+    const year = parts[2];
+    return `${year}-${month}-${day}`;
+  }
+  return dateString;
+}
+
 export default function BlogPostPage() {
   const params = useParams();
   const slug = params.slug as string;
@@ -53,22 +69,27 @@ export default function BlogPostPage() {
     .slice(0, 3);
 
   const categories = Array.from(new Set(blogPosts.map(p => p.category)));
+  
+  const wordCount = post.content.replace(/<[^>]+>/g, '').split(/\s+/).filter(w => w.length > 0).length;
+  const isoDate = formatDateToISO(post.date);
 
   return (
     <div className="min-h-screen bg-background">
       <article itemScope itemType="https://schema.org/BlogPosting">
-        <div className="relative w-full h-[50vh] min-h-[400px] max-h-[600px] overflow-hidden">
-          <img 
-            src={post.image} 
-            alt={post.title}
-            itemProp="image"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+        <div className="relative w-full pt-24 md:pt-28">
+          <div className="relative w-full h-[40vh] min-h-[350px] max-h-[500px] overflow-hidden">
+            <img 
+              src={post.image} 
+              alt={post.title}
+              itemProp="image"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/30" />
+          </div>
           
-          <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16">
+          <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12">
             <div className="container mx-auto max-w-5xl">
-              <nav className="mb-6" aria-label="Breadcrumb">
+              <nav className="mb-4" aria-label="Breadcrumb">
                 <ol className="flex items-center gap-2 text-sm text-white/80">
                   <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
                   <ChevronRight className="w-4 h-4" />
@@ -86,22 +107,22 @@ export default function BlogPostPage() {
               </span>
               
               <h1 
-                className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight max-w-4xl"
+                className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight max-w-4xl"
                 itemProp="headline"
               >
                 {post.title}
               </h1>
               
-              <div className="flex flex-wrap items-center gap-4 md:gap-6 text-white/90">
+              <div className="flex flex-wrap items-center gap-4 md:gap-6 text-white/90 text-sm">
                 <div className="flex items-center gap-2" itemProp="author" itemScope itemType="https://schema.org/Person">
-                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                    <User className="w-5 h-5 text-primary" />
+                  <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+                    <User className="w-4 h-4 text-primary" />
                   </div>
                   <span className="font-medium" itemProp="name">{post.author}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
-                  <time dateTime={new Date(post.date).toISOString()} itemProp="datePublished">
+                  <time dateTime={isoDate} itemProp="datePublished">
                     {post.date}
                   </time>
                 </div>
@@ -111,7 +132,7 @@ export default function BlogPostPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <BookOpen className="w-4 h-4" />
-                  <span>{post.content.split(/\s+/).length} words</span>
+                  <span>{wordCount} words</span>
                 </div>
               </div>
             </div>
@@ -131,25 +152,10 @@ export default function BlogPostPage() {
                 </p>
                 
                 <div 
-                  className="prose prose-lg dark:prose-invert max-w-none
-                    prose-headings:font-bold prose-headings:text-foreground prose-headings:scroll-mt-24
-                    prose-h2:text-2xl prose-h2:md:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b prose-h2:border-border/50 prose-h2:pb-4
-                    prose-h3:text-xl prose-h3:md:text-2xl prose-h3:mt-8 prose-h3:mb-4
-                    prose-p:text-base prose-p:md:text-lg prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-6
-                    prose-li:text-base prose-li:md:text-lg prose-li:text-muted-foreground prose-li:leading-relaxed prose-li:mb-2
-                    prose-ul:my-6 prose-ul:space-y-2
-                    prose-ol:my-6 prose-ol:space-y-2
-                    prose-strong:text-foreground prose-strong:font-bold
-                    prose-a:text-primary prose-a:font-medium prose-a:underline prose-a:underline-offset-4 hover:prose-a:text-primary/80
-                    prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:bg-muted/30 prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:rounded-r-lg prose-blockquote:not-italic
-                    prose-img:rounded-xl prose-img:shadow-lg prose-img:my-8
-                    prose-code:bg-muted prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm
-                    prose-pre:bg-muted prose-pre:rounded-xl prose-pre:shadow-lg
-                  "
+                  className="blog-content"
                   itemProp="articleBody"
-                >
-                  <div dangerouslySetInnerHTML={{ __html: post.content }} />
-                </div>
+                  dangerouslySetInnerHTML={{ __html: post.content }}
+                />
               </div>
 
               <div className="bg-card rounded-2xl border border-border/50 p-6 md:p-8 shadow-lg mb-8">
