@@ -77,11 +77,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 flex-shrink-0" />
-                <span>+91-976-541-2319</span>
+                <a href="tel:+919765412319" className="hover:text-primary transition-colors">+91-976-541-2319</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-4 w-4 flex-shrink-0" />
-                <span>info@ksoftsolution.com</span>
+                <a href="mailto:info@ksoftsolution.com" className="hover:text-primary transition-colors">info@ksoftsolution.com</a>
               </li>
             </ul>
           </div>

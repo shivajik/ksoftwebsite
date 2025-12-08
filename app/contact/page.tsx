@@ -97,7 +97,7 @@ export default function ContactPage() {
                     <Mail className="h-6 w-6 mt-1" />
                     <div>
                       <h4 className="font-bold">Email</h4>
-                      <p className="text-primary-foreground/80">info@ksoftsolution.com</p>
+                      <a href="mailto:info@ksoftsolution.com" className="text-primary-foreground/80 hover:text-white transition-colors">info@ksoftsolution.com</a>
                     </div>
                   </div>
 
@@ -105,7 +105,7 @@ export default function ContactPage() {
                     <Phone className="h-6 w-6 mt-1" />
                     <div>
                       <h4 className="font-bold">Phone</h4>
-                      <p className="text-primary-foreground/80">+91-976-541-2319</p>
+                      <a href="tel:+919765412319" className="text-primary-foreground/80 hover:text-white transition-colors">+91-976-541-2319</a>
                     </div>
                   </div>
                 </div>
