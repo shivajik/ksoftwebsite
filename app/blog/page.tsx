@@ -63,7 +63,7 @@ export default function BlogPage() {
               transition={{ delay: 0.1 }}
               className="text-xl text-muted-foreground max-w-2xl mx-auto"
             >
-              Expert advice on Web Development, SEO, AI Integration, and Digital Marketing to help your business thrive in Aurangabad and beyond.
+              Expert advice on Web Development, SEO, AI Integration, and Digital Marketing to help your business thrive in Chhatrapati Sambhaji Nagar and beyond.
             </motion.p>
           </div>
         </div>

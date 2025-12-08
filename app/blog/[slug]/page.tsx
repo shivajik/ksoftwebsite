@@ -341,7 +341,7 @@ export default function BlogPostPage() {
                     </div>
                   </div>
                   <p className="text-sm text-muted-foreground mt-4">
-                    Experts in web development, SEO, AI integration, and digital marketing helping businesses grow in Aurangabad and beyond.
+                    Experts in web development, SEO, AI integration, and digital marketing helping businesses grow in Chhatrapati Sambhaji Nagar and beyond.
                   </p>
                 </div>
               </div>

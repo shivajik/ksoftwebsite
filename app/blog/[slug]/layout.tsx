@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${post.title} | KSoft Solution Blog`,
     description: post.excerpt,
-    keywords: [...post.tags, post.category, "KSoft Solution", "Aurangabad", "Chhatrapati Sambhaji Nagar", "digital agency", "web development"],
+    keywords: [...post.tags, post.category, "KSoft Solution", "Chhatrapati Sambhaji Nagar", "digital agency", "web development"],
     authors: [{ name: post.author }],
     openGraph: {
       title: post.title,
@@ -204,7 +204,7 @@ export default async function BlogPostLayout({ params, children }: Props) {
     name: "KSoft Solution",
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
-    description: "Digital agency specializing in web development, SEO, AI integration, and digital marketing in Aurangabad (Chhatrapati Sambhaji Nagar), Maharashtra, India.",
+    description: "Digital agency specializing in web development, SEO, AI integration, and digital marketing in Chhatrapati Sambhaji Nagar, Maharashtra, India.",
     areaServed: {
       "@type": "GeoCircle",
       geoMidpoint: {
@@ -251,7 +251,7 @@ export default async function BlogPostLayout({ params, children }: Props) {
       "@id": `${SITE_URL}#website`,
       url: SITE_URL,
       name: "KSoft Solution",
-      description: "Digital agency in Aurangabad specializing in web development, SEO, and digital marketing",
+      description: "Digital agency in Chhatrapati Sambhaji Nagar specializing in web development, SEO, and digital marketing",
       publisher: {
         "@type": "Organization",
         name: "KSoft Solution",

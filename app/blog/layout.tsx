@@ -6,14 +6,14 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ksoftsolution.com"
 
 export const metadata: Metadata = {
   title: "Blog - Digital Marketing, SEO & Web Development Insights | KSoft Solution",
-  description: "Expert insights on web development, SEO, AI integration, digital marketing, and business growth strategies. Learn from KSoft Solution's industry experts in Aurangabad.",
+  description: "Expert insights on web development, SEO, AI integration, digital marketing, and business growth strategies. Learn from KSoft Solution's industry experts in Chhatrapati Sambhaji Nagar.",
   keywords: [
     "digital marketing blog",
     "SEO tips",
     "web development insights",
     "AI integration",
     "business growth",
-    "Aurangabad digital agency",
+    "Chhatrapati Sambhaji Nagar digital agency",
     "Chhatrapati Sambhaji Nagar",
     "GEO optimization",
     "AEO strategies",
