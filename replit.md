@@ -116,6 +116,12 @@ Preferred communication style: Simple, everyday language.
 
 ### External APIs & Integrations
 
+**Email Service (Contact Form)**
+- Resend API for transactional emails (inquiry notifications + auto-reply)
+- Requires `RESEND_API_KEY` environment variable to be configured
+- Emails sent to: shivaji@ksoftsolution.com
+- If API key not configured, inquiries are logged to console for manual follow-up
+
 **Design Assets**
 - Google Fonts API (Inter, Outfit)
 - Preconnect optimization for fonts.googleapis.com and fonts.gstatic.com
@@ -146,6 +152,9 @@ Preferred communication style: Simple, everyday language.
 ## Recent Changes
 
 **December 2024**
+- Enhanced contact form with service selection, company name, mobile number fields
+- Added API route for form submission with email notifications
+- Created professional HTML email templates for inquiry and auto-reply
 - Replaced all "Aurangabad" references with "Chhatrapati Sambhaji Nagar" throughout the site
 - Updated blog post URL slugs to use new city name
 - Removed legacy unused folders: client/, server/, shared/, attached_assets/
