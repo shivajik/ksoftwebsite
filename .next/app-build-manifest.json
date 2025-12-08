@@ -6,25 +6,10 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/services/wordpress-maintenance/layout": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/services/wordpress-maintenance/layout.js"
-    ],
-    "/services/wordpress-maintenance/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/services/wordpress-maintenance/page.js"
-    ],
-    "/services/web-development/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/services/web-development/layout.js"
-    ],
-    "/services/web-development/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/services/web-development/page.js"
+      "static/chunks/app/page.js"
     ]
   }
 }
