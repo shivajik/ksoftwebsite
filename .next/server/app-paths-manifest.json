@@ -1,5 +1,4 @@
 {
-  "/page": "app/page.js",
   "/services/wordpress-maintenance/page": "app/services/wordpress-maintenance/page.js",
   "/services/web-development/page": "app/services/web-development/page.js"
 }
