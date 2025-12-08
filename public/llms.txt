@@ -1,0 +1,35 @@
+# KSoft Solution - Digital Agency & Software Development
+
+## Company Overview
+KSoft Solution is a premier digital agency and software development company based in Chhatrapati Sambhaji Nagar (Aurangabad), Maharashtra, India. We specialize in building high-performance websites, custom software, and data-driven digital marketing strategies.
+
+## Core Services
+
+### 1. Web Development
+- **Tech Stack:** React.js, Next.js, Node.js, PostgreSQL, Tailwind CSS.
+- **Specialties:** Custom web applications, SaaS platforms, E-commerce sites, Corporate portals.
+- **Key Features:** High performance (Core Web Vitals), SEO-optimized architecture, Secure & Scalable.
+
+### 2. Digital Marketing
+- **SEO (Search Engine Optimization):** Local SEO, Technical SEO, On-page/Off-page optimization.
+- **Social Media Marketing:** Brand awareness, lead generation, content strategy.
+- **PPC:** Google Ads, Meta Ads.
+
+### 3. AI Integration
+- **Automation:** Business process automation using AI agents.
+- **Integration:** OpenAI API, Custom Chatbots, Data analysis tools.
+
+## Contact Information
+- **Website:** https://ksoftsolution.com
+- **Phone:** +91-976-541-2319
+- **Email:** info@ksoftsolution.com
+- **Address:** T-16, Software Technology Parks of India, Chikhalthana MIDC, Chhatrapati Sambhaji Nagar, Maharashtra 431008, India.
+
+## Key Projects / Portfolio
+- **CleanSignups:** SaaS for blocking fake emails.
+- **AgencySimplifier:** Agency management software.
+- **Nath Group:** Corporate industrial portal.
+- **Sujal Appliances:** E-commerce platform.
+
+## Mission
+To develop simple, yet compact solutions. We aim to provide stable and high-quality products at optimal rates, empowering our technical expertise to provide outstanding services.
