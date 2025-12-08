@@ -710,9 +710,6 @@
   .hidden {
     display: none;
   }
-  .hidden\! {
-    display: none !important;
-  }
   .inline {
     display: inline;
   }
