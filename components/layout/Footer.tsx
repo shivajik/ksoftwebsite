@@ -18,18 +18,11 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-1">
             <Link href="/" className="inline-block mb-4">
               <Image
-                src="/logo-light.png"
+                src="/logo.png"
                 alt="KSoft Solution"
                 width={160}
                 height={36}
-                className="hidden dark:block h-9 w-auto"
-              />
-              <Image
-                src="/logo-dark.png"
-                alt="KSoft Solution"
-                width={160}
-                height={36}
-                className="block dark:hidden h-9 w-auto"
+                className="h-9 w-auto"
               />
             </Link>
             <p className="text-muted-foreground text-sm mb-6">

@@ -5038,16 +5038,6 @@
       }
     }
   }
-  .dark\:block {
-    @media (prefers-color-scheme: dark) {
-      display: block;
-    }
-  }
-  .dark\:hidden {
-    @media (prefers-color-scheme: dark) {
-      display: none;
-    }
-  }
   .dark\:border-destructive {
     @media (prefers-color-scheme: dark) {
       border-color: hsl(var(--destructive));

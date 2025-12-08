@@ -39,19 +39,11 @@ export default function Navbar() {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link href="/" className="cursor-pointer">
           <Image
-            src="/logo-light.png"
+            src="/logo.png"
             alt="KSoft Solution"
             width={180}
             height={40}
-            className="hidden dark:block h-10 w-auto"
-            priority
-          />
-          <Image
-            src="/logo-dark.png"
-            alt="KSoft Solution"
-            width={180}
-            height={40}
-            className="block dark:hidden h-10 w-auto"
+            className="h-10 w-auto"
             priority
           />
         </Link>
