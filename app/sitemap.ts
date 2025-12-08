@@ -52,9 +52,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   const blogPosts = [
-    'web-development-trends-2025',
-    'local-seo-chhatrapati-sambhaji-nagar-guide',
-    'ai-integration-business',
     'best-web-development-company-chhatrapati-sambhaji-nagar-2025',
     'top-seo-strategies-chhatrapati-sambhaji-nagar-businesses',
     'ai-integration-small-business-guide',
