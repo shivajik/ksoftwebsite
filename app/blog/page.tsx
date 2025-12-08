@@ -2,43 +2,9 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { Calendar, Clock, User, ArrowRight } from "lucide-react";
-
-const blogPosts = [
-  {
-    id: 1,
-    slug: "web-development-trends-2025",
-    title: "Top Web Development Trends for 2025",
-    excerpt: "Discover the latest trends shaping the future of web development, from AI-powered tools to edge computing.",
-    image: "/stock_images/web_development_trends.jpg",
-    category: "Web Development",
-    date: "Nov 15, 2024",
-    readTime: "5 min read",
-    author: "KSoft Team"
-  },
-  {
-    id: 2,
-    slug: "local-seo-aurangabad-guide",
-    title: "Complete Guide to Local SEO in Aurangabad",
-    excerpt: "Learn how to optimize your business for local search and attract more customers in Chhatrapati Sambhaji Nagar.",
-    image: "/stock_images/local_seo_guide.jpg",
-    category: "SEO",
-    date: "Nov 10, 2024",
-    readTime: "8 min read",
-    author: "KSoft Team"
-  },
-  {
-    id: 3,
-    slug: "ai-integration-business",
-    title: "How AI Integration Can Transform Your Business",
-    excerpt: "Explore practical ways to integrate AI into your business operations for improved efficiency and customer experience.",
-    image: "/stock_images/ai_business.jpg",
-    category: "AI",
-    date: "Nov 5, 2024",
-    readTime: "6 min read",
-    author: "KSoft Team"
-  }
-];
+import { blogPosts } from "@/lib/blog-posts";
 
 export default function BlogPage() {
   return (
@@ -72,7 +38,12 @@ export default function BlogPage() {
               className="group bg-card rounded-2xl overflow-hidden border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5"
             >
               <Link href={`/blog/${post.slug}`} className="block h-full flex flex-col">
-                <div className="relative h-48 overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20">
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={post.image} 
+                    alt={post.title}
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  />
                   <div className="absolute top-4 left-4 bg-primary/90 backdrop-blur-sm text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">
                     {post.category}
                   </div>

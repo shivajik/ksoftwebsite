@@ -321,7 +321,7 @@ export const blogPosts: BlogPost[] = [
     date: "December 9, 2025",
     readTime: "5 min read",
     category: "SEO",
-    image: "/attached_assets/stock_images/voice_assistant_smar_0d61b538.jpg",
+    image: "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070&auto=format&fit=crop",
     tags: ["AEO", "Voice Search", "Zero-Click", "Siri/Alexa"],
     content: `
       <h2>Winner Takes All</h2>
