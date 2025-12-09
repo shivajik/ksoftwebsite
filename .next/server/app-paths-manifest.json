@@ -1,4 +1,4 @@
 {
   "/page": "app/page.js",
-  "/privacy/page": "app/privacy/page.js"
+  "/services/local-citations/page": "app/services/local-citations/page.js"
 }

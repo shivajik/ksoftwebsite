@@ -11,15 +11,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/privacy/layout": [
+    "/services/local-citations/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/privacy/layout.js"
+      "static/chunks/app/services/local-citations/layout.js"
     ],
-    "/privacy/page": [
+    "/services/local-citations/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/privacy/page.js"
+      "static/chunks/app/services/local-citations/page.js"
     ]
   }
 }

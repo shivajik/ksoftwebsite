@@ -4,19 +4,40 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Code, Bot, Search, Smartphone, Palette, Megaphone, Settings, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+
+const services = [
+  {
+    category: "Development",
+    items: [
+      { name: "Web Development", href: "/services/web-development", icon: Code, description: "Custom React & Next.js websites" },
+      { name: "Mobile Apps", href: "/services/mobile-apps", icon: Smartphone, description: "iOS & Android applications" },
+      { name: "UI/UX Design", href: "/services/ui-ux-design", icon: Palette, description: "User-centered design" },
+    ],
+  },
+  {
+    category: "Marketing & SEO",
+    items: [
+      { name: "SEO & Growth", href: "/services/seo", icon: Search, description: "Rank #1 on Google" },
+      { name: "Digital Marketing", href: "/services/digital-marketing", icon: Megaphone, description: "PPC, Social & Email" },
+      { name: "Local Citations", href: "/services/local-citations", icon: MapPin, description: "Local SEO & directories" },
+    ],
+  },
+  {
+    category: "AI & Maintenance",
+    items: [
+      { name: "AI Integration", href: "/services/ai-integration", icon: Bot, description: "ChatGPT & automation" },
+      { name: "WordPress Maintenance", href: "/services/wordpress-maintenance", icon: Settings, description: "Security & updates" },
+    ],
+  },
+];
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -49,53 +70,71 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-8">
           <Link href="/" className={cn("font-medium transition-colors hover:text-primary", pathname === "/" ? "text-primary" : "text-muted-foreground")}>
             Home
           </Link>
 
-          <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-1 font-medium text-muted-foreground hover:text-primary transition-colors focus:outline-none">
-              Services <ChevronDown className="h-4 w-4" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-background/90 backdrop-blur-xl border-white/10 p-2 rounded-xl shadow-2xl w-56">
-              <Link href="/services/web-development">
-                <DropdownMenuItem className="cursor-pointer p-3 focus:bg-primary/10 focus:text-primary rounded-lg">
-                  Web Development
-                </DropdownMenuItem>
-              </Link>
-              <Link href="/services/ai-integration">
-                <DropdownMenuItem className="cursor-pointer p-3 focus:bg-primary/10 focus:text-primary rounded-lg">
-                  AI Integration
-                </DropdownMenuItem>
-              </Link>
-              <Link href="/services/seo">
-                <DropdownMenuItem className="cursor-pointer p-3 focus:bg-primary/10 focus:text-primary rounded-lg">
-                  SEO & Growth
-                </DropdownMenuItem>
-              </Link>
-              <Link href="/services/mobile-apps">
-                <DropdownMenuItem className="cursor-pointer p-3 focus:bg-primary/10 focus:text-primary rounded-lg">
-                  Mobile Apps
-                </DropdownMenuItem>
-              </Link>
-              <Link href="/services/ui-ux-design">
-                <DropdownMenuItem className="cursor-pointer p-3 focus:bg-primary/10 focus:text-primary rounded-lg">
-                  UI/UX Design
-                </DropdownMenuItem>
-              </Link>
-              <Link href="/services/digital-marketing">
-                <DropdownMenuItem className="cursor-pointer p-3 focus:bg-primary/10 focus:text-primary rounded-lg">
-                  Digital Marketing
-                </DropdownMenuItem>
-              </Link>
-              <Link href="/services/wordpress-maintenance">
-                <DropdownMenuItem className="cursor-pointer p-3 focus:bg-primary/10 focus:text-primary rounded-lg">
-                  WordPress Maintenance
-                </DropdownMenuItem>
-              </Link>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          {/* MegaMenu for Services */}
+          <div 
+            className="relative"
+            onMouseEnter={() => setIsServicesOpen(true)}
+            onMouseLeave={() => setIsServicesOpen(false)}
+          >
+            <button 
+              className="flex items-center gap-1 font-medium text-muted-foreground hover:text-primary transition-colors focus:outline-none"
+              onClick={() => setIsServicesOpen(!isServicesOpen)}
+            >
+              Services <ChevronDown className={cn("h-4 w-4 transition-transform", isServicesOpen && "rotate-180")} />
+            </button>
+            
+            {isServicesOpen && (
+              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4">
+                <div className="bg-background/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-6 min-w-[640px]">
+                  <div className="grid grid-cols-3 gap-6">
+                    {services.map((category) => (
+                      <div key={category.category}>
+                        <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
+                          {category.category}
+                        </h4>
+                        <div className="space-y-1">
+                          {category.items.map((item) => (
+                            <Link 
+                              key={item.href} 
+                              href={item.href}
+                              className="flex items-start gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors group"
+                              onClick={() => setIsServicesOpen(false)}
+                            >
+                              <div className="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors">
+                                <item.icon className="w-4 h-4 text-primary" />
+                              </div>
+                              <div>
+                                <div className="font-medium text-foreground group-hover:text-primary transition-colors">
+                                  {item.name}
+                                </div>
+                                <div className="text-xs text-muted-foreground">
+                                  {item.description}
+                                </div>
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-6 pt-4 border-t border-white/10">
+                    <Link 
+                      href="/contact" 
+                      className="flex items-center justify-center gap-2 text-sm text-primary hover:underline"
+                      onClick={() => setIsServicesOpen(false)}
+                    >
+                      Need a custom solution? Contact us →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
 
           <Link href="/about" className={cn("font-medium transition-colors hover:text-primary", pathname === "/about" ? "text-primary" : "text-muted-foreground")}>
             About
@@ -117,6 +156,42 @@ export default function Navbar() {
           </Link>
         </div>
 
+        {/* Tablet Nav - Simple Dropdown */}
+        <div className="hidden md:flex lg:hidden items-center gap-6">
+          <Link href="/" className={cn("font-medium transition-colors hover:text-primary text-sm", pathname === "/" ? "text-primary" : "text-muted-foreground")}>
+            Home
+          </Link>
+          <div className="relative group">
+            <button className="flex items-center gap-1 font-medium text-muted-foreground hover:text-primary transition-colors text-sm">
+              Services <ChevronDown className="h-3 w-3" />
+            </button>
+            <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+              <div className="bg-background/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl p-2 w-48">
+                {services.flatMap(cat => cat.items).map((item) => (
+                  <Link 
+                    key={item.href} 
+                    href={item.href}
+                    className="block p-2 text-sm rounded-lg hover:bg-primary/10 hover:text-primary transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+          <Link href="/about" className={cn("font-medium transition-colors hover:text-primary text-sm", pathname === "/about" ? "text-primary" : "text-muted-foreground")}>
+            About
+          </Link>
+          <Link href="/portfolio" className={cn("font-medium transition-colors hover:text-primary text-sm", pathname === "/portfolio" ? "text-primary" : "text-muted-foreground")}>
+            Portfolio
+          </Link>
+          <Link href="/contact">
+            <Button size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-4">
+              Get Started
+            </Button>
+          </Link>
+        </div>
+
         {/* Mobile Toggle */}
         <button
           className="md:hidden text-foreground p-2"
@@ -128,36 +203,30 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-white/10 p-6 md:hidden flex flex-col gap-4 shadow-2xl">
+          <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-white/10 p-6 md:hidden flex flex-col gap-4 shadow-2xl max-h-[80vh] overflow-y-auto">
             <Link href="/" className="text-lg font-medium text-foreground py-2 block" onClick={() => setIsMobileMenuOpen(false)}>
               Home
             </Link>
-            <div className="py-2">
-              <div className="text-sm font-semibold text-muted-foreground mb-2 uppercase tracking-wider">Services</div>
-              <div className="pl-4 flex flex-col gap-3">
-                <Link href="/services/web-development" className="text-foreground/80 block" onClick={() => setIsMobileMenuOpen(false)}>
-                  Web Development
-                </Link>
-                <Link href="/services/ai-integration" className="text-foreground/80 block" onClick={() => setIsMobileMenuOpen(false)}>
-                  AI Integration
-                </Link>
-                <Link href="/services/seo" className="text-foreground/80 block" onClick={() => setIsMobileMenuOpen(false)}>
-                  SEO & Growth
-                </Link>
-                <Link href="/services/mobile-apps" className="text-foreground/80 block" onClick={() => setIsMobileMenuOpen(false)}>
-                  Mobile Apps
-                </Link>
-                <Link href="/services/ui-ux-design" className="text-foreground/80 block" onClick={() => setIsMobileMenuOpen(false)}>
-                  UI/UX Design
-                </Link>
-                <Link href="/services/digital-marketing" className="text-foreground/80 block" onClick={() => setIsMobileMenuOpen(false)}>
-                  Digital Marketing
-                </Link>
-                <Link href="/services/wordpress-maintenance" className="text-foreground/80 block" onClick={() => setIsMobileMenuOpen(false)}>
-                  WordPress Maintenance
-                </Link>
+            {services.map((category) => (
+              <div key={category.category} className="py-2">
+                <div className="text-xs font-semibold text-muted-foreground mb-2 uppercase tracking-wider">
+                  {category.category}
+                </div>
+                <div className="pl-2 flex flex-col gap-2">
+                  {category.items.map((item) => (
+                    <Link 
+                      key={item.href} 
+                      href={item.href} 
+                      className="flex items-center gap-3 text-foreground/80 py-1" 
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <item.icon className="w-4 h-4 text-primary" />
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
               </div>
-            </div>
+            ))}
             <Link href="/about" className="text-lg font-medium text-foreground py-2 block" onClick={() => setIsMobileMenuOpen(false)}>
               About
             </Link>
