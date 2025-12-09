@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, Code, Bot, Search, Smartphone, Palette, Megaphone, Settings, MapPin } from "lucide-react";
+import { Menu, X, ChevronDown, Code, Bot, Search, Smartphone, Palette, Megaphone, Settings, MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -26,7 +26,7 @@ const services = [
     ],
   },
   {
-    category: "AI & Maintenance",
+    category: "AI & Support",
     items: [
       { name: "AI Integration", href: "/services/ai-integration", icon: Bot, description: "ChatGPT & automation" },
       { name: "WordPress Maintenance", href: "/services/wordpress-maintenance", icon: Settings, description: "Security & updates" },
@@ -85,16 +85,23 @@ export default function Navbar() {
               className="flex items-center gap-1 font-medium text-muted-foreground hover:text-primary transition-colors focus:outline-none"
               onClick={() => setIsServicesOpen(!isServicesOpen)}
             >
-              Services <ChevronDown className={cn("h-4 w-4 transition-transform", isServicesOpen && "rotate-180")} />
+              Services <ChevronDown className={cn("h-4 w-4 transition-transform duration-200", isServicesOpen && "rotate-180")} />
             </button>
             
             {isServicesOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4">
-                <div className="bg-background/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-6 min-w-[640px]">
-                  <div className="grid grid-cols-3 gap-6">
+              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-6">
+                <div className="bg-[#0a0f1a] border border-white/10 rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.8)] overflow-hidden min-w-[720px]">
+                  {/* Header */}
+                  <div className="bg-gradient-to-r from-primary/10 to-transparent px-8 py-4 border-b border-white/5">
+                    <h3 className="text-sm font-semibold text-foreground">Our Services</h3>
+                    <p className="text-xs text-muted-foreground mt-1">Choose from our range of digital solutions</p>
+                  </div>
+                  
+                  {/* Services Grid */}
+                  <div className="grid grid-cols-3 gap-0 divide-x divide-white/5">
                     {services.map((category) => (
-                      <div key={category.category}>
-                        <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
+                      <div key={category.category} className="p-6">
+                        <h4 className="text-[11px] font-bold text-primary uppercase tracking-widest mb-5">
                           {category.category}
                         </h4>
                         <div className="space-y-1">
@@ -102,17 +109,17 @@ export default function Navbar() {
                             <Link 
                               key={item.href} 
                               href={item.href}
-                              className="flex items-start gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors group"
+                              className="flex items-start gap-4 p-3 -mx-3 rounded-xl hover:bg-white/5 transition-all duration-200 group"
                               onClick={() => setIsServicesOpen(false)}
                             >
-                              <div className="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors">
+                              <div className="bg-primary/10 p-2.5 rounded-lg group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-200">
                                 <item.icon className="w-4 h-4 text-primary" />
                               </div>
-                              <div>
-                                <div className="font-medium text-foreground group-hover:text-primary transition-colors">
+                              <div className="flex-1 min-w-0">
+                                <div className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors">
                                   {item.name}
                                 </div>
-                                <div className="text-xs text-muted-foreground">
+                                <div className="text-xs text-muted-foreground mt-0.5 leading-relaxed">
                                   {item.description}
                                 </div>
                               </div>
@@ -122,13 +129,26 @@ export default function Navbar() {
                       </div>
                     ))}
                   </div>
-                  <div className="mt-6 pt-4 border-t border-white/10">
+                  
+                  {/* Footer CTA */}
+                  <div className="bg-white/[0.02] border-t border-white/5 px-8 py-4">
                     <Link 
                       href="/contact" 
-                      className="flex items-center justify-center gap-2 text-sm text-primary hover:underline"
+                      className="flex items-center justify-between group"
                       onClick={() => setIsServicesOpen(false)}
                     >
-                      Need a custom solution? Contact us →
+                      <div>
+                        <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                          Need a custom solution?
+                        </span>
+                        <span className="text-xs text-muted-foreground ml-2">
+                          Let&apos;s discuss your project
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2 text-primary text-sm font-medium">
+                        Contact Us
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </div>
                     </Link>
                   </div>
                 </div>
@@ -166,13 +186,14 @@ export default function Navbar() {
               Services <ChevronDown className="h-3 w-3" />
             </button>
             <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-              <div className="bg-background/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl p-2 w-48">
+              <div className="bg-[#0a0f1a] border border-white/10 rounded-xl shadow-2xl p-2 w-52">
                 {services.flatMap(cat => cat.items).map((item) => (
                   <Link 
                     key={item.href} 
                     href={item.href}
-                    className="block p-2 text-sm rounded-lg hover:bg-primary/10 hover:text-primary transition-colors"
+                    className="flex items-center gap-3 p-2.5 text-sm rounded-lg hover:bg-white/5 hover:text-primary transition-colors"
                   >
+                    <item.icon className="w-4 h-4 text-primary" />
                     {item.name}
                   </Link>
                 ))}
@@ -203,21 +224,21 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-white/10 p-6 md:hidden flex flex-col gap-4 shadow-2xl max-h-[80vh] overflow-y-auto">
+          <div className="absolute top-full left-0 right-0 bg-[#0a0f1a] border-b border-white/10 p-6 md:hidden flex flex-col gap-4 shadow-2xl max-h-[80vh] overflow-y-auto">
             <Link href="/" className="text-lg font-medium text-foreground py-2 block" onClick={() => setIsMobileMenuOpen(false)}>
               Home
             </Link>
             {services.map((category) => (
               <div key={category.category} className="py-2">
-                <div className="text-xs font-semibold text-muted-foreground mb-2 uppercase tracking-wider">
+                <div className="text-xs font-bold text-primary uppercase tracking-widest mb-3">
                   {category.category}
                 </div>
-                <div className="pl-2 flex flex-col gap-2">
+                <div className="space-y-1">
                   {category.items.map((item) => (
                     <Link 
                       key={item.href} 
                       href={item.href} 
-                      className="flex items-center gap-3 text-foreground/80 py-1" 
+                      className="flex items-center gap-3 text-foreground/80 py-2 px-2 rounded-lg hover:bg-white/5" 
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       <item.icon className="w-4 h-4 text-primary" />
@@ -227,18 +248,20 @@ export default function Navbar() {
                 </div>
               </div>
             ))}
-            <Link href="/about" className="text-lg font-medium text-foreground py-2 block" onClick={() => setIsMobileMenuOpen(false)}>
-              About
-            </Link>
-            <Link href="/portfolio" className="text-lg font-medium text-foreground py-2 block" onClick={() => setIsMobileMenuOpen(false)}>
-              Portfolio
-            </Link>
-            <Link href="/blog" className="text-lg font-medium text-foreground py-2 block" onClick={() => setIsMobileMenuOpen(false)}>
-              Blog
-            </Link>
-            <Link href="/contact" className="text-lg font-medium text-foreground py-2 block" onClick={() => setIsMobileMenuOpen(false)}>
-              Contact
-            </Link>
+            <div className="border-t border-white/10 pt-4 mt-2">
+              <Link href="/about" className="text-lg font-medium text-foreground py-2 block" onClick={() => setIsMobileMenuOpen(false)}>
+                About
+              </Link>
+              <Link href="/portfolio" className="text-lg font-medium text-foreground py-2 block" onClick={() => setIsMobileMenuOpen(false)}>
+                Portfolio
+              </Link>
+              <Link href="/blog" className="text-lg font-medium text-foreground py-2 block" onClick={() => setIsMobileMenuOpen(false)}>
+                Blog
+              </Link>
+              <Link href="/contact" className="text-lg font-medium text-foreground py-2 block" onClick={() => setIsMobileMenuOpen(false)}>
+                Contact
+              </Link>
+            </div>
             <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
               <Button className="w-full bg-primary text-primary-foreground py-6 text-lg rounded-xl mt-4">
                 Get Started
