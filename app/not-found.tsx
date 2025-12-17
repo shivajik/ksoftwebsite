@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -9,21 +9,22 @@ import { Home, ArrowLeft, Search, Mail } from "lucide-react";
 export default function NotFound() {
   const router = useRouter();
   const [countdown, setCountdown] = useState(10);
+  const hasRedirected = useRef(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCountdown((prev) => {
-        if (prev <= 1) {
-          clearInterval(timer);
-          router.push("/");
-          return 0;
-        }
-        return prev - 1;
-      });
+      setCountdown((prev) => prev - 1);
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [router]);
+  }, []);
+
+  useEffect(() => {
+    if (countdown <= 0 && !hasRedirected.current) {
+      hasRedirected.current = true;
+      router.push("/");
+    }
+  }, [countdown, router]);
 
   const popularPages = [
     { name: "Web Development", href: "/services/web-development" },
@@ -53,7 +54,7 @@ export default function NotFound() {
         </p>
 
         <p className="text-sm text-muted-foreground mb-8">
-          Redirecting to home in <span className="text-primary font-semibold">{countdown}</span> seconds...
+          Redirecting to home in <span className="text-primary font-semibold">{countdown > 0 ? countdown : 0}</span> seconds...
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
