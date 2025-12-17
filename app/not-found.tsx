@@ -1,10 +1,30 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Home, ArrowLeft, Search, Mail } from "lucide-react";
 
 export default function NotFound() {
+  const router = useRouter();
+  const [countdown, setCountdown] = useState(10);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCountdown((prev) => {
+        if (prev <= 1) {
+          clearInterval(timer);
+          router.push("/");
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [router]);
+
   const popularPages = [
     { name: "Web Development", href: "/services/web-development" },
     { name: "SEO Services", href: "/services/seo" },
@@ -15,7 +35,7 @@ export default function NotFound() {
   ];
 
   return (
-    <div className="min-h-[80vh] flex items-center justify-center px-4 py-16">
+    <div className="min-h-[80vh] flex items-center justify-center px-4 pt-32 pb-16">
       <div className="max-w-2xl mx-auto text-center">
         <div className="mb-8">
           <span className="text-8xl md:text-9xl font-bold bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent">
@@ -27,9 +47,13 @@ export default function NotFound() {
           Page Not Found
         </h1>
         
-        <p className="text-lg text-muted-foreground mb-8 max-w-md mx-auto">
+        <p className="text-lg text-muted-foreground mb-4 max-w-md mx-auto">
           Sorry, the page you&apos;re looking for doesn&apos;t exist or has been moved. 
           Let us help you find what you need.
+        </p>
+
+        <p className="text-sm text-muted-foreground mb-8">
+          Redirecting to home in <span className="text-primary font-semibold">{countdown}</span> seconds...
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
