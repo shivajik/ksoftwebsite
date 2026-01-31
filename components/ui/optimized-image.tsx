@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface OptimizedImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
@@ -27,13 +27,6 @@ export default function OptimizedImage({
 }: OptimizedImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
 
-  useEffect(() => {
-    // If priority is true, we might want to preload it
-    if (priority) {
-      const img = new Image();
-      img.src = src;
-    }
-  }, [src, priority]);
 
   return (
     <img
