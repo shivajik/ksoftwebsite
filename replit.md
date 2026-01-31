@@ -117,10 +117,11 @@ Preferred communication style: Simple, everyday language.
 ### External APIs & Integrations
 
 **Email Service (Contact Form)**
-- Resend API for transactional emails (inquiry notifications + auto-reply)
-- Requires `RESEND_API_KEY` environment variable to be configured
-- Emails sent to: shivaji@ksoftsolution.com
-- If API key not configured, inquiries are logged to console for manual follow-up
+- Nodemailer with Gmail SMTP for transactional emails (inquiry notifications + auto-reply)
+- Requires `EMAIL` (Gmail address) and `EMAIL_PASS` (Gmail App Password) environment variables
+- Emails sent to the configured EMAIL address
+- If credentials not configured, inquiries are logged to console for manual follow-up
+- Note: For Gmail, you need to use an "App Password" (not your regular password) - enable 2FA in Google Account, then create an App Password at https://myaccount.google.com/apppasswords
 
 **Design Assets**
 - Google Fonts API (Inter, Outfit)

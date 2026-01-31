@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 interface ContactFormData {
   name: string;
@@ -9,7 +10,49 @@ interface ContactFormData {
   message: string;
 }
 
+let transporter: nodemailer.Transporter | null = null;
+
+function getTransporter() {
+  if (!transporter) {
+    const email = process.env.EMAIL;
+    const pass = process.env.EMAIL_PASS;
+    
+    if (!email || !pass) {
+      return null;
+    }
+    
+    transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true,
+      auth: {
+        user: email,
+        pass: pass,
+      },
+    });
+  }
+  return transporter;
+}
+
+function escapeHtml(text: string): string {
+  const map: { [key: string]: string } = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#039;",
+  };
+  return text.replace(/[&<>"']/g, (m) => map[m]);
+}
+
 function generateInquiryEmailHTML(data: ContactFormData): string {
+  const escapedName = escapeHtml(data.name);
+  const escapedEmail = escapeHtml(data.email);
+  const escapedPhone = escapeHtml(data.phone);
+  const escapedCompany = data.company ? escapeHtml(data.company) : null;
+  const escapedService = escapeHtml(data.service);
+  const escapedMessage = escapeHtml(data.message);
+
   return `
 <!DOCTYPE html>
 <html lang="en">
@@ -40,40 +83,40 @@ function generateInquiryEmailHTML(data: ContactFormData): string {
                 <tr>
                   <td style="padding: 12px 0; border-bottom: 1px solid #eee;">
                     <strong style="color: #666; display: inline-block; width: 140px;">Name:</strong>
-                    <span style="color: #333;">${data.name}</span>
+                    <span style="color: #333;">${escapedName}</span>
                   </td>
                 </tr>
                 <tr>
                   <td style="padding: 12px 0; border-bottom: 1px solid #eee;">
                     <strong style="color: #666; display: inline-block; width: 140px;">Email:</strong>
-                    <a href="mailto:${data.email}" style="color: #4A90E2; text-decoration: none;">${data.email}</a>
+                    <a href="mailto:${escapedEmail}" style="color: #4A90E2; text-decoration: none;">${escapedEmail}</a>
                   </td>
                 </tr>
                 <tr>
                   <td style="padding: 12px 0; border-bottom: 1px solid #eee;">
                     <strong style="color: #666; display: inline-block; width: 140px;">Mobile:</strong>
-                    <a href="tel:${data.phone}" style="color: #4A90E2; text-decoration: none;">${data.phone}</a>
+                    <a href="tel:${escapedPhone}" style="color: #4A90E2; text-decoration: none;">${escapedPhone}</a>
                   </td>
                 </tr>
-                ${data.company ? `
+                ${escapedCompany ? `
                 <tr>
                   <td style="padding: 12px 0; border-bottom: 1px solid #eee;">
                     <strong style="color: #666; display: inline-block; width: 140px;">Company:</strong>
-                    <span style="color: #333;">${data.company}</span>
+                    <span style="color: #333;">${escapedCompany}</span>
                   </td>
                 </tr>
                 ` : ''}
                 <tr>
                   <td style="padding: 12px 0; border-bottom: 1px solid #eee;">
                     <strong style="color: #666; display: inline-block; width: 140px;">Service Required:</strong>
-                    <span style="color: #333; background-color: #e8f4fd; padding: 4px 12px; border-radius: 4px; font-size: 14px;">${data.service}</span>
+                    <span style="color: #333; background-color: #e8f4fd; padding: 4px 12px; border-radius: 4px; font-size: 14px;">${escapedService}</span>
                   </td>
                 </tr>
               </table>
               
               <h2 style="margin: 30px 0 15px; color: #333; font-size: 18px; border-bottom: 2px solid #4A90E2; padding-bottom: 10px;">Project Details</h2>
               <div style="background-color: #f9f9f9; padding: 20px; border-radius: 6px; border-left: 4px solid #4A90E2;">
-                <p style="margin: 0; color: #555; line-height: 1.6; white-space: pre-wrap;">${data.message}</p>
+                <p style="margin: 0; color: #555; line-height: 1.6; white-space: pre-wrap;">${escapedMessage}</p>
               </div>
               
               <div style="margin-top: 30px; padding: 20px; background-color: #fff8e6; border-radius: 6px; border: 1px solid #ffd966;">
@@ -102,6 +145,9 @@ function generateInquiryEmailHTML(data: ContactFormData): string {
 }
 
 function generateAutoReplyEmailHTML(data: ContactFormData): string {
+  const escapedName = escapeHtml(data.name);
+  const escapedService = escapeHtml(data.service);
+
   return `
 <!DOCTYPE html>
 <html lang="en">
@@ -127,11 +173,11 @@ function generateAutoReplyEmailHTML(data: ContactFormData): string {
           <tr>
             <td style="padding: 40px;">
               <p style="margin: 0 0 20px; color: #333; font-size: 16px; line-height: 1.6;">
-                Dear <strong>${data.name}</strong>,
+                Dear <strong>${escapedName}</strong>,
               </p>
               
               <p style="margin: 0 0 20px; color: #555; font-size: 15px; line-height: 1.8;">
-                Thank you for reaching out to <strong>KSoft Solution</strong>! We have received your inquiry regarding <strong>${data.service}</strong> and our team is reviewing your requirements.
+                Thank you for reaching out to <strong>KSoft Solution</strong>! We have received your inquiry regarding <strong>${escapedService}</strong> and our team is reviewing your requirements.
               </p>
               
               <div style="background-color: #e8f4fd; padding: 25px; border-radius: 8px; margin: 25px 0;">
@@ -210,10 +256,10 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const resendApiKey = process.env.RESEND_API_KEY;
+    const emailTransporter = getTransporter();
     
-    if (!resendApiKey) {
-      console.log("RESEND_API_KEY not configured. Storing inquiry for manual follow-up.");
+    if (!emailTransporter) {
+      console.log("EMAIL or EMAIL_PASS not configured. Storing inquiry for manual follow-up.");
       console.log("New Inquiry:", JSON.stringify(data, null, 2));
       
       return NextResponse.json({
@@ -223,43 +269,33 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    const inquiryEmailResponse = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${resendApiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: "KSoft Solution <noreply@ksoftsolution.com>",
-        to: ["shivaji@ksoftsolution.com"],
+    const adminEmail = process.env.EMAIL;
+
+    try {
+      console.log(`Attempting to send inquiry notification to: ${adminEmail}`);
+      await emailTransporter.sendMail({
+        from: adminEmail,
+        to: adminEmail,
         subject: `New Inquiry: ${data.service} - ${data.name}`,
         html: generateInquiryEmailHTML(data),
-        reply_to: data.email,
-      }),
-    });
-
-    if (!inquiryEmailResponse.ok) {
-      const errorData = await inquiryEmailResponse.json();
-      console.error("Failed to send inquiry email:", errorData);
+        replyTo: data.email,
+      });
+      console.log("Inquiry email sent successfully");
+    } catch (error) {
+      console.error("Failed to send inquiry email:", error);
     }
 
-    const autoReplyResponse = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${resendApiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: "KSoft Solution <noreply@ksoftsolution.com>",
-        to: [data.email],
+    try {
+      console.log(`Attempting to send auto-reply to: ${data.email}`);
+      await emailTransporter.sendMail({
+        from: adminEmail,
+        to: data.email,
         subject: "Thank You for Your Inquiry - KSoft Solution",
         html: generateAutoReplyEmailHTML(data),
-      }),
-    });
-
-    if (!autoReplyResponse.ok) {
-      const errorData = await autoReplyResponse.json();
-      console.error("Failed to send auto-reply email:", errorData);
+      });
+      console.log("Auto-reply email sent successfully");
+    } catch (error) {
+      console.error("Failed to send auto-reply email:", error);
     }
 
     return NextResponse.json({
