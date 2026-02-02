@@ -1,6 +1,3 @@
-export const dynamic = "force-static";
-export const revalidate = 3600;
-
 "use client";
 
 import { motion } from "framer-motion";
