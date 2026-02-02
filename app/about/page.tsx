@@ -1,6 +1,7 @@
-"use client";
-
 import AboutSection from "@/components/sections/About";
+
+export const dynamic = 'force-static';
+export const revalidate = 3600;
 
 export default function AboutPage() {
   return (

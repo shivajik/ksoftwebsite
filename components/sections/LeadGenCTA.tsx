@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Mail } from "lucide-react";
-import Link from "next/link";
+import Link from "@/components/ui/link";
 import { motion } from "framer-motion";
 
 export default function LeadGenCTA() {

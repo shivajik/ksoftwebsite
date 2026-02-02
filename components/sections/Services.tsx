@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Code, Brain, TrendingUp, Smartphone, Palette, Megaphone } from "lucide-react";
-import Link from "next/link";
+import Link from "@/components/ui/link";
 
 const services = [
   {

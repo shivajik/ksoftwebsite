@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/ui/link";
 import { useParams } from "next/navigation";
 import { notFound } from "next/navigation";
 import { Calendar, Clock, User, ArrowLeft, Share2, Tag, ChevronRight, Facebook, Twitter, Linkedin, BookOpen } from "lucide-react";

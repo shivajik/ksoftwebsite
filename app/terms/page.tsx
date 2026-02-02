@@ -1,7 +1,10 @@
+export const dynamic = "force-static";
+export const revalidate = 3600;
+
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import Link from "@/components/ui/link";
 
 export default function TermsOfServicePage() {
   return (

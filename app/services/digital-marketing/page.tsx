@@ -1,9 +1,12 @@
+export const dynamic = "force-static";
+export const revalidate = 3600;
+
 "use client";
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Megaphone, TrendingUp, Users, Target, BarChart, Mail, Search, CheckCircle2, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import Link from "@/components/ui/link";
 import Image from "next/image";
 import LeadGenCTA from "@/components/sections/LeadGenCTA";
 import {

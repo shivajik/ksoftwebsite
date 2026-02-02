@@ -1,9 +1,12 @@
+export const dynamic = "force-static";
+export const revalidate = 3600;
+
 "use client";
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Globe, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import Link from "@/components/ui/link";
 import Image from "next/image";
 
 const projects = [

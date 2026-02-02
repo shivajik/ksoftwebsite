@@ -3,6 +3,9 @@ import Services from "@/components/sections/Services";
 import About from "@/components/sections/About";
 import LeadGenCTA from "@/components/sections/LeadGenCTA";
 
+export const dynamic = 'force-static';
+export const revalidate = 3600;
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-background font-sans text-foreground">

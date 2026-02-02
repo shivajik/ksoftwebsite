@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import Link from "@/components/ui/link";
 import { Calendar, Clock, User, ArrowRight, Tag, Search, TrendingUp } from "lucide-react";
 import { blogPosts } from "@/lib/blog-posts";
 import { useState, useMemo } from "react";

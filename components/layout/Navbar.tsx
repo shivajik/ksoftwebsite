@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
+import Link from "@/components/ui/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, Code, Bot, Search, Smartphone, Palette, Megaphone, Settings, MapPin, ArrowRight } from "lucide-react";

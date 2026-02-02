@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/ui/link";
 import Image from "next/image";
 import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from "lucide-react";
 import { useEffect, useState } from "react";
