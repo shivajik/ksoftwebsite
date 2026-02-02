@@ -152,6 +152,12 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+**February 2026**
+- Reduced Vercel edge requests by disabling Next.js Link prefetching (custom Link component with prefetch=false)
+- Added static generation (force-static + 1-hour revalidate) to homepage, about, portfolio, privacy, terms, and all service pages
+- Removed duplicate Google Analytics to keep only Vercel Analytics
+- Inlined noise SVG as data URI and added cache headers for static assets
+
 **December 2024**
 - Enhanced contact form with service selection, company name, mobile number fields
 - Added API route for form submission with email notifications
